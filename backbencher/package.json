@@ -1,0 +1,28 @@
+{
+  "name": "backbencher",
+  "version": "1.0.0",
+  "description": "Backend for college website",
+  "main": "index.js",
+  "repository": "https://github.com/lowcg/downhill.git",
+  "author": "monoid.us",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node --watch ./src/index.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.30.7",
+    "express": "^4.19.2",
+    "joi": "^17.12.3",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7",
+    "@types/pg": "^8.11.5",
+    "drizzle-kit": "^0.20.14",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
