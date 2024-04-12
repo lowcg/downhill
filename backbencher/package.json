@@ -1,5 +1,6 @@
 {
   "name": "backbencher",
+  "type": "module",
   "version": "1.0.0",
   "description": "Backend for college website",
   "main": "index.js",
@@ -10,13 +11,18 @@
     "dev": "ts-node --watch ./src/index.ts"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "csv-parse": "^5.5.5",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.30.7",
     "express": "^4.19.2",
+    "http-status-codes": "^2.3.0",
     "joi": "^17.12.3",
-    "pg": "^8.11.5"
+    "pg": "^8.11.5",
+    "tsx": "^4.7.2"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^20.12.7",
     "@types/pg": "^8.11.5",
