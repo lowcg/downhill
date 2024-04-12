@@ -1,0 +1,141 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Simple API overview",
+    "version": "2.0.0"
+  },
+  "paths": {
+    "/api/ping": {
+      "get": {
+        "summary": "Health check",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": ["ok", "data"],
+                  "properties": {
+                    "ok": { "type": "boolean" },
+                    "data": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/placement/count": {
+      "get": {
+        "summary": "Returns the total number of placement records for the given year",
+        "parameters": [
+          {
+            "name": "year",
+            "description": "The year for the number of placement records need to be fetched",
+            "in": "query",
+            "schema": { "type": "number" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": ["ok", "data"],
+                  "properties": {
+                    "ok": { "type": "boolean" },
+                    "data": {
+                      "type": "object",
+                      "required": ["count"],
+                      "properties": {
+                        "count": { "type": "number" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/placement/{year}": {
+      "get": {
+        "summary": "Returns a page of placement records for the given year",
+        "parameters": [
+          {
+            "name": "year",
+            "description": "The year for which the placement records need to be fetched",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 100
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "required": ["ok", "data"],
+                  "properties": {
+                    "ok": { "type": "boolean" },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "slno",
+                          "student_name",
+                          "company",
+                          "year",
+                          "uniroll"
+                        ],
+                        "properties": {
+                          "slno": { "type": "number" },
+                          "student_name": { "type": "string" },
+                          "company": { "type": "string" },
+                          "year": { "type": "number" },
+                          "uniroll": { "type": "string" },
+                          "branch": { "type": "string" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    }
+  }
+}
