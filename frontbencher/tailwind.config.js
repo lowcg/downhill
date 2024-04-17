@@ -23,9 +23,9 @@ module.exports = {
         'geistRegular': ['GeistRegular', 'sans-serif'],
         'geistMedium': ['GeistMedium', 'sans-serif'],
         'geistSemiBold': ['GeistSemiBold', 'sans-serif'],
+        'prompt': ['Prompt', 'sans-serif'],
       }
     },
 
   },
-  plugins: [],
 };
