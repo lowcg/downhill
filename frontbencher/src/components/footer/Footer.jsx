@@ -12,7 +12,7 @@ export default function Footer() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                 </div>
-                <div className='flex flex-col items-center sm:justify-center gap-[16px]'>
+                <div className='flex flex-col items-center sm:items-start sm:justify-center gap-[16px]'>
                     <div className='flex gap-2 sm:gap-[12px]'>
                         <Image src={Images.phone} alt='phone' />
                         <p className='font-montserrat font-normal text-sm '>+91 0000000000</p>
