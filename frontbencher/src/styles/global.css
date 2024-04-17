@@ -17,6 +17,22 @@ body {
   src: url("../../public/fonts/Montserrat-VariableFont_wght.ttf");
 }
 @font-face {
-  font-family: Geist;
+  font-family: GeistBlack;
   src: url("../../public/fonts/GeistVF-BF6569491f13184.ttf");
+}
+@font-face {
+  font-family: GeistRegular;
+  src: url("../../public/fonts/Geist-Regular-BF6569491e3eff1.otf");
+}
+@font-face {
+  font-family: GeistMedium;
+  src: url("../../public/fonts/Geist-Medium-BF6569491e1c281.otf");
+}
+@font-face {
+  font-family: GeistSemiBold;
+  src: url("../../public/fonts/Geist-SemiBold-BF6569491e8c368.otf");
+}
+@font-face {
+  font-family: GeistSemiBold;
+  src: url("../../public/fonts/Geist-SemiBold-BF6569491e8c368.otf");
 }
