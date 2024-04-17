@@ -19,7 +19,10 @@ module.exports = {
       },
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
-        'geist': ['Geist', 'sans-serif'],
+        'geistBlack': ['GeistBlack', 'sans-serif'],
+        'geistRegular': ['GeistRegular', 'sans-serif'],
+        'geistMedium': ['GeistMedium', 'sans-serif'],
+        'geistSemiBold': ['GeistSemiBold', 'sans-serif'],
       }
     },
 
