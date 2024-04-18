@@ -8,6 +8,7 @@ import cover from './cover.svg';
 import megaPhone from './megaphone.svg'
 import warning from './warning.svg'
 import heroBg from './heroBg.png'
+import share from './share.svg'
 export const Images = {
     AOT,
     fb,
@@ -18,5 +19,6 @@ export const Images = {
     cover,
     megaPhone,
     warning,
-    heroBg
+    heroBg,
+    share
 }
