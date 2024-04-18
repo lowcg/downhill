@@ -1,15 +1,20 @@
 import HeaderTitle from "@/components/HeaderTitle";
+import Announcement from "@/components/announcement/Announcement";
+import Events from "@/components/events/Events";
+import Footer from "@/components/footer/Footer";
+import NewsBulletin from "@/components/news-bulletin/NewsBulletin";
+import WeeklyUpdates from "@/components/weeklyUpdates/WeeklyUpdates";
 
 export default function Home() {
   return (
-    <main className='min-h-screen px-20 bg-white text-deep-blue flex flex-col justify-center items-center font-montserrat'>
-
-        <div className="w-full flex justify-center h-full">
-          <HeaderTitle title={"Weekly Updates"} />
-        </div>
-      
-
-
-    </main>
+    <>
+      <main className='min-h-screen bg-white text-deep-blue flex flex-col justify-center items-center font-montserrat'>
+        <NewsBulletin />
+        <Announcement />
+        <Events />
+        <WeeklyUpdates />
+        <Footer />
+      </main>
+    </>
   );
 }

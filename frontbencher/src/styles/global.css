@@ -36,3 +36,11 @@ body {
   font-family: GeistSemiBold;
   src: url("../../public/fonts/Geist-SemiBold-BF6569491e8c368.otf");
 }
+@font-face {
+  font-family: Prompt;
+  src: url("../../public/fonts//Prompt-ExtraBold.ttf");
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
