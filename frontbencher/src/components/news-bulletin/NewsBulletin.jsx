@@ -40,12 +40,12 @@ export default function NewsBulletin() {
           {
 
             maruqeeItems.map((item, index) => (
-              <React.Fragment key={index} >
+              <>
                 <div className='flex w-full items-center gap-2 py-2'>
                   <span className="mx-4 font-geistRegular text-white text-sm">{item.items}</span>
                   <Image src={Images.marq} className='mx-4' />
                 </div>
-              </React.Fragment>
+              </>
             )
             )
           }
