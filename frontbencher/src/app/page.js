@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <>
       <main className='min-h-screen bg-white text-deep-blue flex flex-col justify-center items-center font-montserrat'>
-        {/* <Marquee className="bg-deep-blue flex w-full text-white items-center">
+        <Marquee>
           {
 
             marqueeItems.map((item, index) => (
@@ -55,7 +55,7 @@ export default function Home() {
             )
             )
           }
-        </Marquee> */}
+        </Marquee>
 
         <NewsBulletin />
         <Announcement />
