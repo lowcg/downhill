@@ -40,7 +40,7 @@ export default function NewsBulletin() {
             <Image src={Images.heroBg} alt='heroBg' className='rounded-t-md h-[345px]' />
             <div className='flex flex-col flex-1 px-10 py-12 gap-8'>
               <div className='flex w-full justify-between items-center'>
-                <div className='bg-orange text-white rounded-full px-4 py-1 w-auto sm:w-[20%] flex items-center justify-center text-sm font-geistRegular'>
+                <div className='bg-orange text-white rounded-full px-4 py-1 w-auto sm:w-auto flex items-center justify-center text-sm font-geistRegular'>
                   Top News
                 </div>
                 <Image src={Images.share} alt='heroBg' />
