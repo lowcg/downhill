@@ -6,57 +6,27 @@ import WeeklyUpdates from "@/components/weeklyUpdates/WeeklyUpdates";
 import Marquee from "react-fast-marquee";
 import { Images } from "../../public/assets";
 import Image from "next/image";
-
+import maruqeeItems from "../../public/data/marquee.json";
 
 export default function Home() {
-  const marqueeItems =
-    [
-      {
-        "items": "Transformation"
-      },
-      {
-        "items": "Empowerment"
-      },
-      {
-        "items": "Knowledge"
-      },
-      {
-        "items": "Growth"
-      },
-      {
-        "items": "Success"
-      },
-      {
-        "items": "Transformation"
-      },
-      {
-        "items": "Empowerment"
-      },
-      {
-        "items": "Knowledge"
-      },
-      {
-        "items": "Growth"
-      },
-      {
-        "items": "Success"
-      }
-    ]
   return (
     <>
       <main className='min-h-screen bg-white text-deep-blue flex flex-col justify-center items-center font-montserrat'>
-        <Marquee>
-          {
+        <div className="bg-deep-blue ">
 
-            marqueeItems.map((item, index) => (
-              <div className='flex w-full items-center gap-2 py-2'>
-                <span key={index} className="mx-4 font-geistRegular text-sm">{item.items}</span>
-                <Image src={Images.marq} className='mx-4' />
-              </div>
-            )
-            )
-          }
-        </Marquee>
+          <Marquee>
+            {
+
+              maruqeeItems.map((item, index) => (
+                <div className='flex w-full items-center gap-2 py-2'>
+                  <span key={index} className="mx-4 font-geistRegular text-white text-sm">{item.items}</span>
+                  <Image src={Images.marq} className='mx-4' />
+                </div>
+              )
+              )
+            }
+          </Marquee>
+        </div>
 
         <NewsBulletin />
         <Announcement />
