@@ -3,6 +3,8 @@ import HeaderTitle from '../HeaderTitle'
 import { Images } from '../../../public/assets'
 import Image from 'next/image'
 import NewsCard from '../NewsCard'
+import Marquee from 'react-fast-marquee'
+import maruqeeItems from '../../../public/data/marquee.json'
 const NewsSampleInfo = [
   {
     title: 'The admit card for the even semester examination has been released.',
@@ -33,6 +35,22 @@ const NewsSampleInfo = [
 export default function NewsBulletin() {
   return (
     <>
+      <div className="bg-deep-blue w-full">
+        <Marquee>
+          {
+
+            maruqeeItems.map((item, index) => (
+              <React.Fragment key={index} >
+                <div className='flex w-full items-center gap-2 py-2'>
+                  <span className="mx-4 font-geistRegular text-white text-sm">{item.items}</span>
+                  <Image src={Images.marq} className='mx-4' />
+                </div>
+              </React.Fragment>
+            )
+            )
+          }
+        </Marquee>
+      </div>
       <div className='flex flex-col  gap-[56px] items-center px-4 sm:px-20 w-full pb-[56px] '>
         <HeaderTitle title={"News Bulletin"} />
         <div className='flex flex-col sm:flex-row w-full gap-4 sm:gap-10'>
