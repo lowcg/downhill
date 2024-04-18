@@ -1,7 +1,5 @@
 import React from 'react'
 import HeaderTitle from '../HeaderTitle'
-import Image from 'next/image'
-import { Images } from '../../../public/assets'
 
 export default function WeeklyUpdates() {
     return (

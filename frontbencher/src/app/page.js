@@ -1,4 +1,3 @@
-import HeaderTitle from "@/components/HeaderTitle";
 import Announcement from "@/components/announcement/Announcement";
 import Events from "@/components/events/Events";
 import Footer from "@/components/footer/Footer";
