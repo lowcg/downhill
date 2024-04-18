@@ -15,7 +15,8 @@ module.exports = {
         'orange': '#D64A3D',
         'deep-blue': '#01153C',
         'white': '#F6F6F6',
-        'gray': '#888888'
+        'gray': '#888888',
+        'pure-white': '#FFFFFF',
       },
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],

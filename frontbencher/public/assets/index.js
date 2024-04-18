@@ -5,6 +5,8 @@ import location from './location.svg';
 import mail from './mail.svg';
 import phone from './phone.svg';
 import cover from './cover.svg';
+import megaPhone from './megaphone.svg'
+import warning from './warning.svg'
 export const Images = {
     AOT,
     fb,
@@ -12,5 +14,7 @@ export const Images = {
     location,
     mail,
     phone,
-    cover
+    cover,
+    megaPhone,
+    warning
 }

@@ -6,7 +6,7 @@ import { Images } from '../../../public/assets'
 export default function WeeklyUpdates() {
     return (
         <>
-            <div className='flex flex-col gap-[24px] items-center px-4 sm:px-20'>
+            <div className='flex flex-col gap-[24px] items-center px-4 sm:px-20 w-full'>
                 <div className='flex flex-col gap-[56px] items-center'>
 
                     <HeaderTitle title={"Weekly Updates"} />
