@@ -7,40 +7,41 @@ import Marquee from "react-fast-marquee";
 import { Images } from "../../public/assets";
 import Image from "next/image";
 
-const marqueeItems =
-  [
-    {
-      "items": "Transformation"
-    },
-    {
-      "items": "Empowerment"
-    },
-    {
-      "items": "Knowledge"
-    },
-    {
-      "items": "Growth"
-    },
-    {
-      "items": "Success"
-    },
-    {
-      "items": "Transformation"
-    },
-    {
-      "items": "Empowerment"
-    },
-    {
-      "items": "Knowledge"
-    },
-    {
-      "items": "Growth"
-    },
-    {
-      "items": "Success"
-    }
-  ]
+
 export default function Home() {
+  const marqueeItems =
+    [
+      {
+        "items": "Transformation"
+      },
+      {
+        "items": "Empowerment"
+      },
+      {
+        "items": "Knowledge"
+      },
+      {
+        "items": "Growth"
+      },
+      {
+        "items": "Success"
+      },
+      {
+        "items": "Transformation"
+      },
+      {
+        "items": "Empowerment"
+      },
+      {
+        "items": "Knowledge"
+      },
+      {
+        "items": "Growth"
+      },
+      {
+        "items": "Success"
+      }
+    ]
   return (
     <>
       <main className='min-h-screen bg-white text-deep-blue flex flex-col justify-center items-center font-montserrat'>
