@@ -19,9 +19,9 @@ export default function Home() {
             {
 
               maruqeeItems.map((item, index) => (
-                <div className='flex w-full items-center gap-2 py-2'>
+                <div key={index} className='flex w-full items-center gap-2 py-2'>
                   <span key={index} className="mx-4 font-geistRegular text-white text-sm">{item.items}</span>
-                  <Image src={Images.marq} className='mx-4' />
+                  <Image src={Images.marq} className='mx-4' alt="img"/>
                 </div>
               )
               )

@@ -31,8 +31,8 @@ export default function UpcomingEvents() {
                 <div className='grid grid-cols-1 gap-y-10 sm:gap-y-0 sm:grid-cols-3 gap-x-10 w-full'>
                     {
 
-                        UpcomingEventsSampleInfo.map((events) => (
-                            <UpcomingEventCard title={events.title} description={events.description} subDescription={events.subDescription} />
+                        UpcomingEventsSampleInfo.map((events,index) => (
+                            <UpcomingEventCard key={index} title={events.title} description={events.description} subDescription={events.subDescription} />
                         ))
                     }
 
