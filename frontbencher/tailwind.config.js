@@ -15,7 +15,8 @@ module.exports = {
         'orange': '#D64A3D',
         'deep-blue': '#01153C',
         'white': '#F6F6F6',
-        'gray': '#888888'
+        'gray': '#888888',
+        'pure-white': '#FFFFFF',
       },
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
@@ -23,6 +24,7 @@ module.exports = {
         'geistRegular': ['GeistRegular', 'sans-serif'],
         'geistMedium': ['GeistMedium', 'sans-serif'],
         'geistSemiBold': ['GeistSemiBold', 'sans-serif'],
+        'prompt': ['Prompt', 'sans-serif'],
       },
       fontSize:{
         'small':'',
@@ -30,5 +32,4 @@ module.exports = {
     },
 
   },
-  plugins: [],
 };
