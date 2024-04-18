@@ -13,7 +13,7 @@ export default function WeeklyUpdates() {
                 <div className='flex flex-col items-center'>
                     <form className='flex flex-col items-center gap-[20px]'>
                         <input type="text" placeholder='Your Name' className='w-[300px] h-[40px] bg-transparent font-geistRegular rounded-md border border-gray px-4 focus:ring-0 focus:ring-offset-0 outline-none' />
-                        <input type="email" placeholder='Your Email' className='text-base font-geistRegular w-[300px] h-[40px] bg-transparent rounded-md border border-gray  px-4' />
+                        <input type="email" placeholder='Your Email' className='text-base font-geistRegular w-[300px] h-[40px] bg-transparent rounded-md border border-gray  px-4 outline-none focus:ring-offset-0 focus:ring-0' />
                         <button className='text-base font-geistRegular bg-orange text-white w-[200px] h-[40px] rounded-md'>Subscribe</button>
                     </form>
                 </div>

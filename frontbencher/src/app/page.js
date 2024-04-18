@@ -7,6 +7,7 @@ import Marquee from "react-fast-marquee";
 import { Images } from "../../public/assets";
 import Image from "next/image";
 import maruqeeItems from "../../public/data/marquee.json";
+import React from "react";
 
 export default function Home() {
   return (
@@ -17,10 +18,12 @@ export default function Home() {
             {
 
               maruqeeItems.map((item, index) => (
-                <div className='flex w-full items-center gap-2 py-2'>
-                  <span key={index} className="mx-4 font-geistRegular text-white text-sm">{item.items}</span>
-                  <Image src={Images.marq} className='mx-4' />
-                </div>
+                <React.Fragment key={index} >
+                  <div className='flex w-full items-center gap-2 py-2'>
+                    <span className="mx-4 font-geistRegular text-white text-sm">{item.items}</span>
+                    <Image src={Images.marq} className='mx-4' />
+                  </div>
+                </React.Fragment>
               )
               )
             }
