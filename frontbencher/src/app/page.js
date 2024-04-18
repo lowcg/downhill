@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <main className='min-h-screen bg-white text-deep-blue flex flex-col justify-center items-center font-montserrat'>
-        <div className="bg-deep-blue ">
+        <div className="bg-deep-blue w-full">
 
           <Marquee>
             {
