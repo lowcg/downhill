@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image'
 import React, { useState } from 'react'
-import { Images } from '../../public/assets'
+import { Images, ImagesOne } from '../../public/assets'
 
 
 
@@ -14,7 +14,7 @@ export default function AnnouncementCard({ title, date, description, small_descr
                 <div className='flex flex-col gap-2'>
                     <div className='flex gap-[12px]'>
                         <p className='text-base font-geistSemiBold '>{title}</p>
-                        <Image src={Images.warning} alt='warning' width={20} height={20} />
+                        <Image src={ImagesOne.warning} alt='warning' width={20} height={20} />
                     </div>
                     <div className='flex text-sm font-geistRegular'>
                         {date}
