@@ -47,7 +47,7 @@ body {
 
 @layer base {
   .font-outline-2 {
-    -webkit-text-stroke: 2px #bcbcbc;
+    -webkit-text-stroke: 4px #bcbcbc6d;
   }
   .font-outline-4 {
     -webkit-text-stroke: 4px #888888;

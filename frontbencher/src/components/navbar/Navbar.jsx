@@ -1,8 +1,5 @@
 "use client"
-
-import * as React from "react"
-import Link from "next/link"
-
+import {useEffect,useState,forwardRef} from "react"
 import { cn } from "@/lib/utils"
 import {
     NavigationMenu,
@@ -14,7 +11,6 @@ import {
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import Image from "next/image"
-import { Images } from "lucide-react"
 import { ImagesOne } from "../../../public/assets"
 
 const components = [
@@ -55,12 +51,21 @@ const components = [
     },
 ]
 
+const navItems = [
+    "Academics",
+    "Departments",
+    "Research",
+    "Students",
+    "Faculty"
+]
+
+
 export default function Navbar() {
 
 
-    const [isScrolled, setIsScrolled] = React.useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
             if (scrollPosition > 0) {
@@ -76,93 +81,36 @@ export default function Navbar() {
 
     return (
         <>
-            <NavigationMenu className={`px-20 py-4 w-full hidden lg:flex ${isScrolled ? "bg-deep-blue" : "bg-transparent"} justify-between`}>
+            <NavigationMenu className={`px-10 py-2 w-full hidden lg:flex ${isScrolled ? "bg-deep-blue" : "bg-transparent"} justify-between`}>
                 <div className="flex">
 
                     <NavigationMenuList className=" text-white flex gap-4">
                         <NavigationMenuItem className=" text-white">
                             <Image src={ImagesOne.cover} alt="Academy of Technology" width={100} height={100} />
                         </NavigationMenuItem>
-                        <NavigationMenuItem className="text-white">
-                            <NavigationMenuTrigger className=" text-white">Academics</NavigationMenuTrigger>
-                            <NavigationMenuContent >
-                                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                                    {components.map((component) => (
-                                        <ListItem
-                                            key={component.title}
-                                            title={component.title}
-                                            href={component.href}
-                                        >
-                                            {component.description}
-                                        </ListItem>
-                                    ))}
-                                </ul>
-                            </NavigationMenuContent>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <NavigationMenuTrigger>Departments</NavigationMenuTrigger>
-                            <NavigationMenuContent>
-                                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                                    {components.map((component) => (
-                                        <ListItem
-                                            key={component.title}
-                                            title={component.title}
-                                            href={component.href}
-                                        >
-                                            {component.description}
-                                        </ListItem>
-                                    ))}
-                                </ul>
-                            </NavigationMenuContent>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <NavigationMenuTrigger>Research</NavigationMenuTrigger>
-                            <NavigationMenuContent>
-                                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                                    {components.map((component) => (
-                                        <ListItem
-                                            key={component.title}
-                                            title={component.title}
-                                            href={component.href}
-                                        >
-                                            {component.description}
-                                        </ListItem>
-                                    ))}
-                                </ul>
-                            </NavigationMenuContent>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <NavigationMenuTrigger>Students</NavigationMenuTrigger>
-                            <NavigationMenuContent>
-                                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                                    {components.map((component) => (
-                                        <ListItem
-                                            key={component.title}
-                                            title={component.title}
-                                            href={component.href}
-                                        >
-                                            {component.description}
-                                        </ListItem>
-                                    ))}
-                                </ul>
-                            </NavigationMenuContent>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <NavigationMenuTrigger>Faculty</NavigationMenuTrigger>
-                            <NavigationMenuContent>
-                                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                                    {components.map((component) => (
-                                        <ListItem
-                                            key={component.title}
-                                            title={component.title}
-                                            href={component.href}
-                                        >
-                                            {component.description}
-                                        </ListItem>
-                                    ))}
-                                </ul>
-                            </NavigationMenuContent>
-                        </NavigationMenuItem>
+                        {
+                            navItems.map((item,ind) => {
+                                return (
+                                    <NavigationMenuItem key={ind} className="text-white">
+                                        <NavigationMenuTrigger className=" text-white">{item}</NavigationMenuTrigger>
+                                        <NavigationMenuContent >
+                                            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                                {components.map((component) => (
+                                                    <ListItem
+                                                        key={component.title}
+                                                        title={component.title}
+                                                        href={component.href}
+                                                    >
+                                                        {component.description}
+                                                    </ListItem>
+                                                ))}
+                                            </ul>
+                                        </NavigationMenuContent>
+                                    </NavigationMenuItem>
+                                )
+                            })
+                        }
+
                         {/* <NavigationMenuItem>
                     <Link href="/docs" legacyBehavior passHref>
                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -180,8 +128,6 @@ export default function Navbar() {
             </NavigationMenu>
 
 
-
-
             {/* // mobile view */}
             <NavigationMenu className={`px-4 py-4 w-full lg:hidden ${isScrolled ? "bg-deep-blue" : "bg-transparent"} justify-between`}>
                 <div className="flex px-1 justify-between w-full items-center">
@@ -193,7 +139,7 @@ export default function Navbar() {
     )
 }
 
-const ListItem = React.forwardRef(({ className, title, children, ...props }, ref) => {
+const ListItem = forwardRef(({ className, title, children, ...props }, ref) => {
     return (
         <li>
             <NavigationMenuLink asChild>

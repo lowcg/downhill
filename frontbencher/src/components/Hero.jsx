@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React, { lazy } from 'react'
-
+import SecondaryButton from './SecondaryButton';
 
 function Hero() {
     return (
@@ -12,7 +12,7 @@ function Hero() {
                     <h2 className='text-[12px] sm:text-[16px] md:text-[20px] text-nowrap font-montserrat tracking-widest'>Translate your vision into reality</h2>
                 </div>
                 <div className='flex-col flex sm:flex-row gap-4 sm:gap-10  sm:items-center sm:justify-center mt-8 text-[12px] md:text-[14px]'>
-                    <button className='border-orange hover:bg-orange/30 duration-300 border-2 rounded-md align-middle font-geistMedium py-1 px-20 flex justify-center'>Explore</button>
+                    <SecondaryButton title='Explore' color='orange' hoverEffectOn={true} />
                     <button className='border-orange bg-orange hover:bg-or border-2 rounded-md align-middle font-geistMedium py-1 px-10 flex justify-center text-nowrap whitespace-nowrap'>Apply for admission</button>
                 </div>
             </div>
