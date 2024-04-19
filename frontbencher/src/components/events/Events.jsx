@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import HeaderTitle from '../HeaderTitle'
 import EventCard from '../EventCard';
 import UpcomingEvents from './UpcomingEvents';
+import SecondaryButton from '../SecondaryButton';
 const EventsSampleInfo = [
     {
         title: 'Event 1',
@@ -97,8 +98,8 @@ export default function Events() {
                         })
                     }
                 </div>
-
-                <button onClick={handleLoadMore} className='border-orange border-2 rounded-md align-middle font-geistMedium text-sm py-2 px-10 flex justify-center'>View All</button>
+                <SecondaryButton title='View All' padding='py-2 px-10' hoverEffectOn={false} onClick={handleLoadMore} textcolor='black'/>
+                
 
                 <UpcomingEvents />
 

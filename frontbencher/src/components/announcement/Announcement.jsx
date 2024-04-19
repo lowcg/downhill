@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import HeaderTitle from '../HeaderTitle'
 import AnnouncementCard from '../AnnouncementCard'
+import SecondaryButton from '../SecondaryButton'
 const AnnouncementSampleInfo = [
     {
         title: 'Even Semester exam admit card release.',
@@ -86,7 +87,8 @@ export default function Announcement() {
 
             </div>
             {visibleAnnouncements < totalAnnouncements && (
-                <button onClick={handleLoadMore} className='border-orange border-2 rounded-md align-middle font-geistMedium text-sm py-2 px-10 flex justify-center'>View All</button>
+                <SecondaryButton title='View All' padding='py-2 px-10' hoverEffectOn={false} onClick={handleLoadMore} textcolor='black'/>
+                
             )}
         </div>
     )
