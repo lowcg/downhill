@@ -8,13 +8,12 @@ import WeeklyUpdates from "@/components/weeklyUpdates/WeeklyUpdates";
 export default function Home() {
   return (
     <>
-      <Hero />
       <main className='min-h-screen bg-white text-deep-blue flex flex-col justify-center items-center font-montserrat'>
+        <Hero />
         <NewsBulletin />
         <Announcement />
         <Events />
         <WeeklyUpdates />
-        <Footer />
       </main>
     </>
   );

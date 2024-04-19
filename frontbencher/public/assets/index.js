@@ -10,7 +10,8 @@ import warning from './warning.svg'
 import heroBg from './heroBg.png'
 import share from './share.svg'
 import marq from './marq.svg'
-export const Images = {
+import search from './search.svg'
+export const ImagesOne = {
     AOT,
     fb,
     linkedin,
@@ -22,5 +23,6 @@ export const Images = {
     warning,
     heroBg,
     share,
-    marq
+    marq,
+    search
 }

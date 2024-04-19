@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import HeaderTitle from '../HeaderTitle'
-import { Images } from '../../../public/assets'
+import { Images, ImagesOne } from '../../../public/assets'
 import Image from 'next/image'
 import NewsCard from '../NewsCard'
 import Marquee from 'react-fast-marquee'
@@ -41,10 +41,10 @@ export default function NewsBulletin() {
           {
 
             maruqeeItems.map((item, index) => (
-                <div key={index} className='flex w-full items-center gap-2 py-2'>
-                  <span className="mx-4 font-geistRegular text-white text-sm">{item.items}</span>
-                  <Image src={Images.marq} className='mx-4' alt='img'/>
-                </div>
+              <div key={index} className='flex w-full items-center gap-2 py-2'>
+                <span className="mx-4 font-geistRegular text-white text-sm">{item.items}</span>
+                <Image src={ImagesOne.marq} className='mx-4' alt='img' />
+              </div>
             )
             )
           }
@@ -54,13 +54,13 @@ export default function NewsBulletin() {
         <HeaderTitle title={"News Bulletin"} />
         <div className='flex flex-col sm:flex-row w-full gap-4 sm:gap-10'>
           <div className='flex-col drop-shadow-md rounded-md bg-pure-white h-auto sm:h-[640px] w-full'>
-            <Image src={Images.heroBg} alt='heroBg' className='rounded-t-md h-[345px]' />
+            <Image src={ImagesOne.heroBg} alt='heroBg' className='rounded-t-md h-[345px]' />
             <div className='flex flex-col flex-1 px-10 py-12 gap-8'>
               <div className='flex w-full justify-between items-center'>
                 <div className='bg-orange text-white rounded-full px-4 py-1 w-auto sm:w-auto flex items-center justify-center text-sm font-geistRegular'>
                   Top News
                 </div>
-                <Image src={Images.share} alt='heroBg' />
+                <Image src={ImagesOne.share} alt='heroBg' />
               </div>
               <p>The admit card for the even semester examination has been released. The students are requested to download the admit card from the official website.</p>
               <p className='font-geistRegular text-base '>2m ago</p>
