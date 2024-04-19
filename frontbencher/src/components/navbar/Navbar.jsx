@@ -12,7 +12,8 @@ import {
 } from "@/components/ui/navigation-menu"
 import Image from "next/image"
 import { ImagesOne } from "../../../public/assets"
-
+import SecondaryButton from "../SecondaryButton"
+import PrimaryButton from "../PrimaryButton"
 const components = [
     {
         title: "Alert Dialog",
@@ -122,8 +123,9 @@ export default function Navbar() {
                 </div>
                 <div className="flex gap-6 items-center">
                     <Image src={ImagesOne.search} alt="Search" />
-                    <button className="bg-white flex items-center font-geistRegular justify-center text-deep-blue text-base px-6 py-1 rounded-lg ">Log in</button>
-                    <button className="bg-transparent flex items-center font-geistRegular justify-center text-white text-base px-6 py-1 border-[1px] border-white rounded-lg ">Contact Us</button>
+                    <PrimaryButton title='Log In' color='white' hoverEffectOn={false} padding='px-6 py-1' border='border-white'/>
+                    
+                    <SecondaryButton title='Contact Us' color='white' hoverEffectOn={false} padding='px-6'/>
                 </div>
             </NavigationMenu>
 
