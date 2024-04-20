@@ -8,7 +8,6 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import Image from "next/image"
 import { ImagesOne } from "../../../public/assets"
@@ -82,7 +81,7 @@ export default function Navbar() {
 
     return (
         <>
-            <NavigationMenu className={`px-10 py-2 w-full hidden lg:flex ${isScrolled ? "bg-deep-blue" : "bg-transparent"} justify-between`}>
+            <NavigationMenu className={`px-10 py-2 w-full hidden text-[16px] lg:flex ${isScrolled ? "bg-deep-blue" : "bg-transparent"} justify-between`}>
                 <div className="flex">
 
                     <NavigationMenuList className=" text-white flex gap-4">
@@ -112,20 +111,13 @@ export default function Navbar() {
                             })
                         }
 
-                        {/* <NavigationMenuItem>
-                    <Link href="/docs" legacyBehavior passHref>
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                            Documentation
-                        </NavigationMenuLink>
-                    </Link>
-                </NavigationMenuItem> */}
                     </NavigationMenuList>
                 </div>
                 <div className="flex gap-6 items-center">
                     <Image src={ImagesOne.search} alt="Search" />
-                    <PrimaryButton title='Log In' color='white' hoverEffectOn={false} padding='px-6 py-1' border='border-white'/>
+                    <PrimaryButton title='Log In' color='white' hoverEffectOn={true} padding='px-6 py-1' border='border-white'/>
                     
-                    <SecondaryButton title='Contact Us' color='white' hoverEffectOn={false} padding='px-6'/>
+                    <SecondaryButton title='Contact Us' color='white' hoverEffectOn={true} padding='px-6'/>
                 </div>
             </NavigationMenu>
 

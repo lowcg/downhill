@@ -47,7 +47,7 @@ export default function Events() {
     const totalEvents = EventsSampleInfo.length;
 
     const handleLoadMore = () => {
-        setVisibleEvents(prevCount => prevCount + 4);
+        setVisibleEvents(prevCount => prevCount + 3);
     };
 
     return (
@@ -98,7 +98,7 @@ export default function Events() {
                         })
                     }
                 </div>
-                <SecondaryButton title='View All' padding='py-2 px-10' hoverEffectOn={false} onClick={handleLoadMore} textcolor='black'/>
+                <SecondaryButton title='View All' padding='px-10' hoverEffectOn={true} onClick={handleLoadMore} textcolor='black'/>
                 
 
                 <UpcomingEvents />
