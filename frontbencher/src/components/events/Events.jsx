@@ -47,7 +47,8 @@ export default function Events() {
     const totalEvents = EventsSampleInfo.length;
 
     const handleLoadMore = () => {
-        setVisibleEvents(prevCount => prevCount + 3);
+        visibleEvents<totalEvents &&
+        setVisibleEvents(prevCount => prevCount + 6);
     };
 
     return (
@@ -57,10 +58,10 @@ export default function Events() {
                 <HeaderTitle title="Events" />
                 <div className='w-full flex flex-col gap-2 sm:gap-6'>
                     {
-                        Array.from({ length: Math.ceil(totalEvents / 6) }).map((_, index) => {
+                        Array.from({length: Math.ceil(visibleEvents / 6)}).map((_, index) => {
                             const start = index * 6;
                             const end = start + 6;
-                            const eventsSlice = EventsSampleInfo.slice(start, end);
+                            const eventsSlice = EventsSampleInfo.slice(start, visibleEvents);
                             return (
                                 <React.Fragment key={index}>
 
@@ -98,7 +99,7 @@ export default function Events() {
                         })
                     }
                 </div>
-                <SecondaryButton title='View All' padding='px-10' hoverEffectOn={true} onClick={handleLoadMore} textcolor='black'/>
+                <SecondaryButton disabled={visibleEvents>=totalEvents&&true} title='View All' padding='px-10' hoverEffectOn={true} onClick={handleLoadMore} textcolor='black'/>
                 
 
                 <UpcomingEvents />

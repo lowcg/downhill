@@ -87,8 +87,7 @@ export default function Announcement() {
 
             </div>
             {visibleAnnouncements < totalAnnouncements && (
-                <SecondaryButton title='View All' padding='px-10' hoverEffectOn={true} onClick={handleLoadMore} textcolor='black'/>
-                
+                <SecondaryButton title='View All' padding='px-10' hoverEffectOn={true} onClick={handleLoadMore} textcolor='black'/>  
             )}
         </div>
     )

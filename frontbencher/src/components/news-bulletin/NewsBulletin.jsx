@@ -43,7 +43,7 @@ export default function NewsBulletin() {
             maruqeeItems.map((item, index) => (
               <div key={index} className='flex w-full items-center gap-2 py-2'>
                 <span className="mx-4 font-geistRegular text-white text-sm">{item.items}</span>
-                <Image src={ImagesOne.marq} className='mx-4' alt='img' />
+                <Image src={ImagesOne.marq} className='mx-4' width={12} alt='img' />
               </div>
             )
             )
