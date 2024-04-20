@@ -112,13 +112,7 @@ export default function Navbar() {
                             })
                         }
 
-                        {/* <NavigationMenuItem>
-                    <Link href="/docs" legacyBehavior passHref>
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                            Documentation
-                        </NavigationMenuLink>
-                    </Link>
-                </NavigationMenuItem> */}
+                      
                     </NavigationMenuList>
                 </div>
                 <div className="flex gap-6 items-center">

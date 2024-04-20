@@ -66,7 +66,7 @@ export default function NewsBulletin() {
               <p className='font-geistRegular text-base '>2m ago</p>
             </div>
           </div>
-          <div className='flex-col drop-shadow-md rounded-md bg-pure-white h-[640px] w-full p-4 flex overflow-y-auto gap-4'>
+          <div className='flex-col drop-shadow-md rounded-md bg-pure-white h-[640px] w-full p-4 flex overflow-hidden gap-4'>
 
             {
               NewsSampleInfo.map((info, index) => (
