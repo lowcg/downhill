@@ -52,11 +52,11 @@ export default function Events({ upcomingEvents }) {
   };
 
   return (
-    <div className="bg-deep-blue w-full py-20">
+    <div className="bg-[#FBF9EF] w-full py-20 text-deep-blue">
       <div className="flex flex-col gap-[56px] items-center px-4 sm:px-20 pb-[56px] set-size">
         <div className="relative z-[9999]">
-          {/* <HeaderTitle title="Events" /> */}
-          <h1 className="text-6xl text-white font-geist font-black">Events</h1>
+          <HeaderTitle title="Events" />
+          {/* <h1 className="text-6xl font-geist font-black">Events</h1> */}
         </div>
         <div className="w-full flex flex-col gap-2 sm:gap-6">
           {Array.from({ length: Math.ceil(visibleEvents / 6) }).map(

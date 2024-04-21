@@ -35,8 +35,8 @@ export default function Home() {
           <div className="set-size">
             <Announcement announcements={sampleAnnouncements} />
           </div>
-            <Events upcomingEvents={sampleUpcomingEvents} />
           <div className="set-size">
+          <Events upcomingEvents={sampleUpcomingEvents} />
             <UpcomingEvents events={sampleUpcomingEvents} />
           </div>
           <WeeklyUpdates />

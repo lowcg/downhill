@@ -7,7 +7,7 @@ import LatestNews from "./LatestNews";
 
 const NewsBulletin = ({ news }) => (
   <>
-    <div className="flex flex-col  gap-[56px] items-center px-4 sm:px-20 w-full pb-[56px] mt-[56px]">
+    <div className="flex flex-col  gap-[56px] items-center px-4 sm:px-20 w-full py-[56px] bg-[#FBF9EF]">
       <HeaderTitle title={"News Bulletin"} />
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-10">
         <div className="flex-col drop-shadow rounded-lg bg-pure-white h-auto sm:h-[640px] w-full">
