@@ -1,21 +1,48 @@
-import React from 'react'
-import { Images, ImagesOne } from '../../public/assets'
-import Image from 'next/image'
+"use client";
+import { useState } from "react";
+import { twMerge } from "tailwind-merge";
+import { IoIosArrowUp as ArrowUp } from "react-icons/io";
 
-export default function NewsCard({ title, date }) {
-    return (
-        <>
-            <div className='flex h-auto sm:h-[200px]'>
-                <Image src={ImagesOne.heroBg} alt='cover' className='rounded-md h-[100px] w-[100px] sm:h-[200px] sm:w-[200px]' />
-                <div className='flex flex-col p-2 justify-between h-auto items-center'>
-                    <p className='font-montserrat text-md font-bold'>{title}</p>
-                    <div className='flex w-full justify-between items-center'>
+const NewsCard = ({ title, date, description }) => {
+  const [isOpen, setOpen] = useState(false);
+  return (
+    <div>
+      <p className="font-montserrat text-md font-bold">{title}</p>
+      <p className="font-geist font-medium text-sm text-neutral-500 mt-2 mb-4">
+        {date.toLocaleDateString("en-us", {
+          weekday: "long",
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        })}
+      </p>
+      {description && (
+        <p className="font-geist font-light">
+          {description.length > 200 ? (
+            <>
+              {isOpen ? description : description.substring(0, 200) + " . . . "}
+              <button
+                className={twMerge("text-secondary", isOpen && "block")}
+                onClick={() => setOpen(!isOpen)}
+              >
+                {isOpen ? (
+                  <div className="mt-4 items-center gap-2 flex">
+                    Less <ArrowUp />
+                  </div>
+                ) : (
+                  <span className="underline underline-offset-4">
+                    Read More
+                  </span>
+                )}
+              </button>
+            </>
+          ) : (
+            description
+          )}
+        </p>
+      )}
+    </div>
+  );
+};
 
-                        <p className='font-geistMedium text-base '>{date}</p>
-                        <Image src={ImagesOne.share} alt='heroBg' />
-                    </div>
-                </div>
-            </div>
-        </>
-    )
-}
+export default NewsCard;

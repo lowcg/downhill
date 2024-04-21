@@ -1,5 +1,8 @@
 "use client"
-import {useEffect,useState,forwardRef} from "react"
+
+import * as React from "react"
+import Link from "next/link"
+
 import { cn } from "@/lib/utils"
 import {
     NavigationMenu,
@@ -8,64 +11,19 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
+    navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import Image from "next/image"
-import { ImagesOne } from "../../../public/assets"
-import SecondaryButton from "../SecondaryButton"
-import PrimaryButton from "../PrimaryButton"
-const components = [
-    {
-        title: "Alert Dialog",
-        href: "/docs/primitives/alert-dialog",
-        description:
-            "A modal dialog that interrupts the user with important content and expects a response.",
-    },
-    {
-        title: "Hover Card",
-        href: "/docs/primitives/hover-card",
-        description:
-            "For sighted users to preview content available behind a link.",
-    },
-    {
-        title: "Progress",
-        href: "/docs/primitives/progress",
-        description:
-            "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-    },
-    {
-        title: "Scroll-area",
-        href: "/docs/primitives/scroll-area",
-        description: "Visually or semantically separates content.",
-    },
-    {
-        title: "Tabs",
-        href: "/docs/primitives/tabs",
-        description:
-            "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-    },
-    {
-        title: "Tooltip",
-        href: "/docs/primitives/tooltip",
-        description:
-            "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-    },
-]
-
-const navItems = [
-    "Academics",
-    "Departments",
-    "Research",
-    "Students",
-    "Faculty"
-]
-
+import SvgAotCover from "@/components/svg/AOTCover.svg";
+import SvgSearch from "@/components/svg/Search.svg";
+import components from '@/lib/data/navbar';
 
 export default function Navbar() {
 
 
-    const [isScrolled, setIsScrolled] = useState(false);
+    const [isScrolled, setIsScrolled] = React.useState(false);
 
-    useEffect(() => {
+    React.useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
             if (scrollPosition > 0) {
@@ -81,59 +39,124 @@ export default function Navbar() {
 
     return (
         <>
-            <NavigationMenu className={`px-10 py-2 w-full hidden text-[16px] lg:flex ${isScrolled ? "bg-deep-blue" : "bg-transparent"} justify-between`}>
+            <NavigationMenu className={`px-20 py-4 w-full hidden lg:flex ${isScrolled ? "bg-deep-blue" : "bg-transparent"} justify-between`}>
                 <div className="flex">
 
                     <NavigationMenuList className=" text-white flex gap-4">
                         <NavigationMenuItem className=" text-white">
-                            <Image src={ImagesOne.cover} alt="Academy of Technology" width={100} height={100} />
+                            <Image src="/assets/cover.svg" width={100} height={100} alt="AOT" />
                         </NavigationMenuItem>
-                        {
-                            navItems.map((item,ind) => {
-                                return (
-                                    <NavigationMenuItem key={ind} className="text-white">
-                                        <NavigationMenuTrigger className=" text-white">{item}</NavigationMenuTrigger>
-                                        <NavigationMenuContent >
-                                            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                                                {components.map((component) => (
-                                                    <ListItem
-                                                        key={component.title}
-                                                        title={component.title}
-                                                        href={component.href}
-                                                    >
-                                                        {component.description}
-                                                    </ListItem>
-                                                ))}
-                                            </ul>
-                                        </NavigationMenuContent>
-                                    </NavigationMenuItem>
-                                )
-                            })
-                        }
-
+                        <NavigationMenuItem className="text-white">
+                            <NavigationMenuTrigger className=" text-white">Academics</NavigationMenuTrigger>
+                            <NavigationMenuContent >
+                                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                    {components.map((component) => (
+                                        <ListItem
+                                            key={component.title}
+                                            title={component.title}
+                                            href={component.href}
+                                        >
+                                            {component.description}
+                                        </ListItem>
+                                    ))}
+                                </ul>
+                            </NavigationMenuContent>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <NavigationMenuTrigger>Departments</NavigationMenuTrigger>
+                            <NavigationMenuContent>
+                                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                    {components.map((component) => (
+                                        <ListItem
+                                            key={component.title}
+                                            title={component.title}
+                                            href={component.href}
+                                        >
+                                            {component.description}
+                                        </ListItem>
+                                    ))}
+                                </ul>
+                            </NavigationMenuContent>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <NavigationMenuTrigger>Research</NavigationMenuTrigger>
+                            <NavigationMenuContent>
+                                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                    {components.map((component) => (
+                                        <ListItem
+                                            key={component.title}
+                                            title={component.title}
+                                            href={component.href}
+                                        >
+                                            {component.description}
+                                        </ListItem>
+                                    ))}
+                                </ul>
+                            </NavigationMenuContent>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <NavigationMenuTrigger>Students</NavigationMenuTrigger>
+                            <NavigationMenuContent>
+                                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                    {components.map((component) => (
+                                        <ListItem
+                                            key={component.title}
+                                            title={component.title}
+                                            href={component.href}
+                                        >
+                                            {component.description}
+                                        </ListItem>
+                                    ))}
+                                </ul>
+                            </NavigationMenuContent>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <NavigationMenuTrigger>Faculty</NavigationMenuTrigger>
+                            <NavigationMenuContent>
+                                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                                    {components.map((component) => (
+                                        <ListItem
+                                            key={component.title}
+                                            title={component.title}
+                                            href={component.href}
+                                        >
+                                            {component.description}
+                                        </ListItem>
+                                    ))}
+                                </ul>
+                            </NavigationMenuContent>
+                        </NavigationMenuItem>
+                        {/* <NavigationMenuItem>
+                    <Link href="/docs" legacyBehavior passHref>
+                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            Documentation
+                        </NavigationMenuLink>
+                    </Link>
+                </NavigationMenuItem> */}
                     </NavigationMenuList>
                 </div>
                 <div className="flex gap-6 items-center">
-                    <Image src={ImagesOne.search} alt="Search" />
-                    <PrimaryButton title='Log In' color='white' hoverEffectOn={true} padding='px-6 py-1' border='border-white'/>
-                    
-                    <SecondaryButton title='Contact Us' color='white' hoverEffectOn={true} padding='px-6'/>
+                    <SvgSearch size={26} />
+                    <button className="bg-white flex items-center font-geist justify-center text-deep-blue text-base px-6 py-1 rounded">Log in</button>
+                    <button className="bg-transparent flex items-center font-geist justify-center text-white text-base px-6 py-1 border-[1px] border-white rounded ">Contact Us</button>
                 </div>
             </NavigationMenu>
+
+
 
 
             {/* // mobile view */}
             <NavigationMenu className={`px-4 py-4 w-full lg:hidden ${isScrolled ? "bg-deep-blue" : "bg-transparent"} justify-between`}>
                 <div className="flex px-1 justify-between w-full items-center">
-                    <Image src={ImagesOne.cover} alt="Academy of Technology" width={50} height={50} />
-                    <Image src={ImagesOne.search} alt="Academy of Technology" />
+                    <SvgAotCover size={26} />
+                    <SvgSearch size={26} />
                 </div>
             </NavigationMenu>
         </>
     )
 }
 
-const ListItem = forwardRef(({ className, title, children, ...props }, ref) => {
+const ListItem = React.forwardRef(({ className, title, children, ...props }, ref) => {
     return (
         <li>
             <NavigationMenuLink asChild>
