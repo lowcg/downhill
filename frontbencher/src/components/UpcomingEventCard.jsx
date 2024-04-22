@@ -7,7 +7,7 @@ const UpcomingEventCard = ({ className, title, description }) => {
   return (
     <div
       className={twMerge(
-        "flex flex-col bg-white rounded-md justify-center pb-4",
+        "flex flex-col bg-white rounded-md justify-between pb-4",
         className
       )}
     >

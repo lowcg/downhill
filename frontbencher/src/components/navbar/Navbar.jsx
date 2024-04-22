@@ -10,11 +10,10 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import Image from "next/image";
 import SvgAotCover from "@/components/svg/AOTCover.svg";
 import SvgSearch from "@/components/svg/Search.svg";
 import components from "@/lib/data/navbar";
-import AOT from "@/components/svg/AOT.svg";
+
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -36,9 +35,9 @@ export default function Navbar() {
   return (
     <>
       <NavigationMenu
-        className={`px-20 py-4 w-full hidden lg:flex ${
+        className={`px-10 py-3 w-full hidden lg:flex ${
           isScrolled ? "bg-deep-blue" : "bg-transparent"
-        } justify-between`}
+        } justify-between `}
       >
         <div className="flex">
           <NavigationMenuList className=" text-white flex gap-4">

@@ -15,7 +15,7 @@ const Announcement = ({ announcements }) => {
   return (
     <div className="flex flex-col gap-[56px] items-center px-4 sm:px-20 w-full pb-[56px]">
       <HeaderTitle title={"Announcement"} />
-      <div className="grid grid-cols-1 sm:grid-cols-2 justify-center items-center gap-y-10 gap-x-10 w-full align-middle">
+      <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-y-10 gap-x-10 w-full align-middle">
         {announcements
           .slice(0, visibleAnnouncements)
           .map((info, index) => (

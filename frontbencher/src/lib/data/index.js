@@ -9,26 +9,33 @@ export const generateDummyAnnouncement = (seed) => {
   };
 };
 
-export const sampleAnnouncements = Array(8).fill(0).map((_, i) => generateDummyAnnouncement(i));
+export const sampleAnnouncements = Array(8)
+  .fill(0)
+  .map((_, i) => generateDummyAnnouncement(i));
 
-function generateDummyUpcomingEvent(seed = 123) {
+function generateDummyEvent(seed = 123) {
   faker.seed(seed);
   return {
     title: faker.lorem.sentence(),
+    imgUrl: '/assets/heroBg.png',
+    date: faker.date.anytime(),
     description: faker.lorem.sentences({ min: 3, max: 6 }),
   };
 }
+export const sampleEvents = Array(8)
+  .fill(0)
+  .map((_, i) => generateDummyEvent(i * 1000));
 
 export const sampleUpcomingEvents = Array(8)
   .fill(0)
-  .map((_, i) => generateDummyUpcomingEvent(i));
+  .map((_, i) => generateDummyEvent(i));
 
 function generateDummyNews(seed = 123) {
   faker.seed(seed);
   return {
     title: faker.lorem.sentence(),
     date: faker.date.anytime(),
-    description: faker.lorem.sentences({min:6, max: 10})
+    description: faker.lorem.sentences({ min: 6, max: 10 }),
   };
 }
 

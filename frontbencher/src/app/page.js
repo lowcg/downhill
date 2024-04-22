@@ -7,9 +7,12 @@ import SvgMarquee from "@/components/svg/Marquee.svg";
 import maruqeeItems from "@/lib/data/marquee.json";
 import Marquee from "react-fast-marquee";
 import UpcomingEvents from "@/components/events/UpcomingEvents";
-import { sampleUpcomingEvents } from "@/lib/data";
-import { sampleAnnouncements } from "@/lib/data";
-import { sampleNews } from "@/lib/data";
+import {
+  sampleUpcomingEvents,
+  sampleAnnouncements,
+  sampleNews,
+  sampleEvents,
+} from "@/lib/data";
 
 export default function Home() {
   return (
@@ -24,6 +27,7 @@ export default function Home() {
                   {item.items}
                 </span>
                 <SvgMarquee size={26} />
+                
               </div>
             ))}
           </Marquee>
@@ -36,7 +40,7 @@ export default function Home() {
             <Announcement announcements={sampleAnnouncements} />
           </div>
           <div className="set-size">
-          <Events upcomingEvents={sampleUpcomingEvents} />
+          <Events events={sampleUpcomingEvents} />
             <UpcomingEvents events={sampleUpcomingEvents} />
           </div>
           <WeeklyUpdates />
