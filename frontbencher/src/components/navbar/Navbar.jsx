@@ -5,11 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import SvgAotCover from "@/components/svg/AOTCover.svg";
 import SvgSearch from "@/components/svg/Search.svg";
-
-import PrimaryButton from "../PrimaryButton";
-import SecondaryButton from "../SecondaryButton";
 import Dropdown from "./dropdown";
-
 export default function Navbar() {
 
 
