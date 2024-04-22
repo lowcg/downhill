@@ -10,10 +10,11 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  
 } from "@/components/ui/navigation-menu";
 import SvgAotCover from "@/components/svg/AOTCover.svg";
 import SvgSearch from "@/components/svg/Search.svg";
-import components from "@/lib/data/navbar";
+import {academics,research,students,faculty,subItem} from "@/lib/data/navbar";
 import { RxHamburgerMenu as SvgHamburger } from "react-icons/rx";
 import Hamburger from "../hamburger";
 import A from "@/components/svg/A.svg";
@@ -61,51 +62,53 @@ export default function Navbar() {
                 <T />
               </div>
             </NavigationMenuItem>
-            <NavigationMenuItem className="text-white">
-              <NavigationMenuTrigger className=" text-white">
-                Academics
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {components.map((component) => (
-                    <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
-                    >
-                      {component.description}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Departments</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {components.map((component) => (
-                    <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
-                    >
-                      {component.description}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
+            <NavigationMenuItem className="text-white overflow-visible">
+  <NavigationMenuTrigger className="text-white">
+    Academics
+    
+  </NavigationMenuTrigger>
+  <NavigationMenuContent >
+    <ul className="block w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+      {academics.map((academic) => (
+        <NavigationMenuItem key={academic.title} className="overflow-visible">
+          <NavigationMenuTrigger>
+            <ListItem
+              title={academic.title}
+              href={academic.href}
+            >
+              
+            </ListItem>
+          </NavigationMenuTrigger>
+          <NavigationMenuContent c>
+            <ul className="block w-[400px] h-[200px] ">
+              {Array.isArray(academic.subItems) && academic.subItems.map((subItem) => (
+                <ListItem
+                  key={subItem.title}
+                  title={subItem.title}
+                  href={subItem.href}
+                >
+                  {subItem.description}
+                </ListItem>
+              ))}
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+      ))}
+    </ul>
+  </NavigationMenuContent>
+</NavigationMenuItem>
+            
             <NavigationMenuItem>
               <NavigationMenuTrigger>Research</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {components.map((component) => (
+                <ul className="block w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                  {research.map((researches) => (
                     <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
+                      key={researches.title}
+                      title={researches.title}
+                      href={researches.href}
                     >
-                      {component.description}
+                      
                     </ListItem>
                   ))}
                 </ul>
@@ -114,14 +117,14 @@ export default function Navbar() {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Students</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {components.map((component) => (
+                <ul className="block w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                  {students.map((student) => (
                     <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
+                      key={student.title}
+                      title={student.title}
+                      href={student.href}
                     >
-                      {component.description}
+                     
                     </ListItem>
                   ))}
                 </ul>
@@ -130,14 +133,14 @@ export default function Navbar() {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Faculty</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {components.map((component) => (
+                <ul className="block w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                  {faculty.map((facult) => (
                     <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
+                      key={facult.title}
+                      title={facult.title}
+                      href={facult.href}
                     >
-                      {component.description}
+                      
                     </ListItem>
                   ))}
                 </ul>

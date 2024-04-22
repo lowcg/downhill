@@ -8,11 +8,15 @@ import { twMerge } from "tailwind-merge";
 const Announcement = ({ announcements, className }) => {
   const [visibleAnnouncements, setVisibleAnnouncements] = useState(4);
   const totalAnnouncements = announcements.length;
-
+  const [isExpanded, setIsExpanded] = useState(false);
   const handleLoadMore = () => {
     setVisibleAnnouncements((prevCount) => prevCount + 4);
+    setIsExpanded(true);
   };
-
+  const handleViewLess = () => {
+    setVisibleAnnouncements(4);
+    setIsExpanded(false);
+  };
   return (
     <section
       className={twMerge(
@@ -41,6 +45,15 @@ const Announcement = ({ announcements, className }) => {
           textcolor="black"
         />
       )}
+      {isExpanded && (
+    <SecondaryButton
+      title="View Less"
+      padding="px-10"
+      hoverEffectOn={true}
+      onClick={handleViewLess}
+      textcolor="black"
+    />
+  )}
     </section>
   );
 };
