@@ -7,11 +7,15 @@ import SecondaryButton from "../SecondaryButton";
 const Announcement = ({ announcements }) => {
   const [visibleAnnouncements, setVisibleAnnouncements] = useState(4);
   const totalAnnouncements = announcements.length;
-
+  const [isExpanded, setIsExpanded] = useState(false);
   const handleLoadMore = () => {
     setVisibleAnnouncements((prevCount) => prevCount + 4);
+    setIsExpanded(true);
   };
-
+  const handleViewLess = () => {
+    setVisibleAnnouncements(4);
+    setIsExpanded(false);
+  };
   return (
     <div className="flex flex-col gap-[56px] items-center px-4 sm:px-20 w-full pb-[56px]">
       <HeaderTitle title={"Announcement"} />
@@ -37,6 +41,15 @@ const Announcement = ({ announcements }) => {
           textcolor="black"
         />
       )}
+      {isExpanded && (
+    <SecondaryButton
+      title="View Less"
+      padding="px-10"
+      hoverEffectOn={true}
+      onClick={handleViewLess}
+      textcolor="black"
+    />
+  )}
     </div>
   );
 }

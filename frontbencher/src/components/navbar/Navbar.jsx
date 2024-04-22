@@ -30,18 +30,17 @@ export default function Navbar() {
     }, []);
 
     return (
-        <>
-           <div className="fixed z-10 flex w-full bg-transparent my-2 justify-between ">
+        <><div className={`fixed z-10 flex w-full py-2 justify-between ${isScrolled ? 'bg-deep-blue' : 'bg-transparent'}`}>
             {/* <SvgAotCover size={10}
                 className="mx-6"/> */}
                 
                
             <div className="flex gap-6 items-center justify-start">   
             <Image src="/assets/cover.svg" width={100} height={100} className="mx-6"/>
-            <Dropdown title="Academic" subdropdownone="UG Programs"/>  
-            <Dropdown title="Research" subdropdownone="UG Programs"/>  
-            <Dropdown title="Student" subdropdownone="UG Programs"/>  
-            <Dropdown title="Faculty" subdropdownone="UG Programs"/>  
+            <Dropdown title="Academic" drawertitles={["UG Programs","Resources","Admissions"]} subtitles={["Department"]} subitems={["PG Programs","Program Structure","Regulations","Curriculam"]}/>  
+            <Dropdown title="Research" subtitles={["Current Research","Past Reasearch","Research Facilities"]}/>  
+            <Dropdown title="Students" subtitles={["Life@AOT","Campus Facilities","Carrer Services","Events"]}/>  
+            <Dropdown title="Faculty" subtitles={["Faculty List","Faculty Positions","Carrer Benefits@ AOT"]}/>  
             </div>
             <div className="flex">
           <SvgSearch size={26} className="mx-5"/>
