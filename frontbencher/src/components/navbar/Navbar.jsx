@@ -1,7 +1,7 @@
 "use client";
 
 import { twMerge } from "tailwind-merge";
-import * as React from "react";
+import { useState, useEffect, forwardRef } from "react";
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
@@ -14,11 +14,14 @@ import {
 import SvgAotCover from "@/components/svg/AOTCover.svg";
 import SvgSearch from "@/components/svg/Search.svg";
 import components from "@/lib/data/navbar";
+import { RxHamburgerMenu as SvgHamburger } from "react-icons/rx";
+import Hamburger from "../hamburger";
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = React.useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isHamOpen, setHamOpen] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       if (scrollPosition > 0) {
@@ -31,6 +34,10 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isHamOpen ? "hidden" : "auto";
+  }, [isHamOpen]);
 
   return (
     <>
@@ -127,13 +134,6 @@ export default function Navbar() {
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
-            {/* <NavigationMenuItem>
-                    <Link href="/docs" legacyBehavior passHref>
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                            Documentation
-                        </NavigationMenuLink>
-                    </Link>
-                </NavigationMenuItem> */}
           </NavigationMenuList>
         </div>
         <div className="flex gap-6 items-center">
@@ -150,40 +150,51 @@ export default function Navbar() {
       {/* // mobile view */}
       <NavigationMenu
         className={twMerge(
-          "px-4 py-4 w-full lg:hidden justify-between transition-colors duration-300",
-          isScrolled ? "bg-deep-blue" : "bg-transparent"
+          "block px-4 py-4 w-full lg:hidden justify-between transition-colors duration-300",
+          isScrolled || isHamOpen ? "bg-deep-blue" : "bg-transparent",
+          isHamOpen && "h-screen"
         )}
       >
-        <div className="flex px-1 justify-between w-full items-center">
+        <div className="flex px-1 justify-between w-full h-fit items-center">
           <SvgAotCover size={26} />
-          <SvgSearch size={26} />
+          <div className="grid grid-cols-2 items-center gap-4">
+            <SvgSearch size={26} />
+            <SvgHamburger
+              size={26}
+              className="text-white"
+              onClick={() => setHamOpen(!isHamOpen)}
+            />
+          </div>
         </div>
+        {isHamOpen && (
+          <div className="py-8 h-full">
+            <Hamburger />
+          </div>
+        )}
       </NavigationMenu>
     </>
   );
 }
 
-const ListItem = React.forwardRef(
-  ({ className, title, children, ...props }, ref) => {
-    return (
-      <li>
-        <NavigationMenuLink asChild>
-          <a
-            ref={ref}
-            className={cn(
-              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-              className
-            )}
-            {...props}
-          >
-            <div className="text-sm font-medium leading-none">{title}</div>
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-              {children}
-            </p>
-          </a>
-        </NavigationMenuLink>
-      </li>
-    );
-  }
-);
+const ListItem = forwardRef(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
 ListItem.displayName = "ListItem";
