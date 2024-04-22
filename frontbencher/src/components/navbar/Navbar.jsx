@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {React,useState,useEffect,Fragment} from "react"
 import Link from "next/link"
@@ -25,9 +25,9 @@ export default function Navbar() {
             }
         };
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
     return (
         <><div className={`fixed z-10 flex w-full py-2 justify-between ${isScrolled ? 'bg-deep-blue' : 'bg-transparent'}`}>

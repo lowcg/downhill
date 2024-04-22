@@ -3,6 +3,8 @@ import { twMerge } from "tailwind-merge";
 import { useEffect, useRef, useState } from "react";
 import EventCard from "../EventCard";
 import { register } from "swiper/element/bundle";
+import HeaderTitle from "@/components/HeaderTitle";
+
 import {
   FaArrowLeft as SvgArrowLeft,
   FaArrowRight as SvgArrowRight,
@@ -19,22 +21,36 @@ const Events = ({ events }) => {
       loop: true,
       initialSlide: 2,
       centeredSlides: true,
-      spaceBetween: 40,
+      spaceBetween: 25,
       pagination: {
         el: ".sbull",
         clickable: true,
         renderBullet: (_, className) =>
           `<span class="${className} ${twMerge(
-            "inline-block  rounded-full bg-white opacity-40 mx-1 w-[0.5rem] h-[0.5rem]"
+            "inline-block  rounded-full bg-deep-blue opacity-40 mx-1 w-[0.5rem] h-[0.5rem]"
           )}"></span>`,
+      },
+      breakpoints:{
+        375:{
+          slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 1,
+        },
+        820: {
+          slidesPerView: 1,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 25,
+        },
       },
       paginationDynamicBullets: true,
       autoplay: { delay: 4000 },
-      slidesPerView: 3,
       on: {
         slideChange: () => {
           if (swiperRef.current && swiperRef.current.swiper) {
-            console.log(swiperRef.current.swiper.activeIndex);
+            setActiveIndex(swiperRef.current.swiper.realIndex);
           }
         },
       },
@@ -46,29 +62,32 @@ const Events = ({ events }) => {
   }, []);
 
   return (
-    <div className="bg-deep-blue w-full py-20">
+    <div className="bg-[#FBF9EF] w-full pb-20 pt-10">
+        <div className="w-full flex justify-center mb-10">
+        <HeaderTitle title="Events" />
+        </div>
       <div className="set-size m-auto  px-4 sm:px-20">
-        <h1 className="text-6xl text-white font-geist font-black text-center mb-16">
+        {/* <h1 className="text-6xl text-white font-geist font-black text-center mb-16">
           Events
-        </h1>
+        </h1> */}
         <div className="text-white relative">
           <swiper-container init="false" ref={swiperRef}>
             {events.map((event, i) => (
               <swiper-slide key={i}>
-                <EventCard {...event} isActive={false} />
+                <EventCard {...event} isActive={i==activeIndex} />
               </swiper-slide>
             ))}
           </swiper-container>
           <div className="flex justify-between items-center mt-8">
             <button
-              className="swiper-nav-btn"
+              className="swiper-nav-btn bg-deep-blue text-white"
               onClick={() => swiperRef.current.swiper.slidePrev()}
             >
               <SvgArrowLeft size={16} />
             </button>
             <div className="sbull bg-transparent flex items-center"></div>
             <button
-              className="swiper-nav-btn"
+              className="swiper-nav-btn bg-deep-blue text-white"
               onClick={() => swiperRef.current.swiper.slideNext()}
             >
               <SvgArrowRight size={16} />

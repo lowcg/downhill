@@ -27,6 +27,7 @@ export default function Home() {
                   {item.items}
                 </span>
                 <SvgMarquee size={26} />
+                
               </div>
             ))}
           </Marquee>
@@ -38,8 +39,8 @@ export default function Home() {
           <div className="set-size">
             <Announcement announcements={sampleAnnouncements} />
           </div>
-          <Events events={sampleEvents} />
           <div className="set-size">
+          <Events events={sampleUpcomingEvents} />
             <UpcomingEvents events={sampleUpcomingEvents} />
           </div>
           <WeeklyUpdates />
