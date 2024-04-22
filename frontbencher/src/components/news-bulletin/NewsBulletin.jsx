@@ -4,10 +4,11 @@ import HeaderTitle from "../HeaderTitle";
 import { Images, ImagesOne } from "../../../public/assets";
 import Image from "next/image";
 import LatestNews from "./LatestNews";
+import { twMerge } from "tailwind-merge"; 
 
-const NewsBulletin = ({ news }) => (
+const NewsBulletin = ({ news, className }) => (
   <>
-    <div className="flex flex-col  gap-[56px] items-center px-4 sm:px-20 w-full py-[56px] bg-[#FBF9EF]">
+    <section className={twMerge("flex flex-col  gap-[56px] items-center px-4 sm:px-20 py-[56px]", className)}>
       <HeaderTitle title={"News Bulletin"} />
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 sm:gap-10">
         <div className="flex-col drop-shadow rounded-lg bg-pure-white h-auto sm:h-[640px] w-full">
@@ -32,7 +33,7 @@ const NewsBulletin = ({ news }) => (
         </div>
         <LatestNews news={news} />
       </div>
-    </div>
+    </section>
   </>
 );
 

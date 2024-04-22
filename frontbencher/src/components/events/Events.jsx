@@ -10,7 +10,7 @@ import {
   FaArrowRight as SvgArrowRight,
 } from "react-icons/fa";
 
-const Events = ({ events }) => {
+const Events = ({ events, className }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const swiperRef = useRef();
@@ -30,8 +30,8 @@ const Events = ({ events }) => {
             "inline-block  rounded-full bg-deep-blue opacity-40 mx-1 w-[0.5rem] h-[0.5rem]"
           )}"></span>`,
       },
-      breakpoints:{
-        375:{
+      breakpoints: {
+        375: {
           slidesPerView: 1,
         },
         640: {
@@ -62,19 +62,16 @@ const Events = ({ events }) => {
   }, []);
 
   return (
-    <div className="bg-[#FBF9EF] w-full pb-20 pt-10">
-        <div className="w-full flex justify-center mb-10">
+    <section className={twMerge("w-full pb-20 pt-10", className)}>
+      <div className="w-full flex justify-center mb-20">
         <HeaderTitle title="Events" />
-        </div>
+      </div>
       <div className="set-size m-auto  px-4 sm:px-20">
-        {/* <h1 className="text-6xl text-white font-geist font-black text-center mb-16">
-          Events
-        </h1> */}
         <div className="text-white relative">
           <swiper-container init="false" ref={swiperRef}>
             {events.map((event, i) => (
               <swiper-slide key={i}>
-                <EventCard {...event} isActive={i==activeIndex} />
+                <EventCard {...event} isActive={i == activeIndex} />
               </swiper-slide>
             ))}
           </swiper-container>
@@ -96,7 +93,7 @@ const Events = ({ events }) => {
           <div className="absolute -right-4 top-0 bottom-0 flex items-center"></div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

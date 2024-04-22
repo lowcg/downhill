@@ -1,5 +1,6 @@
 "use client";
 
+import { twMerge } from "tailwind-merge";
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import {
@@ -13,7 +14,6 @@ import {
 import SvgAotCover from "@/components/svg/AOTCover.svg";
 import SvgSearch from "@/components/svg/Search.svg";
 import components from "@/lib/data/navbar";
-
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -35,19 +35,14 @@ export default function Navbar() {
   return (
     <>
       <NavigationMenu
-        className={`px-10 py-3 w-full hidden lg:flex ${
-          isScrolled ? "bg-deep-blue" : "bg-transparent"
-        } justify-between `}
+        className={twMerge(
+          "px-10 py-3 w-full hidden lg:flex transition-colors duration-300 justify-between",
+          isScrolled ? "bg-deep-blue" : "bg-deep-blue/0"
+        )}
       >
         <div className="flex">
           <NavigationMenuList className=" text-white flex gap-4">
             <NavigationMenuItem className=" text-white">
-              {/* <Image
-                src={AOT}
-                width={100}
-                height={100}
-                alt="AOT"
-              /> */}
               <SvgAotCover />
             </NavigationMenuItem>
             <NavigationMenuItem className="text-white">
@@ -154,9 +149,10 @@ export default function Navbar() {
 
       {/* // mobile view */}
       <NavigationMenu
-        className={`px-4 py-4 w-full lg:hidden ${
+        className={twMerge(
+          "px-4 py-4 w-full lg:hidden justify-between transition-colors duration-300",
           isScrolled ? "bg-deep-blue" : "bg-transparent"
-        } justify-between`}
+        )}
       >
         <div className="flex px-1 justify-between w-full items-center">
           <SvgAotCover size={26} />
