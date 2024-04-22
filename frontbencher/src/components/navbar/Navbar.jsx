@@ -14,6 +14,9 @@ import {
 import SvgAotCover from "@/components/svg/AOTCover.svg";
 import SvgSearch from "@/components/svg/Search.svg";
 import components from "@/lib/data/navbar";
+import A from "@/components/svg/A.svg";
+import O from "@/components/svg/O.svg";
+import T from "@/components/svg/T.svg";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -43,7 +46,13 @@ export default function Navbar() {
         <div className="flex">
           <NavigationMenuList className=" text-white flex gap-4">
             <NavigationMenuItem className=" text-white">
-              <SvgAotCover />
+              <div className="flex -space-x-2">
+                <A />
+                <div className="animate-spin-slow">
+                  <O />
+                </div>
+                <T />
+              </div>
             </NavigationMenuItem>
             <NavigationMenuItem className="text-white">
               <NavigationMenuTrigger className=" text-white">
@@ -155,7 +164,13 @@ export default function Navbar() {
         )}
       >
         <div className="flex px-1 justify-between w-full items-center">
-          <SvgAotCover size={26} />
+          <div className="flex -space-x-2">
+            <A />
+            <div className="animate-spin-slow">
+              <O />
+            </div>
+            <T />
+          </div>
           <SvgSearch size={26} />
         </div>
       </NavigationMenu>
