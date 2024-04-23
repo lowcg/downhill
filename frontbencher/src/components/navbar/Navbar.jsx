@@ -10,11 +10,16 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  
 } from "@/components/ui/navigation-menu";
 import SvgAotCover from "@/components/svg/AOTCover.svg";
 import SvgSearch from "@/components/svg/Search.svg";
-import {academics,research,students,faculty,subItem} from "@/lib/data/navbar";
+import {
+  academics,
+  research,
+  students,
+  faculty,
+  subItem,
+} from "@/lib/data/navbar";
 import { RxHamburgerMenu as SvgHamburger } from "react-icons/rx";
 import Hamburger from "../hamburger";
 import A from "@/components/svg/A.svg";
@@ -63,41 +68,42 @@ export default function Navbar() {
               </div>
             </NavigationMenuItem>
             <NavigationMenuItem className="text-white overflow-visible">
-  <NavigationMenuTrigger className="text-white">
-    Academics
-    
-  </NavigationMenuTrigger>
-  <NavigationMenuContent >
-    <ul className="block w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-      {academics.map((academic) => (
-        <NavigationMenuItem key={academic.title} className="overflow-visible">
-          <NavigationMenuTrigger>
-            <ListItem
-              title={academic.title}
-              href={academic.href}
-            >
-              
-            </ListItem>
-          </NavigationMenuTrigger>
-          <NavigationMenuContent c>
-            <ul className="block w-[400px] h-[200px] ">
-              {Array.isArray(academic.subItems) && academic.subItems.map((subItem) => (
-                <ListItem
-                  key={subItem.title}
-                  title={subItem.title}
-                  href={subItem.href}
-                >
-                  {subItem.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-      ))}
-    </ul>
-  </NavigationMenuContent>
-</NavigationMenuItem>
-            
+              <NavigationMenuTrigger className="text-white">
+                Academics
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="block w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                  {academics.map((academic) => (
+                    <NavigationMenuItem
+                      key={academic.title}
+                      className="overflow-visible"
+                    >
+                      <NavigationMenuTrigger>
+                        <ListItem
+                          title={academic.title}
+                          href={academic.href}
+                        ></ListItem>
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent c>
+                        <ul className="block w-[400px] h-[200px] ">
+                          {Array.isArray(academic.subItems) &&
+                            academic.subItems.map((subItem) => (
+                              <ListItem
+                                key={subItem.title}
+                                title={subItem.title}
+                                href={subItem.href}
+                              >
+                                {subItem.description}
+                              </ListItem>
+                            ))}
+                        </ul>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  ))}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
             <NavigationMenuItem>
               <NavigationMenuTrigger>Research</NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -107,9 +113,7 @@ export default function Navbar() {
                       key={researches.title}
                       title={researches.title}
                       href={researches.href}
-                    >
-                      
-                    </ListItem>
+                    ></ListItem>
                   ))}
                 </ul>
               </NavigationMenuContent>
@@ -123,9 +127,7 @@ export default function Navbar() {
                       key={student.title}
                       title={student.title}
                       href={student.href}
-                    >
-                     
-                    </ListItem>
+                    ></ListItem>
                   ))}
                 </ul>
               </NavigationMenuContent>
@@ -139,9 +141,7 @@ export default function Navbar() {
                       key={facult.title}
                       title={facult.title}
                       href={facult.href}
-                    >
-                      
-                    </ListItem>
+                    ></ListItem>
                   ))}
                 </ul>
               </NavigationMenuContent>
@@ -168,7 +168,7 @@ export default function Navbar() {
         )}
       >
         <div className="flex px-1 justify-between w-full h-fit items-center">
-        <div className="flex -space-x-2">
+          <div className="flex -space-x-2">
             <A />
             <div className="animate-spin-slow">
               <O />

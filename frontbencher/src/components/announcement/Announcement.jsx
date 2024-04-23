@@ -46,14 +46,14 @@ const Announcement = ({ announcements, className }) => {
         />
       )}
       {isExpanded && (
-    <SecondaryButton
-      title="View Less"
-      padding="px-10"
-      hoverEffectOn={true}
-      onClick={handleViewLess}
-      textcolor="black"
-    />
-  )}
+        <SecondaryButton
+          title="View Less"
+          padding="px-10"
+          hoverEffectOn={true}
+          onClick={handleViewLess}
+          textcolor="black"
+        />
+      )}
     </section>
   );
 };
