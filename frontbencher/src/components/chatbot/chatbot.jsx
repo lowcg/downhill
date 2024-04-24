@@ -1,6 +1,6 @@
 "use client"
 
-import { React,useEffect } from 'react';
+import { useEffect } from 'react';
 
 export default function Bot() {
   useEffect(() => {
@@ -16,12 +16,12 @@ export default function Bot() {
           "lazySocket": true,
           "themeName": "prism",
           "botName": "AI-Assistant",
-          "stylesheet": "https://webchat-styler-css.botpress.app/prod/64fa7978-e843-41b5-8cc1-d57ff23092a0/v86173/style.css",
+          "stylesheet": "https://webchat-styler-css.botpress.app/prod/64fa7978-e843-41b5-8cc1-d57ff23092a0/v95125/style.css",
           "frontendVersion": "v1",
           "useSessionStorage": true,
           "theme": "prism",
           "themeColor": "#2563eb"
-    });
+        });
     }
     const script = document.createElement('script');
     script.src = "https://cdn.botpress.cloud/webchat/v1/inject.js";
