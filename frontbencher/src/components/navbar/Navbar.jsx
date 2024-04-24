@@ -4,13 +4,15 @@ import { twMerge } from "tailwind-merge";
 import { useState, useEffect, forwardRef } from "react";
 import { cn } from "@/lib/utils";
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarTrigger,
+} from "@/components/ui/menubar";
+
 import SvgAotCover from "@/components/svg/AOTCover.svg";
 import SvgSearch from "@/components/svg/Search.svg";
 import {
@@ -50,15 +52,11 @@ export default function Navbar() {
 
   return (
     <>
-      <NavigationMenu
-        className={twMerge(
-          "px-10 py-3 w-full hidden lg:flex transition-colors duration-300 justify-between",
-          isScrolled ? "bg-deep-blue" : "bg-deep-blue/0"
-        )}
-      >
-        <div className="flex">
-          <NavigationMenuList className=" text-white flex gap-4">
-            <NavigationMenuItem className=" text-white">
+      
+        <Menubar> 
+        <MenubarMenu className=" text-white flex gap-4">
+        <MenubarContent>
+        <MenubarItem className=" text-white">
               <div className="flex -space-x-2">
                 <A />
                 <div className="animate-spin-slow">
@@ -66,130 +64,21 @@ export default function Navbar() {
                 </div>
                 <T />
               </div>
-            </NavigationMenuItem>
-            <NavigationMenuItem className="text-white overflow-visible">
-              <NavigationMenuTrigger className="text-white">
-                Academics
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="block w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {academics.map((academic) => (
-                    <NavigationMenuItem
-                      key={academic.title}
-                      className="overflow-visible"
-                    >
-                      <NavigationMenuTrigger>
-                        <ListItem
-                          title={academic.title}
-                          href={academic.href}
-                        ></ListItem>
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent c>
-                        <ul className="block w-[400px] h-[200px] ">
-                          {Array.isArray(academic.subItems) &&
-                            academic.subItems.map((subItem) => (
-                              <ListItem
-                                key={subItem.title}
-                                title={subItem.title}
-                                href={subItem.href}
-                              >
-                                {subItem.description}
-                              </ListItem>
-                            ))}
-                        </ul>
-                      </NavigationMenuContent>
-                    </NavigationMenuItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Research</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="block w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {research.map((researches) => (
-                    <ListItem
-                      key={researches.title}
-                      title={researches.title}
-                      href={researches.href}
-                    ></ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Students</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="block w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {students.map((student) => (
-                    <ListItem
-                      key={student.title}
-                      title={student.title}
-                      href={student.href}
-                    ></ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Faculty</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="block w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {faculty.map((facult) => (
-                    <ListItem
-                      key={facult.title}
-                      title={facult.title}
-                      href={facult.href}
-                    ></ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </div>
-        <div className="flex gap-6 items-center">
-          <SvgSearch size={26} />
-          <button className="bg-white flex items-center font-geist justify-center text-deep-blue text-base px-6 py-1 rounded">
-            Log in
-          </button>
-          <button className="bg-transparent flex items-center font-geist justify-center text-white text-base px-6 py-1 border-[1px] border-white rounded ">
-            Contact Us
-          </button>
-        </div>
-      </NavigationMenu>
-
-      {/* // mobile view */}
-      <NavigationMenu
-        className={twMerge(
-          "block px-4 py-4 w-full lg:hidden justify-between transition-colors duration-300",
-          isScrolled || isHamOpen ? "bg-deep-blue" : "bg-transparent",
-          isHamOpen && "h-screen"
-        )}
-      >
-        <div className="flex px-1 justify-between w-full h-fit items-center">
-          <div className="flex -space-x-2">
-            <A />
-            <div className="animate-spin-slow">
-              <O />
-            </div>
-            <T />
-          </div>
-          <div className="grid grid-cols-2 items-center gap-4">
-            <SvgSearch size={26} />
-            <SvgHamburger
-              size={26}
-              className="text-white"
-              onClick={() => setHamOpen(!isHamOpen)}
-            />
-          </div>
-        </div>
-        {isHamOpen && (
-          <div className="py-8 h-full">
-            <Hamburger />
-          </div>
-        )}
-      </NavigationMenu>
+            </MenubarItem>
+          <MenubarTrigger>File</MenubarTrigger>
+          
+            <MenubarItem>
+              New Tab <MenubarShortcut>⌘T</MenubarShortcut>
+            </MenubarItem>
+            <MenubarItem>New Window</MenubarItem>
+            <MenubarSeparator />
+            <MenubarItem>Share</MenubarItem>
+            <MenubarSeparator />
+            <MenubarItem>Print</MenubarItem>
+          </MenubarContent>
+        </MenubarMenu>
+        
+      </Menubar>
     </>
   );
 }
