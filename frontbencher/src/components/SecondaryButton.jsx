@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 
 function SecondaryButton({ title = "View All", hoverEffectOn = true, color = "orange", padding = "px-10", textcolor = "text-white", onClick = undefined, disabled = false }) {
