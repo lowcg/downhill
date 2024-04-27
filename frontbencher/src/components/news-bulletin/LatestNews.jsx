@@ -1,3 +1,4 @@
+"use client"
 import NewsCard from "../NewsCard";
 import { FaArrowDown } from "react-icons/fa6";
 
