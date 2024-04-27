@@ -1,4 +1,3 @@
-"use client"
 import HamMenu from "./HamMenu";
 import HamMenuItem from "./HamMenuItem";
 
