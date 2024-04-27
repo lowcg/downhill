@@ -63,7 +63,7 @@ body {
 
 @layer components {
   .set-size {
-    @apply w-full md:w-[70rem] lg:w-[90rem] m-auto;
+    @apply w-full md:w-[70%] lg:w-[90%] m-auto;
   }
 
   .swiper-nav-btn {
