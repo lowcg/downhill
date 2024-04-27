@@ -1,10 +1,11 @@
+"use client"
 import { useState } from "react";
 import {
   MdKeyboardArrowUp as SvgOpenArrow,
   MdKeyboardArrowDown as SvgCloseArrow,
 } from "react-icons/md";
 
-const HamMenu = ({ label, children, active = false}) => {
+const HamMenu = ({ label, children, active = false }) => {
   const [isOpen, setOpen] = useState(active);
 
   return (
