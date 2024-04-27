@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import SecondaryButton from "./SecondaryButton";
 import PrimaryButton from "./PrimaryButton";

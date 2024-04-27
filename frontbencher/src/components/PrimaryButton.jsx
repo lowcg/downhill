@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React from "react";
 
 function PrimaryButton({
@@ -18,6 +18,7 @@ function PrimaryButton({
         hoverEffectOn &&
         (color === "orange" ? "hover:bg-orange/80" : "hover:bg-white/80")
       } ${padding} ${border} font-geistRegular duration-300  rounded-md align-middle  flex justify-center text-[12px] md:text-[14px] border`}
+
     >
       {title}
     </button>

@@ -1,5 +1,5 @@
+
 import NewsCard from "../NewsCard";
-import { FaArrowDown } from "react-icons/fa6";
 
 const LatestNews = ({ news }) => (
   <div className="flex flex-col drop-shadow rounded-lg overflow-hidden bg-pure-white h-[640px] relative">
