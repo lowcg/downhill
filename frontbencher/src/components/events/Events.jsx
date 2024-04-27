@@ -1,6 +1,6 @@
 "use client";
 import { twMerge } from "tailwind-merge";
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import EventCard from "../EventCard";
 import { register } from "swiper/element/bundle";
 import HeaderTitle from "@/components/HeaderTitle";
@@ -71,7 +71,9 @@ const Events = ({ events, className }) => {
           <swiper-container init="false" ref={swiperRef}>
             {events.map((event, i) => (
               <swiper-slide key={i}>
+                <Suspense fallback={<div className="w-[800px] h-[600px]">Loading...</div>}>
                 <EventCard {...event} isActive={i == activeIndex} />
+                </Suspense>
               </swiper-slide>
             ))}
           </swiper-container>

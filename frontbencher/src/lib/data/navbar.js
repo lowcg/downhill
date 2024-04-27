@@ -5,6 +5,7 @@
       href: "/docs/primitives/alert-dialog",
       description:
           "A modal dialog that interrupts the user with important content and expects a response.",
+      subItems:[{}]
   },
   {
       title: "UG Programs",
@@ -14,12 +15,12 @@
       subItems: [
             {
               title: 'Subitem 1',
-              href: '/course-1/subitem-1',
+              href: '/',
               description: 'Description for Subitem 1',
             },
             {
               title: 'Subitem 2',
-              href: '/course-1/subitem-2',
+              href: '/',
               description: 'Description for Subitem 2',
             },
           ],   
@@ -29,28 +30,30 @@
       href: "/docs/primitives/progress",
       description:
           "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      subItems:[{}]
   },
   {
       title: "Admission",
-      href: "/docs/primitives/scroll-area",
+      href: "/",
       description: "Visually or semantically separates content.",
+      subItems:[{}]
   },
   
 ]
 export const research=[
     {
         title: "Current Research",
-      href: "/docs/primitives/scroll-area",
+      href: "/",
       description: "Visually or semantically separates content.",
     },
     {
         title: "Past Research",
-      href: "/docs/primitives/scroll-area",
+      href: "/",
       description: "Visually or semantically separates content.",
     },
     {
         title: "Research Facilities",
-      href: "/docs/primitives/scroll-area",
+      href: "/",
       description: "Visually or semantically separates content.",
     },
 
@@ -58,7 +61,7 @@ export const research=[
 export const students=[
     {
         title: "Life@AOT",
-      href: "/docs/primitives/scroll-area",
+      href: "/",
       description: "Visually or semantically separates content.",
     },
     {
@@ -90,7 +93,7 @@ export const faculty=[
 
     },
     {
-        title: "Carrer Benefits @ AOT",
+        title: "Carrer Benefits @AOT",
       href: "/docs/primitives/scroll-area",
       description: "Visually or semantically separates content.",
 
