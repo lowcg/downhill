@@ -14,7 +14,7 @@ const NewsBulletin = ({ news, className }) => {
     <>
       <section
         className={twMerge(
-          "flex flex-col  gap-[56px] items-center px-4 sm:px-20 py-[56px]",
+          "flex flex-col  gap-[56px] items-center px-4 sm:px-20 py-[56px] w-full",
           className
         )}
       >
