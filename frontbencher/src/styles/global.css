@@ -2,15 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  /* scroll-behavior: smooth; */
-}
 
-body {
-  /* -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none; */
-}
 
 @font-face {
   font-family: Montserrat;
@@ -63,11 +55,11 @@ body {
 
 @layer components {
   .set-size {
-    @apply w-full md:w-[70%] lg:w-[90%] m-auto;
+    @apply w-full md:w-[80%] lg:w-full m-auto;
   }
 
   .swiper-nav-btn {
-    @apply rounded-lg bg-white p-4 z-50 text-deep-blue;
+    @apply rounded-lg bg-white p-4 z-0 text-deep-blue;
   }
 
   .swiper-pagination-bullet-active {

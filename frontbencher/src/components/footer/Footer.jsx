@@ -1,6 +1,4 @@
-import Image from 'next/image'
 import React from 'react'
-import { ImagesOne } from '../../../public/assets'
 import SvgAOTCover from '@/components/svg/AOTCover.svg';
 import SvgPhone from '@/components/svg/phone.svg';
 import SvgMail from '@/components/svg/mail.svg';

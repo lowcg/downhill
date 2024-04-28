@@ -1,10 +1,8 @@
-"use client"
 import Image from "next/image";
 import SecondaryButton from "./SecondaryButton";
 import PrimaryButton from "./PrimaryButton";
-import { CiLocationOn } from "react-icons/ci";
 import { FaPhoneAlt } from "react-icons/fa";
-
+import { FaLocationDot } from "react-icons/fa6";
 
 function Hero() {
   return (
@@ -32,23 +30,27 @@ function Hero() {
           <SecondaryButton
             title="Explore"
             color="orange"
-            hoverEffectOn={true}
+            hoverEffectOn
             padding="px-20"
           />
           <PrimaryButton
             title="Apply for admission"
             color="orange"
-            hoverEffectOn={true}
+            hoverEffectOn
           />
         </div>
       </div>
-      <div className="absolute bottom-2 'left-[50%] -translate-x-[50%]' right-0 p-2 rounded-l-md flex flex-col items-end font-montserrat text-[12px] md:text-[14px] bg-black/70 text-slate-300 border-2 border-slate-500">
-        <div className="flex gap-1 items-center">
-          <CiLocationOn size={16} className="inline-block text-slate-300" />
-          <h1>Adisaptagram, PO: Adcconagar</h1>
+      <div className="absolute bottom-2 left-[50%] -translate-x-[50%]  rounded-l-md flex flex-col sm:flex-row items-center font-montserrat text-[11px] md:text-[14px] text-slate-300  gap-4">
+        <div className="flex gap-1">
+          <h1 className=" flex items-center text-nowrap"><FaLocationDot className="" />Adisaptagram, PO:Adcconagar,Hooghly, West Bengal, 712121</h1>
         </div>
-          <h1> Hooghly, West Bengal, 712121</h1>
-        <h1 className="flex gap-1 items-center"><FaPhoneAlt/>PH no. +91 0000000000</h1>
+        <div
+          href="/"
+          className="flex gap-1 items-center"
+        >
+          <FaPhoneAlt className=""/>
+          <h1 className=" text-nowrap">+91 0000000000</h1>
+        </div>
       </div>
     </main>
   );

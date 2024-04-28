@@ -1,18 +1,13 @@
 "use client";
 
 import { twMerge } from "tailwind-merge";
-import { useState, useEffect, forwardRef } from "react";
-import { cn } from "@/lib/utils";
+import { useState, useEffect} from "react";
 import {
   Menubar,
-  MenubarCheckboxItem,
   MenubarContent,
   MenubarItem,
   MenubarMenu,
-  MenubarRadioGroup,
-  MenubarRadioItem,
   MenubarSeparator,
-  MenubarShortcut,
   MenubarSub,
   MenubarSubContent,
   MenubarSubTrigger,
@@ -28,8 +23,6 @@ import Hamburger from "@/components/hamburger/HamMenu";
 import A from "@/components/svg/A.svg";
 import O from "@/components/svg/O.svg";
 import T from "@/components/svg/T.svg";
-import { iteratee } from "underscore";
-import { Menu } from "lucide-react";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -57,7 +50,7 @@ export default function Navbar() {
   return (
     <nav
       className={twMerge(
-        "px-10 py-2 w-full flex transition-colors duration-500 justify-between fixed top-0 z-50 border-none text-white rounded-none text-[14px]",
+        "px-10 py-2 w-full flex transition-colors duration-500 justify-between fixed top-0 border-none text-white rounded-none text-[14px] z-[999]",
         isScrolled ? "bg-deep-blue" : "bg-deep-blue/0"
       )}
     >

@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
-import Link from "next/link";
 
 export default function EventCard({
   title,
