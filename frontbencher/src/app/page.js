@@ -4,6 +4,8 @@ import Events from "@/components/events/Events";
 import NewsBulletin from "@/components/news-bulletin/NewsBulletin";
 import WeeklyUpdates from "@/components/weeklyUpdates/WeeklyUpdates";
 import UpcomingEvents from "@/components/events/UpcomingEvents";
+import Navbar from "@/components/navbar/Navbar";
+
 import {
   sampleUpcomingEvents,
   sampleAnnouncements,
@@ -17,6 +19,7 @@ import Loading from "./loading";
 export default function Home() {
   return (
     <>
+      <Navbar className="fixed top-0 z-50 border-none" />
       <main className="min-h-screen bg-white text-deep-blue font-montserrat">
         <Hero />
         <Suspense fallback={<Loading />}>
