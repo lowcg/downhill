@@ -9,7 +9,7 @@ const NavigationMenu = React.forwardRef(({ className, children, ...props }, ref)
   <NavigationMenuPrimitive.Root
     ref={ref}
     className={cn(
-      "z-10 flex w-full flex-1 items-center fixed",
+      "z-10 flex w-full flex-1 items-center",
       className
     )}
     {...props}>

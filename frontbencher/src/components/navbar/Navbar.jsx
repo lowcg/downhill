@@ -27,7 +27,7 @@ import O from "@/components/svg/O.svg";
 import T from "@/components/svg/T.svg";
 import Link from "next/link";
 
-export default function Navbar() {
+export default function Navbar({ className, alwaysSolid = false }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHamOpen, setHamOpen] = useState(false);
 
@@ -52,8 +52,9 @@ export default function Navbar() {
   return (
     <nav
       className={twMerge(
-        "lg:px-10 lg:py-2 w-full flex transition-colors duration-500 justify-between fixed top-0 border-none text-white rounded-none text-[14px] z-[999]",
-        isScrolled ? "bg-deep-blue" : "bg-deep-blue/0"
+        "lg:px-10 lg:py-3 w-full flex transition-colors duration-500 justify-between border-none text-white rounded-none text-[14px] z-[999]",
+        isScrolled || alwaysSolid ? "bg-deep-blue" : "bg-deep-blue/0",
+        alwaysSolid ? "sticky top-0" : "fixed top-0"
       )}
     >
       <Menubar

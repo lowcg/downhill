@@ -66,8 +66,8 @@ const Events = ({ events, className }) => {
       <div className="w-full flex justify-center mb-20">
         <HeaderTitle title="Events" />
       </div>
-      <div className="set-size m-auto  px-4 sm:px-20">
-        <div className="text-white relative ">
+      <div className="m-auto  px-4 sm:px-20">
+        <div className="text-white relative">
           <swiper-container init="false" ref={swiperRef}>
             {events.map((event, i) => (
               <swiper-slide key={i}>
