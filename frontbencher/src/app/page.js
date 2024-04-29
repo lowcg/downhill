@@ -19,9 +19,7 @@ export default function Home() {
     <>
       <main className="min-h-screen bg-white text-deep-blue font-montserrat">
         <Hero />
-        <Suspense fallback={<Loading />}>
-          <MarqueeElement />
-        </Suspense>
+        <MarqueeElement />
         <div className="flex flex-col gap-16">
           <NewsBulletin news={sampleNews} className="set-size m-auto" />
           <Announcement

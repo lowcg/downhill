@@ -1,7 +1,7 @@
 "use client";
 
 import { twMerge } from "tailwind-merge";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import {
   Menubar,
   MenubarContent,
@@ -18,8 +18,10 @@ import SecondaryButton from "@/components/SecondaryButton";
 import PrimaryButton from "@/components/PrimaryButton";
 
 import Search from "@/components/svg/Search.svg";
+
 import { RxHamburgerMenu as SvgHamburger } from "react-icons/rx";
-import Hamburger from "@/components/hamburger/HamMenu";
+import Hamburger from "@/components/hamburger/index";
+import HamMenuItem from "../hamburger/HamMenuItem";
 import A from "@/components/svg/A.svg";
 import O from "@/components/svg/O.svg";
 import T from "@/components/svg/T.svg";
@@ -50,7 +52,7 @@ export default function Navbar() {
   return (
     <nav
       className={twMerge(
-        "px-10 py-2 w-full flex transition-colors duration-500 justify-between fixed top-0 border-none text-white rounded-none text-[14px] z-[999]",
+        "lg:px-10 lg:py-2 w-full flex transition-colors duration-500 justify-between fixed top-0 border-none text-white rounded-none text-[14px] z-[999]",
         isScrolled ? "bg-deep-blue" : "bg-deep-blue/0"
       )}
     >
@@ -143,7 +145,7 @@ export default function Navbar() {
           </MenubarContent>
         </MenubarMenu>
       </Menubar>
-      <div className="flex items-center space-x-4">
+      <div className="lg:flex items-center space-x-4 hidden ">
         <Search />
         <SecondaryButton
           title="Request Info"
@@ -158,6 +160,19 @@ export default function Navbar() {
           padding="py-[0.15rem] px-6"
           border="white"
         />
+      </div>
+      <div className="lg:hidden flex justify-between w-full relative h-20">
+        <Link href="/" className="flex items-center -space-x-2 absolute top-6 left-8 z-20">
+          <A />
+          <div className="animate-spin-slow">
+            <O />
+          </div>
+          <T />
+        </Link>
+        <div className="absolute right-8 z-10 top-6" onClick={() => setHamOpen(!isHamOpen)}>
+          <SvgHamburger size={28}/>
+        </div>
+        {isHamOpen && <div className="absolute w-full h-screen top-0 left-0"><Hamburger active={isHamOpen} /></div>}
       </div>
     </nav>
   );

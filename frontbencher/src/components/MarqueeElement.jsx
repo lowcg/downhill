@@ -1,5 +1,4 @@
 "use client"
-
 import SvgMarquee from "@/components/svg/Marquee.svg";
 import maruqeeItems from "@/lib/data/marquee.json";
 
