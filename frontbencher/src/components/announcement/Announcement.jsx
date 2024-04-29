@@ -20,7 +20,7 @@ const Announcement = ({ announcements, className }) => {
   return (
     <section
       className={twMerge(
-        "flex flex-col gap-[56px] items-center px-4 sm:px-20 pb-[56px] w-full",
+        "flex flex-col gap-[56px] items-center px-4 sm:px-20 pb-[56px]",
         className
       )}
     >

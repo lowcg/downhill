@@ -31,7 +31,7 @@ export default function Home() {
             announcements={sampleAnnouncements}
             className="set-size m-auto"
           />
-          <div className="bg-[#FBF9EF]">
+          <div className="bg-secondary-light">
             <div className="set-size m-auto">
               <Suspense fallback={<Loading />}>
                 <Events events={sampleEvents} />
