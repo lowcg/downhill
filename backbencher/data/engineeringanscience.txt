@@ -1,0 +1,35 @@
+Department of Engineering Science & Humanities
+Year of Establishment July-2003
+
+HOD: Dr. Srinjoy Bid.
+Contact mail Id: hod_eng.sc@aot.edu.in
+
+Overview of Departmental Infrastructure
+Class /Tutorial Room/ Seminar Rooms
+HOD’s Room & Departmental Office
+Faculty Rooms
+Amenities Area.
+
+Departmental Laboratories (with major experimental facilities & equipment):
+Language Technology Lab.:
+Wireless Interactive. Software Integrated Learning Environment with 40 user CACM ISIL software compatible to Windows XP with following features:
+Instructors Microphone to all users, Headset / PA System, Computer audio to all users, headset / PA System AUX or other source to all Users, Headset / PA Talking to any user without interrupting others Receiving Calls from all users, Attending calls on One to One mode, Calls Blocking, Grabbing a particular booth & broadcasting the audio to all users, Headset / PA System Recording facility, Polling on rapid mode Polling option with multiple choice, Digital switching unit, User console unit, Desktop Computer, 1000 VA UPS, BR1000IN VGA Multiplier, Amplifier Speakers, Wired Microphone, Wireless Microphone, Headsets Multimedea Projector & Mounting facility, SONY HDD camera.
+►This Laboratory has been installed by Centre for Advance Communication, STEP, IIT-KHARAGPUR.
+
+Engineering Chemistry Lab-I:
+7 nos.Digital Conductivity meter (Systronics-Model No.304), 7 nos.digital PH Meter (Systronics-Model No.335), 1 no.Refrigerator( 180 Lt.), Water Treatment Plant.
+
+Engineering Chemistry Lab-II:
+Incubators (12² x 12² x 14²) Double Pan balancd (Keroy- Modelno.K-9), Digital pan balance Oswald, Viscometers Distilled Water Plant.
+
+Engineering Physics Lab-I:
+Optical Spectrometers, Sodium vapour lamps and one murcury vapour lamp, Glass prism (60°) and Plane Transmission Grating (15000 LPI), Laser Diode with external power supply and laser detector, Optical bench with slit stand, biprism stand and micrometer scale, attached eyepiece stand, Optical fibres (1m & 5m length) with transmission kit and receiving kit, Newton’s ring setup (Compact unit), Apparatus for the measurement of rigidity modulus (static method), Screw gauges, slide callipers, stop watches, Magnifying glasses, table lamps, wooden meter scale, Apparatus for the measurement of moment of inertia of solid cone and cube.
+
+Engineering Physics Lab.-II:
+Carey-Foster bridge with null point detector (digital galvanometer), Resistance boxes (Range 0.1W to 10W), Commutator, Regulated power supply (2V / 1A), Searle’s apparatus for the measurement of thermal conductivity of good conductor (Copper), Lee’s apparatus for the measurement of thermal conductivity of bad conductor (Ebonite), Thermometers (-10°C to 110°C), steam boilers, induction heaters (1200 watt), Apparatus for the measurement of Young’s Modulus of steel bar, Apparatus for the measurement of Bending Moment of rectangular bar, Travelling Microscopes, Apparatus for the measurement of coefficient of viscosity of water, Capillary glass tube, connecting rubber tubes, volumetric cylinder, Stop clock Apparatus for the measurement of rigidity modulus (dynamic method).
+
+Engineering Physics Lab-III:
+C.R.O (Dual Trace- 20 MHz), Discharge tubes (hydrogen, Helium) with necessary voltage transformer, Optical Spectrometer and grating Setup for the measurement of specific charge of electron by Cyclotron method, Setup kit for Frank-Hertz experiment, Setup kits for Stefan’s Constant measurement, Setup kits for energy band gap measurement, Setup kits for photovoltaic solar cell characteristics, Setup kits for Planck’s constant measurement, Setup for dielectric constant of ebonite using parallel plate capacitor.
+
+Engineering Physics Lab-IV:
+Ballistic galvanometer with lamp and scale arrangement, Resistance boxes (10000W), commutator, 2v dc power supply, one-way plug keys, connecting wires ESR spectrometer with RF oscillator and Helmholtz coil, CRO (Dual Trace 20MHz), Copper-constantan thermocouple with 10 wire potentiometer bridge and dc power supply, Nanoammeter used as a null point detector, Strong Electromagnet with adjustable pole pieces, Hall Probe (Ge semiconductor) attached with Hall voltage setup, Gauss Probe attached with Gaussmeter, Open CRT attached with power supply and voltmeter, Magetometer and Bar magnets placed in wooden frame, Apparatus for the measurement of Planck’s constant using photocell.
