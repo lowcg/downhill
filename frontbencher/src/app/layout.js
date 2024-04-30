@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       <body>
         {children}
         <Footer />
-        <Bot/>
+        {/* <Bot/> */}
       </body>
     </html>
   );
