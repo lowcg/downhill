@@ -9,7 +9,7 @@ import SvgFb from '@/components/svg/fb.svg';
 export default function Footer() {
     return (
         <>
-            <div className='bg-deep-blue border-none text-white px-4 sm:px-20 py-10 w-full flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-48'>
+            <div className='bg-deep-blue border-none text-white px-4 sm:px-20 py-10 w-full flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-48 bottom-0'>
                 <div className='flex flex-col items-center justify-center sm:items-start w-[80%] sm:w-[200px] sm:gap-[16px] gap-3'>
                     <SvgAOTCover />
                     <p className='font-montserrat font-normal text-[14px] text-center sm:text-left '>
