@@ -34,19 +34,11 @@ IBM X510 with AIX 5L V 5.3
 IBM X225-Intel Xeon-2 nos.
 
 IBM X226 Intel Xeon(Mail & proxy)
-
 IBM x3400M3 Intel Xeon 5506 (Quad Core)
-
 Licensed Software, Compilers etc.:
-
-
 Application Software:
-
-
 Oracle 10g
-
 Matlab R2011a
-
 JAVA 2.0 JDK
 
 CS4 Web Premium Under CLP License(Cumulative Licensing Programme)
