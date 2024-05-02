@@ -2,18 +2,22 @@ import Navbar from "../../components/navbar/Navbar";
 import ThinBanner from "../../components/ThinBanner";
 import Department from "../../components/department";
 import News from "../../components/deptnews";
-const departments = () =>(
-    
+import Event from "../../components/deptevent";
+const departments = () =>{
+ 
+  return (
       <>
       
           <Navbar alwaysSolid={true}/>
           <main className="font-geist text-deep-blue bg-white">
             
             <ThinBanner/>
-            <Department/> 
+            <Department/>
+            <News/>
+            <Event/>
           </main>
          
       </>
     );
-
+  };
   export default departments;

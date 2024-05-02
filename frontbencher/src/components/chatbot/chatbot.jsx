@@ -1,8 +1,9 @@
 "use client"
 
-import { useEffect } from 'react';
+import { useEffect ,useRef} from 'react';
 
 export default function Bot() {
+  const ref=useRef(null);
   useEffect(() => {
     const initBotpress = () => {
         window.botpressWebChat.init({
@@ -22,12 +23,18 @@ export default function Bot() {
           "theme": "prism",
           "themeColor": "#2563eb"
         });
-    }
-    const script = document.createElement('script');
-    script.src = "https://cdn.botpress.cloud/webchat/v1/inject.js";
-    script.onload = initBotpress;
-    document.body.appendChild(script);
-  }, []);
 
-  return null;
+    }
+   
+    if (ref.current){
+      ref.current.src = "https://cdn.botpress.cloud/webchat/v1/inject.js";
+      ref.current.onload = initBotpress;
+    }
+    
+    
+  }, [ref]);
+ 
+  return (
+    <script ref={ref}></script>
+  );
 }
