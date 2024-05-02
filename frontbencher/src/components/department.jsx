@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import HeaderTitle from './HeaderTitle'
 import Subheading from './Subheading';
+import EventCard from './EventCard';
 import SecondaryButton from './SecondaryButton';
 import { twMerge } from "tailwind-merge";
 
@@ -32,6 +33,10 @@ const Department = () => {
             <Subheading subtitle="Notice" />
             {selectedDepartment && <Subheading subtitle={selectedDepartment} />}
         </div>
+
+
+
+          
       </section>
     </>
   )
