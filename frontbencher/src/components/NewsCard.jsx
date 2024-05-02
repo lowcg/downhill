@@ -9,13 +9,13 @@ const NewsCard = ({ title, date, description }) => {
     <div>
       <p className="font-montserrat text-md font-bold">{title}</p>
       <p className="font-geist font-medium text-sm text-neutral-500 mt-2 mb-4">
-        {date.toLocaleDateString("en-us", {
-          weekday: "long",
-          year: "numeric",
-          month: "short",
-          day: "numeric",
-        })}
-      </p>
+  {new Date(date).toLocaleDateString("en-us", {
+    weekday: "long",
+    year: "numeric",
+    month: "short",
+    day: "numeric"
+  })}
+</p>
       {description && (
         <p className="font-geist font-light">
           {description.length > 200 ? (
