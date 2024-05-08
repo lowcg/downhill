@@ -69,15 +69,15 @@ const Department = () => {
         </div>
         <div className="w-full px-10 items-center justify-center">
           <table className="w-full border-collapse border borde  bg-slate-100 font-geist">
-            <thead className="border border-border">
+            <thead className="border border-border bg-deep-blue">
               <tr>
-                <th className="border border-border py-3 text-gray">
+                <th className="border border-border py-3 text-white">
                   Posted By
                 </th>
-                <th className="border border-border py-3 text-gray">
+                <th className="border border-border py-3 text-white">
                   Description
                 </th>
-                <th className="border border-border py-3 text-gray">Date</th>
+                <th className="border border-border py-3 text-white">Date</th>
               </tr>
             </thead>
             <tbody className="items-center">
