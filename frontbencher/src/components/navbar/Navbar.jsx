@@ -101,7 +101,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
         </MenubarMenu>
         {/* Placements */}
         <MenubarMenu>
-          <a href="/placements">
+          <a href="/placement">
             <MenubarTrigger>Placements</MenubarTrigger>
           </a>
         </MenubarMenu>
