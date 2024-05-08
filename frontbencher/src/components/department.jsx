@@ -1,19 +1,23 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HeaderTitle from "./HeaderTitle";
 import Subheading from "./Subheading";
+import EventCard from "./EventCard";
 import SecondaryButton from "./SecondaryButton";
-import CustomTable from "./custom-table";
+import { twMerge } from "tailwind-merge";
+import { notices } from "@/lib/data/noticedata";
 const Department = () => {
   const [selectedDepartment, setSelectedDepartment] = useState(null);
 
   const handleButtonClick = (department) => {
     setSelectedDepartment(`${department} Dept.`);
   };
-
+  useEffect(() => {
+    handleButtonClick("CSE");
+  }, []);
   return (
     <>
-      <section className="flex flex-col items-center justify-center gap-[56px] px-4 sm:px-20 py-[56px]">
+      <section className="w-full flex flex-col items-center justify-center gap-[36px]  px-4 sm:px-20 py-[36px]">
         <HeaderTitle title={"Departments"} />
         <div className="grid grid-cols-2 sm:grid-cols-3 md:flex md:space-x-4 gap-4">
           <SecondaryButton
@@ -59,83 +63,40 @@ const Department = () => {
             textcolor="black"
           />
         </div>
-        <div>
-          <div className="flex flex-col sm:flex-row justify-between w-full items-center">
-            <Subheading subtitle="Notice" />
-
-            {selectedDepartment && <Subheading subtitle={selectedDepartment} />}
-          </div>
-          <div className="flex flex-col item-center justify-center">
-            <CustomTable
-              showLabel={false}
-              columns={["Posted By", <>Description</>, "Date"]}
-              rows={[
-                [
-                  "Admin",
-                  <div className="text-center">
-                    Appointment for Faculty Members with Department Heads
-                  </div>,
-                  "10.2.2024,4.30pm",
-                ],
-                [
-                  "Admin",
-                  <div className="text-center">
-                    Appointment for Faculty Members with Department Heads
-                  </div>,
-                  "10.2.2024,4.30pm",
-                ],
-                [
-                  "Admin",
-                  <div className="text-center">
-                    Appointment for Faculty Members with Department Heads
-                  </div>,
-                  "10.2.2024,4.30pm",
-                ],
-                [
-                  "Admin",
-                  <div className="text-center">
-                    Appointment for Faculty Members with Department Heads
-                  </div>,
-                  "10.2.2024,4.30pm",
-                ],
-                [
-                  "Admin",
-                  <div className="text-center">
-                    Appointment for Faculty Members with Department Heads
-                  </div>,
-                  "10.2.2024,4.30pm",
-                ],
-                [
-                  "Admin",
-                  <div className="text-center">
-                    Appointment for Faculty Members with Department Heads
-                  </div>,
-                  "10.2.2024,4.30pm",
-                ],
-                [
-                  "Admin",
-                  <div className="text-center">
-                    Appointment for Faculty Members with Department Heads
-                  </div>,
-                  "10.2.2024,4.30pm",
-                ],
-                [
-                  "Admin",
-                  <div className="text-center">
-                    Appointment for Faculty Members with Department Heads
-                  </div>,
-                  "10.2.2024,4.30pm",
-                ],
-                [
-                  "Admin",
-                  <div className="text-center">
-                    Appointment for Faculty Members with Department Heads
-                  </div>,
-                  "10.2.2024,4.30pm",
-                ],
-              ]}
-            />
-          </div>
+        <div className="flex flex-col sm:flex-row justify-between w-full items-center">
+          <Subheading subtitle="Notice" />
+          {selectedDepartment && <Subheading subtitle={selectedDepartment} />}
+        </div>
+        <div className="w-full px-10 items-center justify-center">
+          <table className="w-full border-collapse border borde  bg-slate-100 font-geist">
+            <thead className="border border-border">
+              <tr>
+                <th className="border border-border py-3 text-gray">
+                  Posted By
+                </th>
+                <th className="border border-border py-3 text-gray">
+                  Description
+                </th>
+                <th className="border border-border py-3 text-gray">Date</th>
+              </tr>
+            </thead>
+            <tbody className="items-center">
+              {notices &&
+                notices.map((notice, index) => (
+                  <tr key={index} className="border border-border ">
+                    <td className="border border-border text-center py-3 text-gray">
+                      {notice.postedBy}
+                    </td>
+                    <td className="border border-border text-center py-3 text-deep-blue ">
+                      {notice.description}
+                    </td>
+                    <td className="border border-border text-center py-3 text-gray">
+                      {notice.date}
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
         </div>
       </section>
     </>

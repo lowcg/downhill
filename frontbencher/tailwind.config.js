@@ -40,6 +40,7 @@ module.exports = {
         white: "#F6F6F6",
         gray: "#888888",
         "pure-white": "#FFFFFF",
+        "border":"#E4E4E7",
         // #e6e9f0
       },
       fontFamily: {
