@@ -32,25 +32,7 @@ const deptevent = () => {
           showHeading={false}
         />
       </div>
-      <div className="flex justify-center px-4 sm:px-20 py-[56px]">
-        {visibleEvents < events.length ? (
-          <SecondaryButton
-            title="View All"
-            padding="px-10"
-            hoverEffectOn={true}
-            textcolor="black"
-            onClick={handleViewAll}
-          />
-        ) : (
-          <SecondaryButton
-            title="View Less"
-            padding="px-10"
-            hoverEffectOn={true}
-            textcolor="black"
-            onClick={handleViewLess}
-          />
-        )}
-      </div>
+      
     </>
   );
 };
