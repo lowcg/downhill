@@ -29,8 +29,9 @@ const deptevent = () => {
         <SubHeading subtitle="Events" />
         <UpcomingEvents
           events={events.slice(0, visibleEvents)}
-          showHeading={false}
+          showHeading={false} showButton={false}
         />
+        
       </div>
       
     </>

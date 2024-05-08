@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import UpcomingEventCard from "../UpcomingEventCard";
 import SecondaryButton from "@/components/SecondaryButton";
-export default function UpcomingEvents({ events, showHeading = true }) {
+export default function UpcomingEvents({ events, showHeading = true,showButton=true }) {
   const [showAll, setShowAll] = useState(false);
 
   const displayedEvents = showAll ? events : events.slice(0, 3);
@@ -22,7 +22,7 @@ export default function UpcomingEvents({ events, showHeading = true }) {
           />
         ))}
       </div>
-      <div className="flex items-center justify-center">
+      {showHeading && (<div className="flex items-center justify-center">
         <SecondaryButton
           title={showAll ? "View Less" : "View All"}
           padding="px-10"
@@ -31,6 +31,7 @@ export default function UpcomingEvents({ events, showHeading = true }) {
           onClick={() => setShowAll(!showAll)}
         />
       </div>
+      )}
     </div>
   );
 }
