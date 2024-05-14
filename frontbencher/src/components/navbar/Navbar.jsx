@@ -71,9 +71,9 @@ export default function Navbar({ className, alwaysSolid = false }) {
         </Link>
         {/* Academics */}
         <MenubarMenu>
-          <a href="/">
+          <Link href="/">
             <MenubarTrigger>Home</MenubarTrigger>
-          </a>
+          </Link>
         </MenubarMenu>
         <MenubarMenu>
           <MenubarTrigger>Academics</MenubarTrigger>
