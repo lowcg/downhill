@@ -85,8 +85,15 @@ export default function Navbar({ className, alwaysSolid = false }) {
                 <MenubarItem>curricullum</MenubarItem>
               </MenubarSubContent>
             </MenubarSub>
-
-            <Link href="/pgprogramme"><MenubarItem>PG Programs</MenubarItem></Link>
+            <MenubarSub>
+              <Link href="/pgprogramme"><MenubarSubTrigger>PG Programs</MenubarSubTrigger></Link>
+              <MenubarSubContent>
+                <MenubarItem>Program Structure</MenubarItem>
+                <MenubarItem>Regulations</MenubarItem>
+                <MenubarItem>curricullum</MenubarItem>
+              </MenubarSubContent>
+            </MenubarSub>
+            
 
             <MenubarSub>
               <MenubarSubTrigger>Resources</MenubarSubTrigger>

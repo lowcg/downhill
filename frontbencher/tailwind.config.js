@@ -42,6 +42,7 @@ module.exports = {
         "pure-white": "#FFFFFF",
         "border":"#E4E4E7",
         // #e6e9f0
+        "border-color":"#E4E4E7",
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
