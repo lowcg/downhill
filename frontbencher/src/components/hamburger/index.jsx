@@ -1,11 +1,11 @@
 import HamMenu from "./HamMenu";
 import HamMenuItem from "./HamMenuItem";
-
+import Link from "next/link";
 const Hamburger = () => (
   <div className="relative px-4 h-full flex flex-col gap-4 overflow-scroll text-lg bg-deep-blue py-20">
     <div>
       <HamMenu label="Academics" active={true}>
-        <HamMenu label="Departments" />
+        <Link href="/departments"><HamMenu label="Departments" /></Link>
         <HamMenu label="UG Programs">
           <HamMenuItem label="PG Programs" />
           <HamMenuItem label="Program Structure" />
@@ -13,8 +13,8 @@ const Hamburger = () => (
           <HamMenuItem label="Curriculum" />
         </HamMenu>
         <HamMenu label="Resources">
-          <HamMenuItem label="Library" />
-          <HamMenuItem label="Moodle" />
+          <Link href="https://aot.edu.in/library/"><HamMenuItem label="Library" /></Link>
+          <Link href="http://182.74.215.198/moodle/"><HamMenuItem label="Moodle" /></Link>
         </HamMenu>
         <HamMenu label="Admissions">
           <HamMenuItem label="Undergraduate" />

@@ -1,5 +1,4 @@
 "use client";
-
 import { twMerge } from "tailwind-merge";
 import { useState, useEffect } from "react";
 import {
@@ -79,7 +78,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
           <MenubarTrigger>Academics</MenubarTrigger>
           <MenubarContent>
             <MenubarSub>
-              <MenubarSubTrigger>UG Programs</MenubarSubTrigger>
+              <Link href="/ugprogramme"><MenubarSubTrigger>UG Programs</MenubarSubTrigger></Link>
               <MenubarSubContent>
                 <MenubarItem>Program Structure</MenubarItem>
                 <MenubarItem>Regulations</MenubarItem>
@@ -87,13 +86,13 @@ export default function Navbar({ className, alwaysSolid = false }) {
               </MenubarSubContent>
             </MenubarSub>
 
-            <MenubarItem>PG Programs</MenubarItem>
+            <Link href="/pgprogramme"><MenubarItem>PG Programs</MenubarItem></Link>
 
             <MenubarSub>
               <MenubarSubTrigger>Resources</MenubarSubTrigger>
               <MenubarSubContent>
-                <MenubarItem>Moodles</MenubarItem>
-                <MenubarItem>Library</MenubarItem>
+                <Link href="http://182.74.215.198/moodle/"><MenubarItem>Moodles</MenubarItem></Link>
+                <Link href="https://aot.edu.in/library/"><MenubarItem>Library</MenubarItem></Link>
               </MenubarSubContent>
             </MenubarSub>
             <MenubarItem>Admission</MenubarItem>
@@ -114,7 +113,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
 
         {/* Research */}
         <MenubarMenu>
-          <MenubarTrigger>Research</MenubarTrigger>
+          <Link href="/research"><MenubarTrigger>Research</MenubarTrigger></Link>
           <MenubarContent>
             <MenubarItem>Current Research</MenubarItem>
             <MenubarSeparator />
@@ -126,7 +125,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
 
         {/* Students */}
         <MenubarMenu>
-          <MenubarTrigger>Students</MenubarTrigger>
+          <Link href="/students"><MenubarTrigger>Students</MenubarTrigger></Link>
           <MenubarContent>
             <MenubarItem>Life@AOT</MenubarItem>
             <MenubarSeparator />
@@ -138,7 +137,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
 
         {/* Faculty */}
         <MenubarMenu>
-          <MenubarTrigger>Faculty</MenubarTrigger>
+          <Link href="/faculty"><MenubarTrigger>Faculty</MenubarTrigger></Link>
           <MenubarContent>
             <MenubarItem>Faculty List</MenubarItem>
             <MenubarItem>Faculty Positions</MenubarItem>
