@@ -13,7 +13,7 @@ const index = ({sectionname}) => {
               key={section.name}
               href="#"
               onClick={() => setSelectedSection(section.name)}
-              className=" py-0 px-1 md:px-0 md:py-6 border-border-color border-b-0 md:border-b-[0.5px]"
+              className=" py-0 px-1 md:px-0 md:py-6 border-border-color border-b-0 md:border-b-[0.5px] "
             >
               {section.name}
             </Link>
