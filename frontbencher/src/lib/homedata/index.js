@@ -2,7 +2,6 @@ export const sampleNews=
 [
     {
         title: "Admission Procedure",
-        date: "Admission Procedure",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
     },
 ];
