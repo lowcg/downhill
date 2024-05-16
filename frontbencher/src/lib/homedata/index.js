@@ -27,7 +27,8 @@ export const sampleUpcomingEvents=[
 
 ];
 export const sampleAnnouncements=[
-    // title: "Admission Procedure",
-    // description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-    // small_description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    
+    {   title: "Admission Procedure",
+        
+        small_description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",}
 ];
