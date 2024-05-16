@@ -6,11 +6,33 @@ const Hamburger = () => (
     <div>
       <HamMenu label="Academics" active={true}>
         <HamMenu label="UG Programs">
-          <HamMenuItem label="Program Structure" />
+          <HamMenuItem label="Admission Procedure" />
+          <HamMenuItem label="B. Tech Fees Structure" />
+          <HamMenuItem label="B. Tech (Lateral) Fees Structure" />
+          <HamMenuItem label="Rules for Fees Payment" />
+          <HamMenuItem label="Documents for Admission" />
+          <HamMenuItem label="Financial Aid & Support" />
+          <HamMenuItem label="Comprehensive Academic System" />
+          <HamMenuItem label="Academic Performance" />
+          <HamMenuItem label="Activities Beyond Academics" />
+          <HamMenuItem label="Academic Calendar" />
           <HamMenuItem label="Regulations" />
           <HamMenuItem label="Curriculum" />
         </HamMenu>
-        <HamMenu label="PG Programs" />
+        <HamMenu label="PG Programs">
+          <HamMenuItem label="Admission Procedure" />
+          <HamMenuItem label="B. Tech Fees Structure" />
+          <HamMenuItem label="B. Tech (Lateral) Fees Structure" />
+          <HamMenuItem label="Rules for Fees Payment" />
+          <HamMenuItem label="Documents for Admission" />
+          <HamMenuItem label="Financial Aid & Support" />
+          <HamMenuItem label="Comprehensive Academic System" />
+          <HamMenuItem label="Academic Performance" />
+          <HamMenuItem label="Activities Beyond Academics" />
+          <HamMenuItem label="Academic Calendar" />
+          <HamMenuItem label="Regulations" />
+          <HamMenuItem label="Curriculum" />
+        </HamMenu>
         <HamMenu label="Resources">
           <Link href="https://aot.edu.in/library/">
             <HamMenuItem label="Library" />
@@ -18,10 +40,6 @@ const Hamburger = () => (
           <Link href="http://182.74.215.198/moodle/">
             <HamMenuItem label="Moodle" />
           </Link>
-        </HamMenu>
-        <HamMenu label="Admissions">
-          <HamMenuItem label="Undergraduate" />
-          <HamMenuItem label="Postgraduate" />
         </HamMenu>
       </HamMenu>
       <Link href="/departments">
