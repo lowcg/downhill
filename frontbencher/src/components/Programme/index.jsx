@@ -21,7 +21,7 @@ const index = ({sectionname}) => {
         {sectionname.map(
           (section) =>
             selectedSection === section.name && (
-              <div className="flex flex-col pt-9 md:pt-24 pl-4 w-[70%] pr-7">
+              <div className="flex flex-col pt-9 md:pt-24 pl-4 md:w-[70%] pr-0 md:pr-7 md:items-start md:justify-start items-center justify-center w-full">
                 <div className="font-geist px-4 font-extrabold text-deep-blue text-3xl">
                   {section.name}
                 </div>
