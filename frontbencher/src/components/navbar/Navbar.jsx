@@ -132,7 +132,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
 
         {/* Students */}
         <MenubarMenu>
-          <Link href="/students"><MenubarTrigger>Students</MenubarTrigger></Link>
+          <MenubarTrigger>Students</MenubarTrigger>
           <MenubarContent>
             <MenubarItem>Life@AOT</MenubarItem>
             <MenubarSeparator />

@@ -23,7 +23,7 @@ const index = ({sectionname}) => {
           (section) =>
             selectedSection === section.name && (
               <div className="flex flex-col pt-9 md:pt-24 pl-4">
-                <div className="font-geist px-4 font-extrabold text-deep-blue text-3xl border-b-[0.5px] border-border-color">
+                <div className="font-geist px-4 font-extrabold text-deep-blue text-3xl">
                   {section.name}
                 </div>
                 <div
