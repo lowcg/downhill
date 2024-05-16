@@ -62,3 +62,22 @@ export const ugsection = [
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio pariatur libero in, quam, cumque quae ea totam molestias aliquid deleniti quaerat. Tempora atque pariatur commodi molestias voluptates a eos adipisci?",
     },
   ];
+  export const research=[
+    {
+      name: "Current research",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio pariatur libero in, quam, cumque quae ea totam molestias aliquid deleniti quaerat. Tempora atque pariatur commodi molestias voluptates a eos adipisci?",
+
+    },
+    {
+      name: "Past research",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio pariatur libero in, quam, cumque quae ea totam molestias aliquid deleniti quaerat. Tempora atque pariatur commodi molestias voluptates a eos adipisci?",
+
+    },
+    {
+      name: "Research Facilities",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio pariatur libero in, quam, cumque quae ea totam molestias aliquid deleniti quaerat. Tempora atque pariatur commodi molestias voluptates a eos adipisci?",
+    },
+  ];

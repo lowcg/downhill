@@ -28,14 +28,14 @@ export default function EventCard({
           <h1 className="py-2 w-full text-secondary text-[1rem] leading-snug font-montserrat font-semibold">
             {title}
           </h1>
-          <p className="text-white font-normal text-xs rounded-full border border-white w-fit p-1 px-3">
+          {/* <p className="text-white font-normal text-xs rounded-full border border-white w-fit p-1 px-3">
             {date.toLocaleDateString("en-us", {
               weekday: "long",
               year: "numeric",
               month: "short",
               day: "numeric",
             })}
-          </p>
+          </p> */}
         </div>
       </div>
       <div className="py-2 -translate-y-3 sm:-translate-y-2 w-[calc(100%-1rem)] m-auto bg-neutral-800/20 rounded-b-lg"></div>
