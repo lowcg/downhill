@@ -11,7 +11,7 @@ export async function fetchAllPlacementDetails(year) {
 }
 
 export async function fetchPlacementCount({ year }) {
-  return fetchAllPlacementDetails(year).length;
+  return (await fetchAllPlacementDetails(year)).length;
 }
 
 export async function fetchPlacementData({ year, page, size }) {
