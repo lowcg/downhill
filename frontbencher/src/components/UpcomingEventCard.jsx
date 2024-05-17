@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 import { twMerge } from "tailwind-merge";
 
-const UpcomingEventCard = ({ className, title, description }) => {
+const UpcomingEventCard = ({ className, title, description,img }) => {
   return (
     <div
       className={twMerge(
@@ -14,7 +14,7 @@ const UpcomingEventCard = ({ className, title, description }) => {
       <div className="mb-4">
         <div className="w-auto">
           <Image
-            src="/assets/heroBg.png"
+            src={img}
             width={1000}
             height={1000}
             alt="heroBg"

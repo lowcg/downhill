@@ -11,7 +11,7 @@ import {
   sampleAnnouncements,
   sampleNews,
   sampleEvents,
-} from "@/lib/data";
+} from "@/lib/homedata/index";
 import MarqueeElement from "@/components/MarqueeElement";
 import { Suspense } from "react";
 import Loading from "./loading";

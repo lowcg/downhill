@@ -1,27 +1,53 @@
 import HamMenu from "./HamMenu";
 import HamMenuItem from "./HamMenuItem";
-
+import Link from "next/link";
 const Hamburger = () => (
   <div className="relative px-4 h-full flex flex-col gap-4 overflow-scroll text-lg bg-deep-blue py-20">
     <div>
       <HamMenu label="Academics" active={true}>
-        <HamMenu label="Departments" />
         <HamMenu label="UG Programs">
-          <HamMenuItem label="PG Programs" />
-          <HamMenuItem label="Program Structure" />
+          <HamMenuItem label="Admission Procedure" />
+          <HamMenuItem label="B. Tech Fees Structure" />
+          <HamMenuItem label="B. Tech (Lateral) Fees Structure" />
+          <HamMenuItem label="Rules for Fees Payment" />
+          <HamMenuItem label="Documents for Admission" />
+          <HamMenuItem label="Financial Aid & Support" />
+          <HamMenuItem label="Comprehensive Academic System" />
+          <HamMenuItem label="Academic Performance" />
+          <HamMenuItem label="Activities Beyond Academics" />
+          <HamMenuItem label="Academic Calendar" />
+          <HamMenuItem label="Regulations" />
+          <HamMenuItem label="Curriculum" />
+        </HamMenu>
+        <HamMenu label="PG Programs">
+          <HamMenuItem label="Admission Procedure" />
+          <HamMenuItem label="B. Tech Fees Structure" />
+          <HamMenuItem label="B. Tech (Lateral) Fees Structure" />
+          <HamMenuItem label="Rules for Fees Payment" />
+          <HamMenuItem label="Documents for Admission" />
+          <HamMenuItem label="Financial Aid & Support" />
+          <HamMenuItem label="Comprehensive Academic System" />
+          <HamMenuItem label="Academic Performance" />
+          <HamMenuItem label="Activities Beyond Academics" />
+          <HamMenuItem label="Academic Calendar" />
           <HamMenuItem label="Regulations" />
           <HamMenuItem label="Curriculum" />
         </HamMenu>
         <HamMenu label="Resources">
-          <HamMenuItem label="Library" />
-          <HamMenuItem label="Moodle" />
-        </HamMenu>
-        <HamMenu label="Admissions">
-          <HamMenuItem label="Undergraduate" />
-          <HamMenuItem label="Postgraduate" />
+          <Link href="https://aot.edu.in/library/">
+            <HamMenuItem label="Library" />
+          </Link>
+          <Link href="http://182.74.215.198/moodle/">
+            <HamMenuItem label="Moodle" />
+          </Link>
         </HamMenu>
       </HamMenu>
-
+      <Link href="/departments">
+        <HamMenu label="Departments" />
+      </Link>
+      <Link href="/placement">
+        <HamMenu label="Placements" />
+      </Link>
       <HamMenu label="Research" active={true}>
         <HamMenuItem label="Current Research" />
         <HamMenuItem label="Past Research" />

@@ -1,5 +1,4 @@
 "use client";
-
 import { twMerge } from "tailwind-merge";
 import { useState, useEffect } from "react";
 import {
@@ -71,32 +70,39 @@ export default function Navbar({ className, alwaysSolid = false }) {
         </Link>
         {/* Academics */}
         <MenubarMenu>
-          <a href="/">
+          <Link href="/">
             <MenubarTrigger>Home</MenubarTrigger>
-          </a>
+          </Link>
         </MenubarMenu>
         <MenubarMenu>
           <MenubarTrigger>Academics</MenubarTrigger>
           <MenubarContent>
             <MenubarSub>
-              <MenubarSubTrigger>UG Programs</MenubarSubTrigger>
+              <Link href="/ugprogramme"><MenubarSubTrigger>UG Programs</MenubarSubTrigger></Link>
               <MenubarSubContent>
                 <MenubarItem>Program Structure</MenubarItem>
                 <MenubarItem>Regulations</MenubarItem>
                 <MenubarItem>curricullum</MenubarItem>
               </MenubarSubContent>
             </MenubarSub>
-
-            <MenubarItem>PG Programs</MenubarItem>
+            <MenubarSub>
+              <Link href="/pgprogramme"><MenubarSubTrigger>PG Programs</MenubarSubTrigger></Link>
+              <MenubarSubContent>
+                <MenubarItem>Program Structure</MenubarItem>
+                <MenubarItem>Regulations</MenubarItem>
+                <MenubarItem>curricullum</MenubarItem>
+              </MenubarSubContent>
+            </MenubarSub>
+            
 
             <MenubarSub>
               <MenubarSubTrigger>Resources</MenubarSubTrigger>
               <MenubarSubContent>
-                <MenubarItem>Moodles</MenubarItem>
-                <MenubarItem>Library</MenubarItem>
+                <Link href="http://182.74.215.198/moodle/"><MenubarItem>Moodles</MenubarItem></Link>
+                <Link href="https://aot.edu.in/library/"><MenubarItem>Library</MenubarItem></Link>
               </MenubarSubContent>
             </MenubarSub>
-            <MenubarItem>Admission</MenubarItem>
+            
           </MenubarContent>
         </MenubarMenu>
         {/* Placements */}
@@ -114,7 +120,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
 
         {/* Research */}
         <MenubarMenu>
-          <MenubarTrigger>Research</MenubarTrigger>
+         <Link href='/research'><MenubarTrigger>Research</MenubarTrigger></Link> 
           <MenubarContent>
             <MenubarItem>Current Research</MenubarItem>
             <MenubarSeparator />
@@ -132,7 +138,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
             <MenubarSeparator />
             <MenubarItem>Campus Facilities</MenubarItem>
             <MenubarItem>Carrer Services</MenubarItem>
-            <MenubarItem>Events</MenubarItem>
+            
           </MenubarContent>
         </MenubarMenu>
 

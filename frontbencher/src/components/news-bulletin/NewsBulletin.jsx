@@ -33,11 +33,9 @@ const NewsBulletin = ({ news, className }) => {
                 </div>
               </div>
               <p>
-                The admit card for the even semester examination has been
-                released. The students are requested to download the admit card
-                from the official website.
+              As notified by MAKAUT, form fill-up for Even Semester Examinations 2023-24 for all eligible even semester students has begun. 
               </p>
-              <p className="font-geistRegular text-base ">2m ago</p>
+              <p className="font-geistRegular text-base ">1 day ago</p>
             </div>
           </div>
           {isMobile ? <LatestNewsMobile news={news} /> : <LatestNews news={news} />}
