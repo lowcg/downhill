@@ -15,8 +15,8 @@ const deptnewscard = ({ content }) => {
         className="rounded-lg "
       ></Image>
       <div className="flex-col text-deep-blue ">
-        <p className="text-[20px] font-geistSemiBold">{content}</p>
-        <button className="text-orange px-4 py-3 rounded text-sm font-medium flex items-center gap-3">
+        <p className="text-[16px] font-geist">{content}</p>
+        <button className="text-orange py-3 rounded text-sm font-medium flex items-center gap-3">
           Learn More
           <FaArrowRight size={11} />
         </button>

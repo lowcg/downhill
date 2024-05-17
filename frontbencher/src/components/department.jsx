@@ -104,17 +104,18 @@ const Department = () => {
         {selectedSection === "about" && (
           <div className="flex flex-col px-7">
             <Subheading subtitle="About" />
-            <div className="flex flex-col sm:flex-row gap-5  py-5 justify-center w-full items-center text-deep-blue font-geist font-bold text-[17px] ">
+            <div className="flex flex-col sm:flex-row gap-5  py-5 justify-center w-full items-center text-deep-blue font-geist  text-[17px] ">
               <div className=" text-deep-blue ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati minus, doloremque asperiores eos, voluptatem,
-                aspernatur voluptatum cum quisquam consequuntur nam magnam sit
-                sequi quis rem est nemo voluptatibus nihil impedit?
+              Established in 2003, Academy of Technology is one of the most acclaimed self-financed engineering colleges in West Bengal. It has been established by Ananda Educational Development & Charitable Organisation (AEDCO), a trust under the chairmanship of Prof. Jagannath Banerjee, an alumnus of IIT Kharagpur and IIM Calcutta.
+In a metamorphosis of over 11 years, Academy of Technology has been reinventing itself constantly to explore the infinite possibilities of engineering and technology - an academy that inspires everyone to think differently. It is now the preferred career destination for meritorious students due to its academic integrity and standard as well as its attractive campus placement.
+
+Vision
+“Aspires to be a pre-eminent deemed university of national standing in education and innovation”.
               </div>
               <Image
                 src="/heroBg.png"
-                width={500}
-                height={500}
+                width={400}
+                height={400}
                 alt="department"
               />
             </div>
