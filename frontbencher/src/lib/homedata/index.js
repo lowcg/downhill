@@ -61,7 +61,7 @@ export const sampleEvents=[
 export const sampleUpcomingEvents=[
     {
         title: "Admission Procedure",
-        image:"/assets/admission.webp",
+        img:"/assets/admission.webp",
         description: "The admission procedure involves submitting an application with required documents, such as transcripts and test scores. The institution reviews these materials, may conduct interviews or entrance exams, and then notifies successful candidates of their acceptance. Accepted students confirm enrollment by paying a deposit and completing any additional paperwork before classes begin.",
     },
     {
@@ -87,7 +87,7 @@ export const sampleUpcomingEvents=[
 
 ];
 export const sampleAnnouncements=[
-    // title: "Admission Procedure",
-    // description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-    // small_description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    {title: "Admission Procedure",
+        
+    small_description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",}
 ];
