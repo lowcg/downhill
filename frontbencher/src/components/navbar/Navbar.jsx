@@ -102,7 +102,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
                 <Link href="https://aot.edu.in/library/"><MenubarItem>Library</MenubarItem></Link>
               </MenubarSubContent>
             </MenubarSub>
-            <MenubarItem>Admission</MenubarItem>
+            
           </MenubarContent>
         </MenubarMenu>
         {/* Placements */}
@@ -120,7 +120,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
 
         {/* Research */}
         <MenubarMenu>
-          <Link href="/research"><MenubarTrigger>Research</MenubarTrigger></Link>
+         <Link href='/research'><MenubarTrigger>Research</MenubarTrigger></Link> 
           <MenubarContent>
             <MenubarItem>Current Research</MenubarItem>
             <MenubarSeparator />
@@ -132,23 +132,23 @@ export default function Navbar({ className, alwaysSolid = false }) {
 
         {/* Students */}
         <MenubarMenu>
-          <Link href="/students"><MenubarTrigger>Students</MenubarTrigger></Link>
+          <MenubarTrigger>Students</MenubarTrigger>
           <MenubarContent>
             <MenubarItem>Life@AOT</MenubarItem>
             <MenubarSeparator />
             <MenubarItem>Campus Facilities</MenubarItem>
             <MenubarItem>Carrer Services</MenubarItem>
-            <MenubarItem>Events</MenubarItem>
+            
           </MenubarContent>
         </MenubarMenu>
 
         {/* Faculty */}
         <MenubarMenu>
-          <Link href="/faculty"><MenubarTrigger>Faculty</MenubarTrigger></Link>
+          <MenubarTrigger>Faculty</MenubarTrigger>
           <MenubarContent>
-            <MenubarItem>Faculty List</MenubarItem>
+          <Link href="/faculty/list"><MenubarItem>Faculty List</MenubarItem></Link> 
             <MenubarItem>Faculty Positions</MenubarItem>
-            <MenubarItem>Career Benefits @AOT</MenubarItem>
+            <Link href="/faculty/career"><MenubarItem>Career Benefits @AOT</MenubarItem></Link>
           </MenubarContent>
         </MenubarMenu>
       </Menubar>
