@@ -66,28 +66,40 @@ export const sampleUpcomingEvents=[
     },
     {
         title: "Application Deadlines",
-       
+        img:"/assets/deadline.webp",
         description: "Application deadlines are crucial dates by which prospective students must submit their applications and supporting documents. These deadlines vary by institution and program, and missing them can result in the application not being considered. Early decision, regular decision, and rolling admissions each have different timelines that applicants need to be aware of.",
     },
     {
         title: "Financial Aid Process",
-       
+        img:"/assets/financialaid.webp",
         description: "The financial aid process helps students secure funding for their education through scholarships, grants, loans, and work-study programs. It involves filling out forms such as the FAFSA, providing financial information, and meeting deadlines. Institutions then review the information to determine eligibility and award financial aid packages accordingly.",
     },
     {
         title: "Entrance Exams",
-       
+        img:"/assets/entrance.webp",
         description: "Entrance exams are standardized tests that assess the academic readiness of applicants for higher education. Common examples include the SAT, ACT, GRE, and GMAT. Scores from these exams are often required as part of the application process and can significantly impact admission decisions.",
     },
     {
         title: "Campus Tours and Open Houses",
-       
+        img:"/assets/campus.webp",
         description: "Campus tours and open houses provide prospective students with an opportunity to visit the institution, explore facilities, and interact with current students and faculty. These events help applicants gain a better understanding of the campus environment, academic programs, and student life, aiding in their decision-making process.",
     },
 
 ];
 export const sampleAnnouncements=[
-    {title: "Admission Procedure",
+    {title: "Exam Registration Deadline Reminder",
         
-    small_description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",}
+    small_description:"This is to remind all students that the deadline for exam registration is approaching. Ensure your PPR forms are verified and complete your registration by making the payment today. The portal will be open until 11:00 pm (20-5-2024)."},
+    {title: "Final Payment for OIC Exams",
+        
+    small_description:"Attention students: Those with verified PPR forms can proceed to make their payments today. The payment portal will remain accessible until 11:00 pm tonight (18-5-2024). Don’t miss this final opportunity to complete your registration."},
+    {title: "OIC Exam Admit Cards Ready",
+        
+    small_description:"This is to inform all students that admit cards for the OIC examinations are now available for download. Please log into the student portal to access and print your admit card. Ensure to bring a printed copy to the examination center."},
+    {title: "Pre-Exam Orientation",
+        
+    small_description:"Join our pre-exam orientation for OIC candidates online at 3:00 pm tomorrow (14-5-2024). We'll cover exam day protocols and success tips. Access the link on the student portal."},
+    {title: "OIC Examination Guidelines Update",
+        
+    small_description:"This is to notify all students about an important update to the OIC examination guidelines. The new guidelines include changes in the exam duration, permissible materials, and conduct protocols. Please review the updated guidelines on the official website to ensure compliance on the exam day. Failure to adhere to these guidelines may result in disqualification."},
 ];

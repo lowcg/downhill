@@ -13,13 +13,13 @@ export default function Footer() {
                 <div className='flex flex-col items-center justify-center sm:items-start w-[80%] sm:w-[200px] sm:gap-[16px] gap-3'>
                     <SvgAOTCover />
                     <p className='font-montserrat font-normal text-[14px] text-center sm:text-left '>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Aspires to be a pre-eminent deemed university of national standing in education and innovation
                     </p>
                 </div>
                 <div className='flex flex-col items-center sm:items-start sm:justify-center gap-[16px]'>
                     <div className='flex gap-2 sm:gap-[12px]'>
                         <SvgPhone />
-                        <p className='font-montserrat font-normal text-sm '>+91 0000000000</p>
+                        <p className='font-montserrat font-normal text-sm '>+91 9830161441</p>
                     </div>
                     <div className='flex gap-[12px]'>
                         <SvgMail />
