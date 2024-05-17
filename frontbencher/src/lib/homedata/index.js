@@ -27,9 +27,34 @@ export const sampleNews=
     },
 ];
 export const sampleEvents=[
-    {   title: "Admission Procedure",
-        imgUrl:"/assets/heroBg.png",
-        
+    {  
+        title: "AOT and IRCS",
+        imgUrl:"/assets/AOT_IRCS.webp",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    },
+    {  
+        title: "AOT hosts Dr. Ranjan Ganguly",
+        imgUrl:"/assets/RG.webp",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    },
+    {  
+        title: "AOT hosts Dr. Ujjwal Maulik",
+        imgUrl:"/assets/UM.webp",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    },
+    {  
+        title: "AOT and IRCS",
+        imgUrl:"/assets/AOT_IRCS.webp",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    },
+    {  
+        title: "AOT and IRCS",
+        imgUrl:"/assets/AOT_IRCS.webp",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+    },
+    {  
+        title: "AOT and IRCS",
+        imgUrl:"/assets/AOT_IRCS.webp",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
     },
 ];
