@@ -96,18 +96,18 @@ export const ugsection = [
     {
       name: "Current research",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio pariatur libero in, quam, cumque quae ea totam molestias aliquid deleniti quaerat. Tempora atque pariatur commodi molestias voluptates a eos adipisci?",
+        "Industry 4.0 Innovations: AOT College is actively engaged in research related to Industry 4.0, focusing on automation, data exchange, and manufacturing technologies. This includes projects on smart manufacturing systems and IoT applications in industrial settings​ (AOT)​.Artificial Intelligence and Machine Learning: Researchers at AOT are exploring advancements in AI and machine learning. Current projects involve developing intelligent algorithms for data analysis, enhancing machine learning models, and applying AI in various sectors such as healthcare and finance​ (Academy of Technology)​.Renewable Energy Systems: AOT is working on sustainable energy solutions, particularly in the development of efficient renewable energy systems. Research includes optimizing solar and wind energy technologies and integrating these systems into existing power grids​ (Academy of Technology)​.Advanced Communication Technologies: The college is conducting research in the field of advanced communication systems. This includes work on 5G technology, wireless communication protocols, and improving data transmission efficiency​ (Academy of Technology)",
 
     },
     {
       name: "Past research",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio pariatur libero in, quam, cumque quae ea totam molestias aliquid deleniti quaerat. Tempora atque pariatur commodi molestias voluptates a eos adipisci?",
+        "The Academy of Technology, a renowned educational institution nestled in the heart of bustling innovation, stands as a beacon of excellence in technological education and research. With a steadfast commitment to fostering the next generation of engineers, scientists, and innovators, the Academy offers a diverse range of cutting-edge programs and initiatives. From state-of-the-art laboratories to immersive project-based learning experiences, students are equipped with the knowledge, skills, and practical insights necessary to thrive in today's rapidly evolving technological landscape. Guided by esteemed faculty members who are leaders in their respective fields, students engage in interdisciplinary collaboration and exploration, pushing the boundaries of innovation and problem-solving. Beyond academia, the Academy serves as a hub for industry partnerships and collaborations, facilitating groundbreaking research and real-world applications of technology. Through its unwavering dedication to excellence and innovation, the Academy of Technology continues to shape the future of technology and inspire positive change on a global scale.",
 
     },
     {
       name: "Research Facilities",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio pariatur libero in, quam, cumque quae ea totam molestias aliquid deleniti quaerat. Tempora atque pariatur commodi molestias voluptates a eos adipisci?",
+        "Research facilities serve as the crucibles of innovation, where ideas are nurtured, theories tested, and discoveries made. These dynamic environments are meticulously designed to foster creativity and collaboration, providing researchers with state-of-the-art equipment, cutting-edge technology, and specialized expertise. From sprawling laboratories equipped with advanced instrumentation to high-tech computational centers capable of handling vast amounts of data, research facilities offer a diverse array of resources tailored to the unique needs of each scientific endeavor. Here, interdisciplinary teams converge, pooling their talents and perspectives to tackle complex challenges across a multitude of fields, from biotechnology and renewable energy to artificial intelligence and space exploration. With an unwavering dedication to pushing the boundaries of knowledge and innovation, research facilities stand as beacons of discovery, driving forward the frontiers of human understanding and paving the way for a brighter, more sustainable future.",
     },
   ];

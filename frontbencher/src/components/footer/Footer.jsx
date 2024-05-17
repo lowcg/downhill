@@ -36,9 +36,8 @@ export default function Footer() {
                 </div>
                 <div className='flex flex-col justify-center items-center gap-[16px]'>
                     <p className='font-montserrat font-normal text-sm underline'>Department</p>
-                    <p className='font-montserrat font-normal text-sm underline'>Explore</p>
-                    <p className='font-montserrat font-normal text-sm underline'>Explore</p>
-
+                    <p className='font-montserrat font-normal text-sm underline'>Placement</p>
+                    {/* <p className='font-montserrat font-normal text-sm underline'>Explore</p> */}
                 </div>
             </div>
             <div className='bg-deep-blue text-white py-4 w-full '>
