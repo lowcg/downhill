@@ -2,7 +2,7 @@
 import { twMerge } from "tailwind-merge";
 import CustomTable from "../custom-table";
 import { useEffect, useState } from "react";
-import { fetchPlacementCount, fetchPlacementData } from "@/lib/api";
+import { fetchAllPlacementDetails, fetchPlacementCount, fetchPlacementData } from "@/lib/api";
 import { MdArrowLeft, MdArrowRight } from "react-icons/md";
 
 const PlacementData = ({ years, currentYear: _currentYear }) => {
@@ -13,6 +13,7 @@ const PlacementData = ({ years, currentYear: _currentYear }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
+    // fetchAllPlacementDetails(currentYear);
     fetchPlacementCount({ year: currentYear }).then((count) =>
       setCurrentYearCount(count)
     );
@@ -21,8 +22,8 @@ const PlacementData = ({ years, currentYear: _currentYear }) => {
         return data.map((r) => {
           const { slno, student_name, company, year, uniroll, branch } = r;
           return [
-            <div className="text-center">{slno}</div>,
-            <div className="text-center">{year}</div>,
+            slno,
+            year,
             uniroll,
             student_name,
             branch,
@@ -35,7 +36,7 @@ const PlacementData = ({ years, currentYear: _currentYear }) => {
   }, [currentYear, currentPage]);
 
   return (
-    <section className="py-20 set-size sm:w-fit m-auto px-4 sm:px-0">
+    <section className="py-20 sm:w-[80%] lg:w-[60rem]  m-auto px-4 sm:px-0">
       <div className="flex gap-8 justify-center mb-10 text-sm sm:text-base">
         {years.map((y, i) => (
           <div
@@ -54,7 +55,7 @@ const PlacementData = ({ years, currentYear: _currentYear }) => {
         <CustomTable
           label="Placement Details"
           columns={[
-            "Sl. No",
+            "Sl.No",
             "Year",
             "University Roll",
             "Student Name",

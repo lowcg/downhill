@@ -1,23 +1,22 @@
 import axios from "axios";
-axios.defaults.baseURL = "http://www.localhost:8000/";
+// axios.defaults.baseURL = "http://www.localhost:8000/";
+
+const placementDataCache = {};
+
+export async function fetchAllPlacementDetails(year) {
+  if (placementDataCache[year]) { return placementDataCache[year]; }
+  const { data } = await axios.get(`/assets/placement/${year}.json`)
+  placementDataCache[year] = data;
+  return data;
+}
 
 export async function fetchPlacementCount({ year }) {
-  const { data } = await axios.get("/api/placement/count", {
-    params: { year },
-  });
-  if (!data.ok) {
-    throw new Error("failed to fetch data");
-  }
-  console.log(data.data.count);
-  return data.data.count;
+  return (await fetchAllPlacementDetails(year)).length;
 }
 
 export async function fetchPlacementData({ year, page, size }) {
-  const { data } = await axios.get("/api/placement/" + year, {
-    params: { page, size },
-  });
-  if (!data.ok) {
-    throw new Error("failed to fetch data");
-  }
-  return data.data;
+  const allData = await fetchAllPlacementDetails(year);
+  const start = (page-1)*size;
+  const end = start + size;
+  return allData.slice(start, end);
 }
