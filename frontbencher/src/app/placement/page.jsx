@@ -10,8 +10,8 @@ const Placements = () => (
     <Navbar alwaysSolid={true} />
     <main className="font-geist text-deep-blue bg-white">
       <ThinBanner />
-     <PlacementSection/>
-     <PlacementData years={[2023, 2022, 2021]} currentYear={2023}/>
+      <PlacementSection />
+      <PlacementData years={[2023, 2022, 2021]} currentYear={2023} />
     </main>
   </>
 );
