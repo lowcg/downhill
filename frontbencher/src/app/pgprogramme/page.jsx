@@ -13,7 +13,7 @@ const page = () => {
       <div className="flex items-center justify-center pt-10 md:pt-0 py-0 md:py-10 ">
         <HeaderTitle title="PG Programmes" />
       </div>
-      <Programme sectionname={pgsection} />
+      <Programme defaultsection='Admission Procedure' sectionname={pgsection} />
     </div>
   );
 };

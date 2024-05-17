@@ -2,8 +2,8 @@
 import React from 'react'
 import Link from 'next/link'
 import { useState } from 'react'
-const index = ({sectionname}) => {
-  const [selectedSection, setSelectedSection] = useState('Admission Procedure');
+const index = ({sectionname,defaultsection}) => {
+  const [selectedSection, setSelectedSection] = useState(defaultsection);
   return (
     <div className="flex md:flex-row flex-col w-full">
         <div className="hidden md:flex md:flex-col flex-row w-[30%] font-geist  font-normal md:font-semibold p-10 md:p-20 ">
