@@ -7,17 +7,7 @@ import { FaLocationDot } from "react-icons/fa6";
 function Hero() {
   return (
     <main className="relative h-full w-full  text-white font-geistSemiBold bg-black">
-      {/* <Image
-        priority={true}
-        quality={100}
-        src={"/heroBg.png"}
-        style={{ objectFit: "cover" }}
-        width={1728}
-        height={400}
-        className="h-[40rem] w-full md:h-[50rem]  lg:h-[30rem] opacity-[0.65]"
-        alt="bg-iamge"
-      ></Image> */}
-      <video src="/herobgvideo.mp4" muted loop autoPlay  className="w-full object-cover h-[30rem] opacity-[0.35]"></video>
+      <video preload="metadata" playsInline src="https://utfs.io/f/21792fbc-d267-4163-bebf-8cb0a4e6063c-y4alcz.mp4" muted loop autoPlay  className="w-full object-cover h-[30rem] opacity-[0.35]"></video>
       <div className="absolute top-[50%] -translate-y-[30%] left-[50%] -translate-x-[50%] flex flex-col items-center justify-center gap-2 sm:gap-2 lg:gap-4">
         <div className="flex flex-col gap-2 justify-center items-center">
           <h1 className="text-[24px] sm:text-[36px] md:text-[46px] lg:text-[56px] text-nowrap">
