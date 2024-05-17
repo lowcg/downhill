@@ -146,9 +146,9 @@ export default function Navbar({ className, alwaysSolid = false }) {
         <MenubarMenu>
           <MenubarTrigger>Faculty</MenubarTrigger>
           <MenubarContent>
-            <MenubarItem>Faculty List</MenubarItem>
+          <Link href="/faculty/list"><MenubarItem>Faculty List</MenubarItem></Link> 
             <MenubarItem>Faculty Positions</MenubarItem>
-            <MenubarItem>Career Benefits @AOT</MenubarItem>
+            <Link href="/faculty/career"><MenubarItem>Career Benefits @AOT</MenubarItem></Link>
           </MenubarContent>
         </MenubarMenu>
       </Menubar>
