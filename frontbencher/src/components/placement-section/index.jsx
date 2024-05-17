@@ -1,10 +1,10 @@
 import HeaderTitle from "../HeaderTitle";
 import CustomTable from "../custom-table";
 const PlacementSection = () => (
-  <section className="bg-secondary-light">
-    <div className="set-size m-auto flex flex-col justify-center items-center gap-16 py-20">
+  <section className="bg-secondary-light px-8 sm:px-0">
+    <div className="sm:w-[80%] lg:w-[60rem] m-auto flex flex-col justify-center items-center gap-16 py-20">
       <HeaderTitle title="Placements" />
-      <p>
+      <p className="text-center">
         At the Academy of Technology (AOT), our teaching-learning process,
         examination system, and training are tailored to foster hard work and
         motivation among our students. Our commitment to placement assistance

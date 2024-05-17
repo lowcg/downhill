@@ -40,7 +40,7 @@ function Hero() {
           className="flex gap-1 items-center"
         >
           <FaPhoneAlt className=""/>
-          <h1 className=" text-nowrap">+91 0000000000</h1>
+          <h1 className=" text-nowrap">+91 9830161441</h1>
         </div>
       </div>
     </main>

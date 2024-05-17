@@ -17,7 +17,7 @@ function generateDummyEvent(seed = 123) {
   faker.seed(seed);
   return {
     title: faker.lorem.sentence(),
-    imgUrl: '/assets/heroBg.png',
+    imgUrl: "/assets/heroBg.png",
     date: faker.date.anytime(),
     description: faker.lorem.sentences({ min: 3, max: 6 }),
   };

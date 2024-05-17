@@ -13,12 +13,13 @@ export default function UpcomingEvents({ events, showHeading = true,showButton=t
       )}
 
       <div className="grid grid-cols-1 gap-y-10 sm:gap-y-10 md:grid-cols-2 lg:grid-cols-3 gap-x-16 w-full">
-        {displayedEvents.map(({ title, description }, index) => (
+        {displayedEvents.map(({ title, description,img }, index) => (
           <UpcomingEventCard
             key={index}
             title={title}
             description={description}
             className="h-full shadow-md"
+            img={img}
           />
         ))}
       </div>
