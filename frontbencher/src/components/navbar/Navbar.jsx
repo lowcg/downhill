@@ -51,7 +51,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
   return (
     <nav
       className={twMerge(
-        "lg:px-10 lg:py-3 w-full flex transition-colors duration-500 justify-between border-none text-white rounded-none text-[14px] z-[999]",
+        "lg:px-10 lg:py-3 w-full flex transition-colors duration-500 justify-between border-none text-white rounded-none text-[14px] z-[100]",
         isScrolled || alwaysSolid ? "bg-deep-blue" : "bg-deep-blue/0",
         alwaysSolid ? "sticky top-0" : "fixed top-0"
       )}
@@ -62,11 +62,11 @@ export default function Navbar({ className, alwaysSolid = false }) {
         )}
       >
         <Link href="/" className="flex items-center -space-x-2">
-          <A />
+          <A className="size-[36px] fill-white"/>
           <div className="animate-spin-slow">
             <O />
           </div>
-          <T />
+          <T className="size-[36px] fill-white"/>
         </Link>
         {/* Academics */}
         <MenubarMenu>
