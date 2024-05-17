@@ -15,7 +15,7 @@ export const sampleEvents=[
 export const sampleUpcomingEvents=[
     {
         title: "Admission Procedure",
-       
+        img:"/assets/heroBg.png",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
     },
 
