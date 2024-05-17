@@ -61,9 +61,9 @@ const Hamburger = () => (
       </HamMenu>
 
       <HamMenu label="Faculty" active={true}>
-        <HamMenuItem label="Faculty List" />
+        <Link href="/faculty/list"><HamMenuItem label="Faculty List" /></Link>
         <HamMenuItem label="Faculty Positions" />
-        <HamMenuItem label="Career Benefits" />
+        <Link href="/faculty/career"><HamMenuItem label="Career Benefits" /></Link>
       </HamMenu>
     </div>
   </div>
