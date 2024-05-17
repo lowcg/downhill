@@ -66,24 +66,31 @@ const Preloader = () => {
     animate="out"
     className="absolute min-h-screen w-full top-0 left-0 bg-slate-200 z-[110]">
       <div className="absolute flex items-center -space-x-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 h-full">
+        
         <motion.div
         variants={Avariants}
         initial="hidden"
         animate="visible"
+        ease="cubic-bezier(0.83, 0, 0.17, 1)"
         >
           <A className="size-[15vmax] fill-deep-blue" />
         </motion.div>
+
         <motion.div
         variants={Ovariants} 
         initial="hidden"
         animate="visible"
-        className="animate">
+        ease="cubic-bezier(0.83, 0, 0.17, 1)"
+        className="animate"
+        >
           <O className="fill-deep-blue size-[15vmax]" />
         </motion.div>
+
         <motion.div
         variants={Tvariants}
         initial="hidden"
         animate="visible"
+        ease="cubic-bezier(0.83, 0, 0.17, 1)"
         >
           <T className="fill-deep-blue size-[15vmax] stroke-deep-blue" />
         </motion.div>

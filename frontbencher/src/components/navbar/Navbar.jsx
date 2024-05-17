@@ -169,12 +169,12 @@ export default function Navbar({ className, alwaysSolid = false }) {
         />
       </div>
       <div className="lg:hidden flex justify-between w-full relative h-20">
-        <Link href="/" className="flex items-center -space-x-2 absolute top-6 left-8 z-20">
-          <A />
+      <Link href="/" className="flex items-center -space-x-2">
+          <A className="size-[36px] fill-white"/>
           <div className="animate-spin-slow">
             <O />
           </div>
-          <T />
+          <T className="size-[36px] fill-white"/>
         </Link>
         <div className="absolute right-8 z-10 top-6" onClick={() => setHamOpen(!isHamOpen)}>
           <SvgHamburger size={28}/>
