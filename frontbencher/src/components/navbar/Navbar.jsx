@@ -77,26 +77,14 @@ export default function Navbar({ className, alwaysSolid = false }) {
         <MenubarMenu>
           <MenubarTrigger>Academics</MenubarTrigger>
           <MenubarContent>
-            <MenubarSub>
-              <Link href="/ugprogramme">
-                <MenubarSubTrigger>UG Programs</MenubarSubTrigger>
-              </Link>
-              <MenubarSubContent>
-                <MenubarItem>Program Structure</MenubarItem>
-                <MenubarItem>Regulations</MenubarItem>
-                <MenubarItem>curricullum</MenubarItem>
-              </MenubarSubContent>
-            </MenubarSub>
-            <MenubarSub>
-              <Link href="/pgprogramme">
-                <MenubarSubTrigger>PG Programs</MenubarSubTrigger>
-              </Link>
-              <MenubarSubContent>
-                <MenubarItem>Program Structure</MenubarItem>
-                <MenubarItem>Regulations</MenubarItem>
-                <MenubarItem>curricullum</MenubarItem>
-              </MenubarSubContent>
-            </MenubarSub>
+          <MenubarItem>
+              <Link href="/ugprogramme">UG Programs</Link>
+              
+              </MenubarItem>
+            <MenubarItem>
+              <Link href="/pgprogramme">PG Programs</Link>
+              
+              </MenubarItem>
 
             <MenubarSub>
               <MenubarSubTrigger>Resources</MenubarSubTrigger>
@@ -126,16 +114,14 @@ export default function Navbar({ className, alwaysSolid = false }) {
 
         {/* Research */}
         <MenubarMenu>
-          <Link href="/research">
-            <MenubarTrigger>Research</MenubarTrigger>
-          </Link>
-          <MenubarContent>
+         <Link href='/research'><MenubarTrigger>Research</MenubarTrigger></Link> 
+          {/* <MenubarContent>
             <MenubarItem>Current Research</MenubarItem>
             <MenubarSeparator />
             <MenubarItem>Past Research</MenubarItem>
             <MenubarSeparator />
             <MenubarItem>Research Facilities</MenubarItem>
-          </MenubarContent>
+          </MenubarContent> */}
         </MenubarMenu>
 
         {/* Students */}
@@ -156,12 +142,9 @@ export default function Navbar({ className, alwaysSolid = false }) {
         <MenubarMenu>
           <MenubarTrigger>Faculty</MenubarTrigger>
           <MenubarContent>
-            <Link href="/faculty/list">
-              <MenubarItem>Faculty List</MenubarItem>
-            </Link>
-            <Link href="/faculty/career">
-              <MenubarItem>Career Benefits @AOT</MenubarItem>
-            </Link>
+          <Link href="/faculty/list"><MenubarItem>Faculty List & Positions </MenubarItem></Link> 
+            
+            <Link href="/faculty/career"><MenubarItem>Career Benefits @AOT</MenubarItem></Link>
           </MenubarContent>
         </MenubarMenu>
       </Menubar>

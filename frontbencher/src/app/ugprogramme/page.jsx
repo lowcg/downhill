@@ -13,7 +13,7 @@ const page = () => {
       <div className="flex items-center justify-center pt-[18px] py-0 md:py-10 ">
         <HeaderTitle title="UG Programmes" />
       </div>
-      <Programme sectionname={ugsection} />
+      <Programme defaultsection='Admission Procedure' sectionname={ugsection} />
     </div>
   );
 };
