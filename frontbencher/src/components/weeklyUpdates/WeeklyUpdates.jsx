@@ -21,12 +21,12 @@ const WeeklyUpdates = ({ className }) => (
           <input
             type="text"
             placeholder="Your Name"
-            className="w-[50%] h-[40px] bg-transparent font-geistRegular focus:border-orange border-b border-gray px-4 focus:ring-0 focus:ring-offset-0 outline-none"
+            className="w-[50%] h-[40px] bg-transparent font-geistRegular focus:border-orange border-b border-gray px-4 focus:ring-0 focus:ring-offset-0 outline-none caret-orange"
           />
           <input
             type="email"
             placeholder="Your Email"
-            className="w-[50%] h-[40px] bg-transparent font-geistRegular focus:border-orange border-b border-gray px-4 focus:ring-0 focus:ring-offset-0 outline-none"
+            className="w-[50%] h-[40px] bg-transparent font-geistRegular focus:border-orange border-b border-gray px-4 focus:ring-0 focus:ring-offset-0 outline-none caret-orange"
           />
 
           <PrimaryButton
