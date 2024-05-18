@@ -5,6 +5,8 @@ import NewsBulletin from "@/components/news-bulletin/NewsBulletin";
 import WeeklyUpdates from "@/components/weeklyUpdates/WeeklyUpdates";
 import UpcomingEvents from "@/components/events/UpcomingEvents";
 import Navbar from "@/components/navbar/Navbar";
+import Preloader from "@/components/preloader";
+
 
 import {
   sampleUpcomingEvents,
@@ -19,6 +21,7 @@ import Loading from "./loading";
 export default function Home() {
   return (
     <>
+      <Preloader />
       <Navbar className="fixed top-0 z-50 border-none" />
       <main className="min-h-screen bg-white text-deep-blue font-montserrat">
         <Hero />
