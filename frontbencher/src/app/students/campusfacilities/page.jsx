@@ -33,7 +33,7 @@ const allData = [
 const page = () => {
   return (
     <div className="bg-white w-full flex flex-col items-center min-h-screen gap-20 py-20">
-      <HeaderTitle title="Life at AOT" />
+      <HeaderTitle title="Campus Facilities" />
       <section className="w-full space-y-10">
         {
           allData.map((item,idx)=>{
@@ -49,11 +49,11 @@ const page = () => {
 export function CardSeq({ image, title, desc}) {
   console.log()
   return (
-    <div className="w-full flex md:flex-row flex-col py-10 md:px-14 font-geist gap-6  md:even:flex-row-reverse md:even:justify-end md:even:text-right">
-      <div className=" md:w-[40%] h-fit box-content overflow-hidden flex justify-center p-5 ">
+    <div className="w-full flex md:flex-row flex-col py-10 md:px-14 font-geist gap-6  md:even:flex-row-reverse md:even:justify-end md:even:text-right items-center">
+      <div className="w-[80%] md:w-[40%] h-fit box-content overflow-hidden flex justify-center p-5">
         <Image src={image} width={500} height={200} alt="main gate" className="rounded-lg drop-shadow-lg shadow-slate-700 object-contain" />
       </div>
-      <div className="flex flex-col justify-center w-[60%] gap-12">
+      <div className="flex flex-col justify-center w-[80%] md:w-[60%] gap-12">
         <h1 className="font-bold text-xl">{title}</h1>
         <p>{desc}</p>
       </div>
