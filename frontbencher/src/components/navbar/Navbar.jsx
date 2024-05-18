@@ -51,22 +51,22 @@ export default function Navbar({ className, alwaysSolid = false }) {
   return (
     <nav
       className={twMerge(
-        "lg:px-10 lg:py-3 w-full flex transition-colors duration-500 justify-between border-none text-white rounded-none text-[14px] z-[100]",
+        "lg:px-10 lg:py-3 w-full flex transition-colors duration-500 justify-between border-none text-white rounded-none text-[12px] lg:text-[14px] z-[100]",
         isScrolled || alwaysSolid ? "bg-deep-blue" : "bg-deep-blue/0",
         alwaysSolid ? "sticky top-0" : "fixed top-0"
       )}
     >
       <Menubar
         className={twMerge(
-          " lg:flex gap-4 border-none text-white rounded-none bg-transparent hidden"
+          "lg:flex gap-4 border-none text-white rounded-none bg-transparent hidden"
         )}
       >
-        <Link href="/" className="flex items-center -space-x-2">
-          <A className="size-[36px] fill-white"/>
+        <Link href="/" className="flex items-center -space-x-3">
+          <A className="size-[36px] fill-white" />
           <div className="animate-spin-slow">
             <O />
           </div>
-          <T className="size-[36px] fill-white"/>
+          <T className="size-[36px] fill-white" />
         </Link>
         {/* Academics */}
         <MenubarMenu>
@@ -78,7 +78,9 @@ export default function Navbar({ className, alwaysSolid = false }) {
           <MenubarTrigger>Academics</MenubarTrigger>
           <MenubarContent>
             <MenubarSub>
-              <Link href="/ugprogramme"><MenubarSubTrigger>UG Programs</MenubarSubTrigger></Link>
+              <Link href="/ugprogramme">
+                <MenubarSubTrigger>UG Programs</MenubarSubTrigger>
+              </Link>
               <MenubarSubContent>
                 <MenubarItem>Program Structure</MenubarItem>
                 <MenubarItem>Regulations</MenubarItem>
@@ -86,23 +88,27 @@ export default function Navbar({ className, alwaysSolid = false }) {
               </MenubarSubContent>
             </MenubarSub>
             <MenubarSub>
-              <Link href="/pgprogramme"><MenubarSubTrigger>PG Programs</MenubarSubTrigger></Link>
+              <Link href="/pgprogramme">
+                <MenubarSubTrigger>PG Programs</MenubarSubTrigger>
+              </Link>
               <MenubarSubContent>
                 <MenubarItem>Program Structure</MenubarItem>
                 <MenubarItem>Regulations</MenubarItem>
                 <MenubarItem>curricullum</MenubarItem>
               </MenubarSubContent>
             </MenubarSub>
-            
 
             <MenubarSub>
               <MenubarSubTrigger>Resources</MenubarSubTrigger>
               <MenubarSubContent>
-                <Link href="http://182.74.215.198/moodle/"><MenubarItem>Moodles</MenubarItem></Link>
-                <Link href="https://aot.edu.in/library/"><MenubarItem>Library</MenubarItem></Link>
+                <Link href="http://182.74.215.198/moodle/">
+                  <MenubarItem>Moodles</MenubarItem>
+                </Link>
+                <Link href="https://aot.edu.in/library/">
+                  <MenubarItem>Library</MenubarItem>
+                </Link>
               </MenubarSubContent>
             </MenubarSub>
-            
           </MenubarContent>
         </MenubarMenu>
         {/* Placements */}
@@ -120,7 +126,9 @@ export default function Navbar({ className, alwaysSolid = false }) {
 
         {/* Research */}
         <MenubarMenu>
-         <Link href='/research'><MenubarTrigger>Research</MenubarTrigger></Link> 
+          <Link href="/research">
+            <MenubarTrigger>Research</MenubarTrigger>
+          </Link>
           <MenubarContent>
             <MenubarItem>Current Research</MenubarItem>
             <MenubarSeparator />
@@ -134,11 +142,13 @@ export default function Navbar({ className, alwaysSolid = false }) {
         <MenubarMenu>
           <MenubarTrigger>Students</MenubarTrigger>
           <MenubarContent>
-            <MenubarItem>Life@AOT</MenubarItem>
-            <MenubarSeparator />
-            <MenubarItem>Campus Facilities</MenubarItem>
+            <Link href={"/students/lifeataot"}>
+              <MenubarItem>Life@AOT</MenubarItem>
+            </Link>
+            <Link href={'/students/campusfacilities'}>
+              <MenubarItem>Campus Facilities</MenubarItem>
+            </Link>
             <MenubarItem>Carrer Services</MenubarItem>
-            
           </MenubarContent>
         </MenubarMenu>
 
@@ -146,9 +156,12 @@ export default function Navbar({ className, alwaysSolid = false }) {
         <MenubarMenu>
           <MenubarTrigger>Faculty</MenubarTrigger>
           <MenubarContent>
-          <Link href="/faculty/list"><MenubarItem>Faculty List</MenubarItem></Link> 
-            <MenubarItem>Faculty Positions</MenubarItem>
-            <Link href="/faculty/career"><MenubarItem>Career Benefits @AOT</MenubarItem></Link>
+            <Link href="/faculty/list">
+              <MenubarItem>Faculty List</MenubarItem>
+            </Link>
+            <Link href="/faculty/career">
+              <MenubarItem>Career Benefits @AOT</MenubarItem>
+            </Link>
           </MenubarContent>
         </MenubarMenu>
       </Menubar>
@@ -168,18 +181,25 @@ export default function Navbar({ className, alwaysSolid = false }) {
           border="white"
         />
       </div>
-      <div className="lg:hidden flex justify-between w-full relative h-20">
-      <Link href="/" className="flex items-center -space-x-2">
-          <A className="size-[36px] fill-white"/>
+      <div className="lg:hidden flex justify-between w-full relative h-20 px-6">
+        <Link href="/" className="flex items-center -space-x-2">
+          <A className="size-[36px] fill-white" />
           <div className="animate-spin-slow">
             <O />
           </div>
-          <T className="size-[36px] fill-white"/>
+          <T className="size-[36px] fill-white" />
         </Link>
-        <div className="absolute right-8 z-10 top-6" onClick={() => setHamOpen(!isHamOpen)}>
-          <SvgHamburger size={28}/>
+        <div
+          className="absolute right-8 z-10 top-6"
+          onClick={() => setHamOpen(!isHamOpen)}
+        >
+          <SvgHamburger size={28} />
         </div>
-        {isHamOpen && <div className="absolute w-full h-screen top-0 left-0"><Hamburger active={isHamOpen} /></div>}
+        {isHamOpen && (
+          <div className="absolute w-full h-screen top-0 left-0">
+            <Hamburger active={isHamOpen} />
+          </div>
+        )}
       </div>
     </nav>
   );
