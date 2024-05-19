@@ -30,15 +30,21 @@ export default function Footer() {
                         <p className='font-montserrat font-normal text-sm'>Adisaptagram, Aedcconagar, Hooghly, 712121</p>
                     </div>
                     <div className='flex gap-[12px]'>
-                        <SvgLinkedIn />
-                        <SvgFb />
+                    <a href="https://www.linkedin.com/school/academy-of-technology/?originalSubdomain=in" target="_blank" rel="noopener noreferrer">
+                    <SvgLinkedIn />
+                    </a>
+                    <a href="https://www.facebook.com/aot.adisaptagram/" target="_blank" rel="noopener noreferrer">
+                    <SvgFb />
+                    </a>
+                    {/* <a href="https://www.instagram.com/aotconnect/" target="_blank" rel="noopener noreferrer">
+                    <SvgInstagram />
+                    </a> */}
                     </div>
                 </div>
                 <div className='flex flex-col justify-center items-center gap-[16px]'>
                     <p className='font-montserrat font-normal text-sm underline'>Department</p>
-                    <p className='font-montserrat font-normal text-sm underline'>Explore</p>
-                    <p className='font-montserrat font-normal text-sm underline'>Explore</p>
-
+                    <p className='font-montserrat font-normal text-sm underline'>Placement</p>
+                    {/* <p className='font-montserrat font-normal text-sm underline'>Explore</p> */}
                 </div>
             </div>
             <div className='bg-deep-blue text-white py-4 w-full '>
