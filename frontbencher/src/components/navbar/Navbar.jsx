@@ -77,14 +77,12 @@ export default function Navbar({ className, alwaysSolid = false }) {
         <MenubarMenu>
           <MenubarTrigger>Academics</MenubarTrigger>
           <MenubarContent>
-          <MenubarItem>
+            <MenubarItem>
               <Link href="/ugprogramme">UG Programs</Link>
-              
-              </MenubarItem>
+            </MenubarItem>
             <MenubarItem>
               <Link href="/pgprogramme">PG Programs</Link>
-              
-              </MenubarItem>
+            </MenubarItem>
 
             <MenubarSub>
               <MenubarSubTrigger>Resources</MenubarSubTrigger>
@@ -114,7 +112,9 @@ export default function Navbar({ className, alwaysSolid = false }) {
 
         {/* Research */}
         <MenubarMenu>
-         <Link href='/research'><MenubarTrigger>Research</MenubarTrigger></Link> 
+          <Link href="/research">
+            <MenubarTrigger>Research</MenubarTrigger>
+          </Link>
         </MenubarMenu>
 
         {/* Students */}
@@ -124,10 +124,12 @@ export default function Navbar({ className, alwaysSolid = false }) {
             <Link href={"/students/lifeataot"}>
               <MenubarItem>Life@AOT</MenubarItem>
             </Link>
-            <Link href={'/students/campusfacilities'}>
+            <Link href={"/students/campusfacilities"}>
               <MenubarItem>Campus Facilities</MenubarItem>
             </Link>
-            <MenubarItem>Carrer Services</MenubarItem>
+            <Link href={'/students/careerservices'}>
+              <MenubarItem>Carrer Services</MenubarItem>
+            </Link>
           </MenubarContent>
         </MenubarMenu>
 
@@ -135,9 +137,13 @@ export default function Navbar({ className, alwaysSolid = false }) {
         <MenubarMenu>
           <MenubarTrigger>Faculty</MenubarTrigger>
           <MenubarContent>
-          <Link href="/faculty/list"><MenubarItem>Faculty List & Positions </MenubarItem></Link> 
-            
-            <Link href="/faculty/career"><MenubarItem>Career Benefits @AOT</MenubarItem></Link>
+            <Link href="/faculty/list">
+              <MenubarItem>Faculty List & Positions </MenubarItem>
+            </Link>
+
+            <Link href="/faculty/career">
+              <MenubarItem>Career Benefits @AOT</MenubarItem>
+            </Link>
           </MenubarContent>
         </MenubarMenu>
       </Menubar>
