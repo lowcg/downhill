@@ -50,11 +50,12 @@ const Hamburger = () => (
         <Link href={"/students/lifeataot"}>
           <HamMenuItem label="Life@AOT" />
         </Link>
-        <Link href={'/students/campusfacilities'}>
-        <HamMenuItem label="Campus Facilities" />
+        <Link href={"/students/campusfacilities"}>
+          <HamMenuItem label="Campus Facilities" />
         </Link>
-
-        <HamMenuItem label="Career Services" />
+        <Link href={'/students/careerservices'}>
+          <HamMenuItem label="Career Services" />
+        </Link>
       </HamMenu>
 
       <HamMenu label="Faculty" active={true}>
