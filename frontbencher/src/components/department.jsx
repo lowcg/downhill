@@ -83,7 +83,7 @@ const Department = () => {
             ME
           </button>
         </div>
-        <div className="flex flex-col sm:flex-row gap-5  py-5 justify-center w-full items-center text-deep-blue font-geist font-bold text-[17px] ">
+        <div className="flex flex-row gap-5  py-5 justify-center w-full items-center text-deep-blue font-geist font-bold text-[17px] ">
           <button
             onClick={() =>
               setSelectedSection("about") && handleSectionClick("about")
@@ -127,14 +127,15 @@ const Department = () => {
               <div className=" text-deep-blue ">
                 <p>{departmentData[selectedSection].text}</p>
               </div>
-              
+
               <Image
                 src={departmentData[selectedSection].image}
                 width={400}
                 height={400}
                 alt="department"
+                className="rounded-xl mt-5"
+                
               />
-             
             </div>
           </div>
         )}
@@ -200,7 +201,7 @@ const Department = () => {
         />
       </div>
     </div> } */}
-    {/*Events*/}
+        {/*Events*/}
         {selectedSection === "events" && (
           <div className="w-full flex flex-col px-4 sm:px-20 py-[56px] justify-center">
             <Subheading subtitle="Events" />
@@ -229,13 +230,11 @@ const Department = () => {
                             {event.title}
                           </p>
                           <p className="font-geist text-[0.85em] text-neutral-700">
-      {event.description}
-    </p>
+                            {event.description}
+                          </p>
                         </div>
                       </div>
-                      <div className="px-4">
-                        
-                      </div>
+                      <div className="px-4"></div>
                     </div>
                   </>
                 ))}
