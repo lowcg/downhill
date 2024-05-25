@@ -48,9 +48,9 @@ export const departments = [
               ],
             },
             events : [
-              { title: "Event 1",img:"/heroBg.png", description: "This is event 1" },
-              { title: "Event 2",img:"/aot-main.webp", description: "This is event 2" },
-              { title: "Event 3",img:"/heroBg.png", description: "This is event 3" },
+              { title: "Event 1",img:"/assets/CSE-1.webp", description: "This is event 1" },
+              { title: "Event 2",img:"/assets/CSE-2.webp", description: "This is event 2" },
+              { title: "Event 3",img:"/assets/CSE-3.webp", description: "This is event 3" },
               
           ],
          
@@ -112,9 +112,9 @@ export const departments = [
               },
                 
                 events : [
-                    { title: "Event 1",img:"/heroBg.png", description: "This is event 1" },
-                    { title: "Event 2",img:"/heroBg.png", description: "This is event 2" },
-                    { title: "Event 3",img:"/heroBg.png", description: "This is event 3" },
+                    { title: "Event 1",img:"/assets/ECE-1.webp", description: "This is event 1" },
+                    { title: "Event 2",img:"/assets/ECE-2.webp", description: "This is event 2" },
+                    { title: "Event 3",img:"/assets/ECE-3.webp", description: "This is event 3" },
                     
                 ],
                 
@@ -159,9 +159,9 @@ export const departments = [
                     ],
                   },
                   events : [
-                    { title: "Event 1",img:"/heroBg.png", description: "This is event 1" },
-                    { title: "Event 2",img:"/basketball.webp", description: "This is event 2" },
-                    { title: "Event 3",img:"/heroBg.png", description: "This is event 3" },
+                    { title: "Event 1",img:"/assets/CSBS-1.webp", description: "This is event 1" },
+                    { title: "Event 2",img:"/assets/CSBS-2.webp", description: "This is event 2" },
+                    { title: "Event 3",img:"/assets/CSBS-3.webp", description: "This is event 3" },
                     
                 ],
                
@@ -228,9 +228,9 @@ export const departments = [
                 ],
               },
               events : [
-                { title: "Event 1",img:"/heroBg.png", description: "This is event 1" },
-                { title: "Event 2",img:"/girlshostel.jpeg", description: "This is event 2" },
-                { title: "Event 3",img:"/heroBg.png", description: "This is event 3" },
+                { title: "Event 1",img:"/assets/EE-1.webp", description: "This is event 1" },
+                { title: "Event 2",img:"/assets/EE-2.webp", description: "This is event 2" },
+                { title: "Event 3",img:"/assets/EE-3.webp", description: "This is event 3" },
                 
             ],
             
@@ -286,9 +286,9 @@ export const departments = [
                 ],
               },
               events : [
-                { title: "Event 1",img:"/heroBg.png", description: "This is event 1" },
-                { title: "Event 2",img:"/basketball.webp", description: "This is event 2" },
-                { title: "Event 3",img:"/library.webp", description: "This is event 3" },
+                { title: "Event 1",img:"/assets/EEE-1.webp", description: "This is event 1" },
+                { title: "Event 2",img:"/assets/EEE-2.webp", description: "This is event 2" },
+                { title: "Event 3",img:"/assets/EEE-3.webp", description: "This is event 3" },
                 
             ],
            
@@ -337,7 +337,7 @@ export const departments = [
             ],
           },
           events : [
-            { title: "Event 1",img:"/heroBg.png", description: "This is event 1" },
+            { title: "Event 1",img:"/assets/ME-1.webp", description: "This is event 1" },
             { title: "Event 2",img:"/basketball.webp", description: "This is event 2" },
             { title: "Event 3",img:"/heroBg.png", description: "This is event 3" },
             
