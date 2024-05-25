@@ -119,6 +119,7 @@ const Department = () => {
             Newsletter
           </button> */}
         </div>
+        {/*About*/}
         {selectedSection === "about" && (
           <div className="flex flex-col px-7">
             <Subheading subtitle="About" />
@@ -137,8 +138,9 @@ const Department = () => {
             </div>
           </div>
         )}
+        {/*Notice*/}
         {selectedSection === "notice" && (
-          <div className="flex flex-col gap-10 w-full">
+          <div className="overflow-scroll px-5 md:px-36 flex flex-col gap-10 w-full">
             <div className="flex flex-col sm:flex-row justify-between w-full items-center">
               <Subheading subtitle="Notice" />
               {selectedDepartment && (
@@ -146,7 +148,7 @@ const Department = () => {
               )}
             </div>
 
-            <div className="w-full px-10 items-center justify-center">
+            <div className="w-full py-10 items-center justify-center">
               <table className="w-full border-collapse border borde  bg-slate-100 font-geist">
                 <thead className="border border-border bg-deep-blue">
                   <tr>
@@ -182,6 +184,7 @@ const Department = () => {
             </div>
           </div>
         )}
+        {/*News*/}
         {/* {selectedSection === "news" && <div className="w-full flex flex-col px-4 sm:px-20 py-[56px] justify-center">
       <Subheading subtitle="News" />
       <div className="flex flex-col items-center justify-center gap-[36px]  px-4 sm:px-20 py-[36px] pt-20">
@@ -197,6 +200,7 @@ const Department = () => {
         />
       </div>
     </div> } */}
+    {/*Events*/}
         {selectedSection === "events" && (
           <div className="w-full flex flex-col px-4 sm:px-20 py-[56px] justify-center">
             <Subheading subtitle="Events" />
@@ -207,7 +211,7 @@ const Department = () => {
                     <div
                       key={index}
                       className={twMerge(
-                        "flex flex-col bg-white rounded-md justify-between pb-4"
+                        "flex flex-col rounded-md justify-between pb-4 bg-[#FBF9EF] transform transition-transform duration-200 hover:scale-105 hover:shadow-lg"
                       )}
                     >
                       <div className="mb-4">
