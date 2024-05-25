@@ -7,7 +7,6 @@ import UpcomingEvents from "@/components/events/UpcomingEvents";
 import Navbar from "@/components/navbar/Navbar";
 import Preloader from "@/components/preloader";
 
-
 import {
   sampleUpcomingEvents,
   sampleAnnouncements,

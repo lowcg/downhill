@@ -14,9 +14,14 @@ module.exports = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        
       },
     },
+    
     extend: {
+      screens:{
+        "lg":"1025px"
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -53,6 +58,7 @@ module.exports = {
         geistSemiBold: ["GeistSemiBold", "sans-serif"],
         prompt: ["Prompt", "sans-serif"],
       },
+      
     },
   },
   plugins: [require("tailwindcss-animate")],

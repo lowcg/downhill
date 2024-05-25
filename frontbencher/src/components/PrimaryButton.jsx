@@ -17,7 +17,7 @@ function PrimaryButton({
       } ${
         hoverEffectOn &&
         (color === "orange" ? "hover:bg-orange/90" : "hover:bg-white/80")
-      } ${padding} ${border} font-geistRegular duration-300  rounded-md align-middle  flex justify-center text-[14px] md:text-[16px] border`}
+      } ${padding} ${border} font-geistRegular duration-300  rounded-md align-middle  flex justify-center text-[14px] md:text-[16px] border text-nowrap`}
 
     >
       {title}
