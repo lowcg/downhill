@@ -8,7 +8,7 @@ const deptnewscard = ({ content }) => {
   return (
     <div className="w-fit flex flex-col md:flex-row items-start justify-between gap-6 ">
       <Image
-        src="/assets/heroBg.png"
+        src={img}
         alt="News"
         width={300}
         height={800}

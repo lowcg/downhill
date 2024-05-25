@@ -19,7 +19,7 @@ const AnnouncementCard = ({
       <h1 className="font-bold text-lg">{title}</h1>
       <h4 className="font-geist text-sm text-neutral-600 mt-2 flex items-center gap-3">
         <SlCalender size={16} />
-        {/* {date.toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"})} */}
+        {date}
       </h4>
       <p className="font-geist font-light text-[0.95em] mt-4 text-neutral-900">{small_description}</p>
     </div>
