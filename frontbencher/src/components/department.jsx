@@ -127,18 +127,18 @@ const Department = () => {
               <div className=" text-deep-blue ">
                 <p>{departmentData[selectedSection].text}</p>
               </div>
-              <div className="justify-end w-[100px] h-[100px]">
+              {/* <div className="justify-end w-[100px] h-[100px]"> */}
               <Image
                 src={departmentData[selectedSection].image}
-                // width={400}
-                // height={400}
+                width={400}
+                height={400}
                 alt="department"
                 className="rounded-xl mt-5"
-                layout="fill"
-          objectFit="cover"
-          objectPosition="center"
+          //       layout="fill"
+          // objectFit="cover"
+          // objectPosition="center"
               />
-              </div>
+              {/* </div> */}
             </div>
           </div>
         )}
