@@ -9,67 +9,85 @@ import { notices } from "@/lib/data/noticedata";
 import Image from "next/image";
 import News from "@/components/deptnews";
 import Event from "@/components/deptevent";
+import UpcomingEvents from "./events/UpcomingEvents";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
+import { departments } from "@/lib/departmentdata/index";
+
 const Department = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState(null);
+  const [selectedDepartment, setSelectedDepartment] = useState("CSE");
   const [selectedSection, setSelectedSection] = useState("about");
 
   const handleButtonClick = (department) => {
-    setSelectedDepartment(`${department} Dept.`);
+    setSelectedDepartment(department);
   };
-  useEffect(() => {
-    handleButtonClick("CSE");
-  }, []);
+
+  const handleSectionClick = (section) => {
+    setSelectedSection(section);
+  };
+
+  const departmentData = departments.find(
+    (dept) => Object.keys(dept)[0] === selectedDepartment
+  )[selectedDepartment][0];
   return (
     <>
       <section className="w-full flex flex-col items-center justify-center gap-[36px]  px-4 sm:px-20 py-[36px]">
         <HeaderTitle title={"Departments"} />
         <div className="grid grid-cols-2 sm:grid-cols-3 md:flex md:space-x-4 gap-4">
-          <SecondaryButton
-            title="CSE"
-            padding="px-2 sm:px-10"
-            hoverEffectOn={true}
-            onClick={() => handleButtonClick("CSE")}
-            textcolor="black"
-          />
-          <SecondaryButton
-            title="ECE"
-            padding="px-2 sm:px-10"
-            hoverEffectOn={true}
-            onClick={() => handleButtonClick("ECE")}
-            textcolor="black"
-          />
-          <SecondaryButton
-            title="CSBS"
-            padding="px-2 sm:px-10"
-            hoverEffectOn={true}
-            onClick={() => handleButtonClick("CSBS")}
-            textcolor="black"
-          />
-          <SecondaryButton
-            title="EEE"
-            padding="px-2 sm:px-10"
-            hoverEffectOn={true}
-            onClick={() => handleButtonClick("EEE")}
-            textcolor="black"
-          />
-          <SecondaryButton
-            title="EE"
-            padding="px-2 sm:px-10"
-            hoverEffectOn={true}
-            onClick={() => handleButtonClick("EE")}
-            textcolor="black"
-          />
-          <SecondaryButton
-            title="ME"
-            padding="px-2 sm:px-10"
-            hoverEffectOn={true}
-            onClick={() => handleButtonClick("ME")}
-            textcolor="black"
-          />
-        </div>
-        <div className="flex flex-col sm:flex-row gap-5  py-5 justify-center w-full items-center text-deep-blue font-geist font-bold text-[17px] ">
           <button
-            onClick={() => setSelectedSection("about")}
+            onClick={() => handleButtonClick("CSE")}
+            className={`${
+              selectedDepartment === "CSE" ? "bg-orange/30" : ""
+            } flex- justify-center border-2 border-orange px-2 sm:px-10 py-[0.3rem] rounded-md`}
+          >
+            CSE
+          </button>
+          <button
+            onClick={() => handleButtonClick("ECE")}
+            className={`${
+              selectedDepartment === "ECE" ? "bg-orange/30" : ""
+            } flex- justify-center border-2 border-orange px-2 sm:px-10 py-[0.3rem] rounded-md`}
+          >
+            ECE
+          </button>
+          <button
+            onClick={() => handleButtonClick("CSBS")}
+            className={`${
+              selectedDepartment === "CSBS" ? "bg-orange/30" : ""
+            } flex- justify-center border-2 border-orange px-2 sm:px-10 py-[0.3rem] rounded-md`}
+          >
+            CSBS
+          </button>
+          <button
+            onClick={() => handleButtonClick("EEE")}
+            className={`${
+              selectedDepartment === "EEE" ? "bg-orange/30" : ""
+            } flex- justify-center border-2 border-orange px-2 sm:px-10 py-[0.3rem] rounded-md`}
+          >
+            EEE
+          </button>
+          <button
+            onClick={() => handleButtonClick("EE")}
+            className={`${
+              selectedDepartment === "EE" ? "bg-orange/30" : ""
+            } flex- justify-center border-2 border-orange px-2 sm:px-10 py-[0.3rem] rounded-md`}
+          >
+            EE
+          </button>
+          <button
+            onClick={() => handleButtonClick("ME")}
+            className={`${
+              selectedDepartment === "ME" ? "bg-orange/30" : ""
+            } flex- justify-center border-2 border-orange px-2 sm:px-10 py-[0.3rem] rounded-md`}
+          >
+            ME
+          </button>
+        </div>
+        <div className="flex flex-row gap-5  py-5 justify-center w-full items-center text-deep-blue font-geist font-bold text-[17px] ">
+          <button
+            onClick={() =>
+              setSelectedSection("about") && handleSectionClick("about")
+            }
             className={`${
               selectedSection === "about" ? "border-b-2 border-orange " : ""
             } mr-4`}
@@ -92,37 +110,41 @@ const Department = () => {
           >
             Events
           </button>
-          <button
+          {/* <button
             onClick={() => setSelectedSection("news")}
             className={`${
               selectedSection === "news" ? "border-b-2 border-orange " : ""
             } mr-4`}
           >
             Newsletter
-          </button>
+          </button> */}
         </div>
+        {/*About*/}
         {selectedSection === "about" && (
           <div className="flex flex-col px-7">
             <Subheading subtitle="About" />
             <div className="flex flex-col sm:flex-row gap-5  py-5 justify-center w-full items-center text-deep-blue font-geist  text-[17px] ">
               <div className=" text-deep-blue ">
-              Established in 2003, Academy of Technology is one of the most acclaimed self-financed engineering colleges in West Bengal. It has been established by Ananda Educational Development & Charitable Organisation (AEDCO), a trust under the chairmanship of Prof. Jagannath Banerjee, an alumnus of IIT Kharagpur and IIM Calcutta.
-In a metamorphosis of over 11 years, Academy of Technology has been reinventing itself constantly to explore the infinite possibilities of engineering and technology - an academy that inspires everyone to think differently. It is now the preferred career destination for meritorious students due to its academic integrity and standard as well as its attractive campus placement.
-
-Vision
-“Aspires to be a pre-eminent deemed university of national standing in education and innovation”.
+                <p>{departmentData[selectedSection].text}</p>
               </div>
+              {/* <div className="justify-end w-[100px] h-[100px]"> */}
               <Image
-                src="/heroBg.png"
+                src={departmentData[selectedSection].image}
                 width={400}
                 height={400}
                 alt="department"
+                className="rounded-xl mt-5"
+          //       layout="fill"
+          // objectFit="cover"
+          // objectPosition="center"
               />
+              {/* </div> */}
             </div>
           </div>
         )}
+        {/*Notice*/}
         {selectedSection === "notice" && (
-          <div className="flex flex-col gap-10 w-full">
+          <div className="overflow-scroll px-5 md:px-36 flex flex-col gap-10 w-full">
             <div className="flex flex-col sm:flex-row justify-between w-full items-center">
               <Subheading subtitle="Notice" />
               {selectedDepartment && (
@@ -130,7 +152,7 @@ Vision
               )}
             </div>
 
-            <div className="w-full px-10 items-center justify-center">
+            <div className="w-full py-10 items-center justify-center">
               <table className="w-full border-collapse border borde  bg-slate-100 font-geist">
                 <thead className="border border-border bg-deep-blue">
                   <tr>
@@ -146,8 +168,8 @@ Vision
                   </tr>
                 </thead>
                 <tbody className="items-center">
-                  {notices &&
-                    notices.map((notice, index) => (
+                  {departmentData[selectedSection].notices.map(
+                    (notice, index) => (
                       <tr key={index} className="border border-border ">
                         <td className="border border-border text-center py-3 text-gray">
                           {notice.postedBy}
@@ -159,14 +181,70 @@ Vision
                           {notice.date}
                         </td>
                       </tr>
-                    ))}
+                    )
+                  )}
                 </tbody>
               </table>
             </div>
           </div>
         )}
-        {selectedSection === "news" && <News />}
-        {selectedSection === "events" && <Event />}
+        {/*News*/}
+        {/* {selectedSection === "news" && <div className="w-full flex flex-col px-4 sm:px-20 py-[56px] justify-center">
+      <Subheading subtitle="News" />
+      <div className="flex flex-col items-center justify-center gap-[36px]  px-4 sm:px-20 py-[36px] pt-20">
+        {displayedContents.map((content, index) => (
+          <Card key={index} content={content} />
+        ))}
+        <SecondaryButton
+          title={showAll ? "View Less" : "View All"}
+          padding="px-10"
+          hoverEffectOn={true}
+          textcolor="black"
+          onClick={() => setShowAll(!showAll)}
+        />
+      </div>
+    </div> } */}
+        {/*Events*/}
+        {selectedSection === "events" && (
+          <div className="w-full flex flex-col px-4 sm:px-20 py-[56px] justify-center">
+            <Subheading subtitle="Events" />
+            <div className="pt-16">
+              <div className="grid grid-cols-1 gap-y-10 sm:gap-y-10 md:grid-cols-2 lg:grid-cols-3 gap-x-16 w-full">
+                {departmentData[selectedSection].map((event, index) => (
+                  <>
+                    <div
+                      key={index}
+                      className={twMerge(
+                        "flex flex-col rounded-md justify-between pb-4 bg-[#FBF9EF] transform transition-transform duration-200 hover:scale-105 hover:shadow-lg"
+                      )}
+                    >
+                      <div className="mb-4">
+                        <div className="w-auto">
+                          <Image
+                            src={event.img}
+                            width={1000}
+                            height={1000}
+                            alt="heroBg"
+                            className="rounded-t-md aspect-[16/9]"
+                          />
+                        </div>
+                        <div className="mt-6 px-4">
+                          <p className="font-montserrat text-[0.90em] font-semibold  mb-4">
+                            {event.title}
+                          </p>
+                          <p className="font-geist text-[0.85em] text-neutral-700">
+                            {event.description}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="px-4"></div>
+                    </div>
+                  </>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </section>
     </>
   );
