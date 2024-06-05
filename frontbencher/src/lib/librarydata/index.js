@@ -5,27 +5,27 @@ export const departments = [
           Sem1: [
             {
               image: "/book logo/electrical logo.png",
-              pdf: "/path/to/basic electrical engineering ebook.pdf",
+              pdf: "/bookdoc/basic electrical engineering ebook.pdf",
               name: "Basic Electrical Engineering",
             },
             {
               image: "/book logo/math logo.png",
-              pdf: "/path/to/mathematics ebook_11zon.pdf",
+              pdf: "/bookdoc/mathematics ebook_11zon.pdf",
               name: "Mathematics",
             },
             {
               image: "/book logo/chem logo.png",
-              pdf: "/path/to/chemistry ebook.pdf",
+              pdf: "/bookdoc/chemistry ebook.pdf",
               name: "Chemistry",
             },
             {
               image: "/book logo/c lang pic.png",
-              pdf: "/path/to/Let us c.pdf",
+              pdf: "/bookdoc/Let us c.pdf",
               name: "Computer Programming",
             },
             {
               image: "/book logo/physic logo.png",
-              pdf: "/path/to/physics ebook.pdf",
+              pdf: "/bookdoc/physics ebook.pdf",
               name: "Physics",
             },
           ],
@@ -120,17 +120,17 @@ export const departments = [
           Sem1: [
             {
               image: "/book logo/electrical logo.png",
-              pdf: "/path/to/basic electrical engineering ebook.pdf",
+              pdf: "/bookdoc/basic electrical engineering ebook.pdf",
               name: "Basic Electrical Engineering",
             },
             {
               image: "/book logo/math logo.png",
-              pdf: "/path/to/mathematics ebook_11zon.pdf",
+              pdf: "/bookdoc/mathematics ebook_11zon.pdf",
               name: "Mathematics",
             },
             {
               image: "/book logo/chem logo.png",
-              pdf: "/path/to/chemistry ebook.pdf",
+              pdf: "/bookdoc/chemistry ebook.pdf",
               name: "Chemistry",
             },
           ],
@@ -164,12 +164,12 @@ export const departments = [
         Sem1: [
           {
             image: "/book logo/electrical logo.png",
-            pdf: "/path/to/basic electrical engineering ebook.pdf",
+            pdf: "/bookdoc/basic electrical engineering ebook.pdf",
             name: "Basic Electrical Engineering",
           },
           {
             image: "/book logo/math logo.png",
-            pdf: "/path/to/mathematics ebook_11zon.pdf",
+            pdf: "/bookdoc/mathematics ebook_11zon.pdf",
             name: "Mathematics",
           },
         ],

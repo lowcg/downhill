@@ -109,7 +109,7 @@ const library = () => {
                       {book.name}
                     </div>
                     <div className="flex justify-end ml-auto">
-                      <Link href={book.pdf} download={book.name} className="right-0 pt-2">
+                      <Link href={book.pdf} className="right-0 pt-2">
                         <Download />
                       </Link>
                     </div>
