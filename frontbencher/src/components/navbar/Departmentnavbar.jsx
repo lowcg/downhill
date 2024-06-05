@@ -75,9 +75,38 @@ export default function Navbar({ className, alwaysSolid = false }) {
           </Link>
         </MenubarMenu>
         <MenubarMenu>
+          <MenubarTrigger>People</MenubarTrigger>
+          
+          
+          <MenubarContent>
+            <MenubarItem>
+              <Link href="">Faculty Members</Link>
+            </MenubarItem>
+            <MenubarItem>
+              <Link href="">Staff Members</Link>
+            </MenubarItem>
+
+            
+          </MenubarContent>
+        </MenubarMenu>
+        {/* Students */}
+        <MenubarMenu>
+          <MenubarTrigger>Students</MenubarTrigger>
+          <MenubarContent>
+            <Link href={"/students/lifeataot"}>
+              <MenubarItem>Life@AOT</MenubarItem>
+            </Link>
+            <Link href={"/students/campusfacilities"}>
+              <MenubarItem>Campus Facilities</MenubarItem>
+            </Link>
+            <Link href={'/students/careerservices'}>
+              <MenubarItem>Carrer Services</MenubarItem>
+            </Link>
+          </MenubarContent>
+        </MenubarMenu>
+        <MenubarMenu>
           <MenubarTrigger>Academics</MenubarTrigger>
-          <MenubarTrigger>Achievements & Events</MenubarTrigger>
-          <MenubarTrigger>Join Us</MenubarTrigger>
+          
           
           <MenubarContent>
             <MenubarItem>
@@ -100,12 +129,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
             </MenubarSub>
           </MenubarContent>
         </MenubarMenu>
-        {/* Placements */}
-        <MenubarMenu>
-          <a href="/placement">
-            <MenubarTrigger>Placements</MenubarTrigger>
-          </a>
-        </MenubarMenu>
+        
         {/* Department */}
         <MenubarMenu>
           <a href="/departments">
@@ -120,34 +144,16 @@ export default function Navbar({ className, alwaysSolid = false }) {
           </Link>
         </MenubarMenu>
 
-        {/* Students */}
+        
         <MenubarMenu>
-          <MenubarTrigger>Students</MenubarTrigger>
-          <MenubarContent>
-            <Link href={"/students/lifeataot"}>
-              <MenubarItem>Life@AOT</MenubarItem>
-            </Link>
-            <Link href={"/students/campusfacilities"}>
-              <MenubarItem>Campus Facilities</MenubarItem>
-            </Link>
-            <Link href={'/students/careerservices'}>
-              <MenubarItem>Carrer Services</MenubarItem>
-            </Link>
-          </MenubarContent>
+          <Link href="/">
+            <MenubarTrigger>Achievements & Events</MenubarTrigger>
+          </Link>
         </MenubarMenu>
-
-        {/* Faculty */}
         <MenubarMenu>
-          <MenubarTrigger>Faculty</MenubarTrigger>
-          <MenubarContent>
-            <Link href="/faculty/list">
-              <MenubarItem>Faculty List & Positions </MenubarItem>
-            </Link>
-
-            <Link href="/faculty/career">
-              <MenubarItem>Career Benefits @AOT</MenubarItem>
-            </Link>
-          </MenubarContent>
+          <Link href="/">
+            <MenubarTrigger>Join Us</MenubarTrigger>
+          </Link>
         </MenubarMenu>
       </Menubar>
       <div className="lg:flex items-center space-x-4 hidden ">
