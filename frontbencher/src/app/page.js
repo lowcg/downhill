@@ -6,6 +6,7 @@ import WeeklyUpdates from "@/components/weeklyUpdates/WeeklyUpdates";
 import UpcomingEvents from "@/components/events/UpcomingEvents";
 import Navbar from "@/components/navbar/Navbar";
 import Preloader from "@/components/preloader";
+import Accreditation from "@/components/accreditation/Accreditation";
 
 import {
   sampleUpcomingEvents,
@@ -31,6 +32,7 @@ export default function Home() {
             announcements={sampleAnnouncements}
             className="set-size m-auto"
           />
+          <Accreditation/>
           <div className="bg-secondary-light">
             <div className="set-size m-auto">
               <Suspense fallback={<Loading />}>

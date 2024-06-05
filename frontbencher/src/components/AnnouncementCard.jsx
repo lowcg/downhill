@@ -1,6 +1,7 @@
 import { FaArrowRight } from "react-icons/fa6";
 import { SlCalender } from "react-icons/sl";
 import { twMerge } from "tailwind-merge";
+import AnnouncementLogo from './svg/announcement.svg'
 
 const AnnouncementCard = ({
   className,
@@ -16,7 +17,7 @@ const AnnouncementCard = ({
     )}
   >
     <div>
-      <h1 className="font-bold text-lg">{title}</h1>
+      <h1 className="font-bold text-lg flex items-center gap-4">{title}<AnnouncementLogo className="flex animate-ping size-5"/></h1>
       <h4 className="font-geist text-sm text-neutral-600 mt-2 flex items-center gap-3">
         <SlCalender size={16} />
         {date}

@@ -13,6 +13,11 @@ import {
   MenubarTrigger,
 } from "@/components/ui/menubar";
 
+import {
+  MdKeyboardArrowUp as SvgOpenArrow,
+  MdKeyboardArrowDown as SvgCloseArrow,
+} from "react-icons/md";
+
 import SecondaryButton from "@/components/SecondaryButton";
 import PrimaryButton from "@/components/PrimaryButton";
 
@@ -75,7 +80,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
           </Link>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger>Academics</MenubarTrigger>
+          <MenubarTrigger>Academics<SvgCloseArrow/></MenubarTrigger>
           <MenubarContent>
             <MenubarItem>
               <Link href="/ugprogramme">UG Programs</Link>
@@ -90,7 +95,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
                 <Link href="http://182.74.215.198/moodle/">
                   <MenubarItem>Moodles</MenubarItem>
                 </Link>
-                <Link href="https://aot.edu.in/library/">
+                <Link href="/library">
                   <MenubarItem>Library</MenubarItem>
                 </Link>
               </MenubarSubContent>
@@ -119,7 +124,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
 
         {/* Students */}
         <MenubarMenu>
-          <MenubarTrigger>Students</MenubarTrigger>
+          <MenubarTrigger>Students<SvgCloseArrow/></MenubarTrigger>
           <MenubarContent>
             <Link href={"/students/lifeataot"}>
               <MenubarItem>Life@AOT</MenubarItem>
@@ -135,7 +140,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
 
         {/* Faculty */}
         <MenubarMenu>
-          <MenubarTrigger>Faculty</MenubarTrigger>
+          <MenubarTrigger>Faculty<SvgCloseArrow/></MenubarTrigger>
           <MenubarContent>
             <Link href="/faculty/list">
               <MenubarItem>Faculty List & Positions </MenubarItem>

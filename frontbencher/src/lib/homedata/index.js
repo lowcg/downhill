@@ -1,6 +1,11 @@
 export const sampleNews=
 [
     {
+        title: "Student start-up wins Princeton award",
+        date: "11.02.2024 4.30pm",
+        description: "College friends launched ProjectX.Cloud, a cloud OS revolutionizing low-powered systems, earning international acclaim, major grants, and top awards.",
+    },
+    {
         title: "AOT-AGILE",
         date: "11.02.2024 4.30pm",
         description: "Greetings from AGILE. You are cordially invited to the Games Meet 2024. The Football Final match will start today at 4 PM. All the prizes and certificates for Football (Boys), Volleyball ( Boys & Girls) and Basketball ( Boys & Girls) will be given away today at the end of the Football Final Match. ",
