@@ -5,7 +5,7 @@ import location from './location.svg';
 import mail from './mail.svg';
 import phone from './phone.svg';
 import cover from './cover.svg';
-import megaPhone from './megaphone.svg'
+import MegaPhone from './megaphone.svg'
 import warning from './warning.svg'
 import heroBg from './heroBg.png'
 import share from './share.svg'
@@ -19,7 +19,7 @@ export const ImagesOne = {
     mail,
     phone,
     cover,
-    megaPhone,
+    MegaPhone,
     warning,
     heroBg,
     share,
