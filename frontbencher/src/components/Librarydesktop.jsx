@@ -39,10 +39,10 @@ const library = () => {
       </div>
       {/* Department buttons end */}
 
-      <div className="md:hidden flex justify-center items-center">
+      <div className="md:hidden flex justify-center items-center ">
         <select onChange={(e) => handleDepartmentClick(e.target.value)}>
           {Object.keys(departments[0]).map((departmentName) => (
-            <option key={departmentName} value={departmentName}>
+            <option key={departmentName} value={departmentName} className="border-border-color border-2">
               {departmentName}
             </option>
           ))}
@@ -50,7 +50,7 @@ const library = () => {
       </div>
 
       {/* Semester buttons */}
-      <div className="flex py-10 px-20 md:p-20 ">
+      <div className="flex flex-col md:flex-row p-0 md:p-20">
         <div className="hidden md:flex flex-col">
           {selectedDepartment &&
             Object.keys(departmentData[0]).map((semesterName) => (
@@ -66,7 +66,7 @@ const library = () => {
             ))}
         </div>
         
-        <div className="md:hidden flex justify-center relative items-center">
+        <div className="md:hidden flex justify-center items-center pt-5 ">
           <select onChange={(e) => handleSemesterClick(e.target.value)}>
             {selectedDepartment &&
               Object.keys(departmentData[0]).map((semesterName) => (
@@ -77,18 +77,18 @@ const library = () => {
           </select>
         </div>
         {/* Display books */}
-        <div className="flex flex-col pl-20">
-          <div className="flex relative  items-center justify-center w-6 md:w-[512px] h-[46px] pt-3">
+        <div className="flex flex-col px-5 py-7 md:py-0 md:pl-20">
+          <div className="hidden md:flex relative items-center justify-center w-6 md:w-[512px] h-[46px] pt-3">
             <input
               type="text"
-              className="border-[0.5px] border-[#888888] bg-[#FBF9EF] w-[512px] h-[46px] px-5 pr-10 rounded-lg text-sm font-geist focus:outline-none"
+              className="border-[0.5px] border-[#888888] bg-[#FBF9EF] w-[512px] h-[46px] px-5 pr-0 md:pr-10 rounded-lg  items-center justify-center text-sm font-geist focus:outline-none"
               placeholder="Books you need "
             />
             <button type="submit" className="absolute right-0 top-0 mt-6 mr-5 ">
               <FaSearch />
             </button>
           </div>
-          <div className="grid grid-cols-3 md:grid-cols-4 gap-10 items-center justify-start pt-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-10 items-center justify-center md:justify-start pt-16">
             {semesterData &&
               semesterData.map((book, index) => (
                 <div

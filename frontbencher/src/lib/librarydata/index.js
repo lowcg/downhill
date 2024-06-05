@@ -68,6 +68,18 @@ export const departments = [
           ],
         },
       ],
-      EEE: [{}],
+      CSBS: [{
+
+      }],
+      EEE: [{
+
+      }],
+      EE: [{
+
+      }],
+      ME: [{
+        
+      }],
+
     },
   ];
