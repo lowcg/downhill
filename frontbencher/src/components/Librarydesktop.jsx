@@ -3,10 +3,10 @@ import { React, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import Download from "../../public/assets/Download.svg";
 import { departments } from "../lib/librarydata/index";
+import Link from "next/link";
 const library = () => {
   const [selectedDepartment, setSelectedDepartment] = useState("CSE");
   const [selectedSemester, setSelectedSemester] = useState("Sem1");
-  
 
   const handleDepartmentClick = (departmentName) => {
     setSelectedDepartment(departmentName);
@@ -42,7 +42,11 @@ const library = () => {
       <div className="md:hidden flex justify-center items-center ">
         <select onChange={(e) => handleDepartmentClick(e.target.value)}>
           {Object.keys(departments[0]).map((departmentName) => (
-            <option key={departmentName} value={departmentName} className="border-border-color border-2">
+            <option
+              key={departmentName}
+              value={departmentName}
+              className="border-border-color border-2"
+            >
               {departmentName}
             </option>
           ))}
@@ -65,7 +69,7 @@ const library = () => {
               </button>
             ))}
         </div>
-        
+
         <div className="md:hidden flex justify-center items-center pt-5 ">
           <select onChange={(e) => handleSemesterClick(e.target.value)}>
             {selectedDepartment &&
@@ -105,9 +109,9 @@ const library = () => {
                       {book.name}
                     </div>
                     <div className="flex justify-end ml-auto">
-                      <a href={book.pdf} download className="right-0 pt-2">
+                      <Link href={book.pdf} className="right-0 pt-2">
                         <Download />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
