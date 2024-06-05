@@ -1,4 +1,4 @@
-import Navbar from "../../components/navbar/Navbar";
+import Navbar from "../../components/navbar/Departmentnavbar";
 import ThinBanner from "../../components/ThinBanner";
 import Department from "../../components/department";
 
