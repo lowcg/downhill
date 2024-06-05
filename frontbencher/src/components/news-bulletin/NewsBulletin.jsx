@@ -22,7 +22,9 @@ const NewsBulletin = ({ news, className }) => {
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 sm:gap-10">
           <div className="flex-col drop-shadow rounded-lg bg-pure-white h-auto sm:h-[640px] w-full">
             <Image
-              src={ImagesOne.heroBg}
+              src="/assets/SIH_2023.webp"
+              width={450}
+              height={450}
               alt="heroBg"
               className="rounded-t-md h-[345px] w-full object-cover"
             />
@@ -33,7 +35,7 @@ const NewsBulletin = ({ news, className }) => {
                 </div>
               </div>
               <p>
-              As notified by MAKAUT, form fill-up for Even Semester Examinations 2023-24 for all eligible even semester students has begun. 
+              Our college's team triumphed at Smart India Hackathon, showcasing innovation and teamwork, earning national recognition and making us proud.
               </p>
               <p className="font-geistRegular text-base ">1 day ago</p>
             </div>
