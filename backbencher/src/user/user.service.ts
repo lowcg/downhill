@@ -32,4 +32,8 @@ export class UserService {
   public async isUserWithRollExists(email: string): Promise<boolean> {
     return (await this.userRepo.countBy({ email })) == 1;
   }
+
+  public async getUserById(id: string): Promise<User> {
+    return await this.userRepo.findOneBy({ id });
+  }
 }

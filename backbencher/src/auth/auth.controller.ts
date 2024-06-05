@@ -1,6 +1,6 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { Auth, UseUser } from './auth.decorator';
+import { LocalAuth, UseUser } from './auth.decorator';
 import { BasicAuthDTO, BasicAuthResponseDTO } from './auth.dto';
 import { User } from 'src/user/user.entity';
 
@@ -9,7 +9,7 @@ export class AuthController {
   constructor(private authService: AuthService) {}
 
   @Post('/')
-  @Auth()
+  @LocalAuth()
   public async authenticate(
     @Body() body: BasicAuthDTO,
     @UseUser() user: User,
