@@ -90,7 +90,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
                 <Link href="http://182.74.215.198/moodle/">
                   <MenubarItem>Moodles</MenubarItem>
                 </Link>
-                <Link href="https://aot.edu.in/library/">
+                <Link href="/library">
                   <MenubarItem>Library</MenubarItem>
                 </Link>
               </MenubarSubContent>

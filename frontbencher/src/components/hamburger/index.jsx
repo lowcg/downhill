@@ -25,7 +25,7 @@ const Hamburger = () => (
           </HamMenu>
         </Link>
         <HamMenu label="Resources">
-          <Link href="https://aot.edu.in/library/">
+          <Link href="/library">
             <HamMenuItem label="Library" />
           </Link>
           <Link href="http://182.74.215.198/moodle/">
