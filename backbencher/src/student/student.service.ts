@@ -28,4 +28,8 @@ export class StudentService {
   public async isStudentWithRollExist(roll: string): Promise<boolean> {
     return (await this.studentRepo.countBy({ roll })) == 1;
   }
+
+  public async getStudentProfileFromUserId(userId: string): Promise<Student> {
+    return await this.studentRepo.findOneBy({ userId });
+  }
 }
