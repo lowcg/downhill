@@ -38,7 +38,7 @@ export const departments = [
             {
               image: "/assets/heroBg.png",
               pdf: "/path/to/book1.pdf",
-              name: "alu das",
+              name: "Pal das 2.0",
             },
           ],
           Sem3: [
@@ -50,7 +50,7 @@ export const departments = [
             {
               image: "/assets/heroBg.png",
               pdf: "/path/to/book1.pdf",
-              name: "alu das",
+              name: "Pal das 2.0",
             },
           ],
           Sem4: [
@@ -62,7 +62,7 @@ export const departments = [
             {
               image: "/assets/heroBg.png",
               pdf: "/path/to/book1.pdf",
-              name: "alu das",
+              name: "Pal das 2.0",
             },
           ],
           Sem5: [
@@ -74,7 +74,7 @@ export const departments = [
             {
               image: "/assets/heroBg.png",
               pdf: "/path/to/book1.pdf",
-              name: "alu das",
+              name: "Pal das 2.0",
             },
           ],
           Sem6: [
@@ -86,7 +86,7 @@ export const departments = [
             {
               image: "/assets/heroBg.png",
               pdf: "/path/to/book1.pdf",
-              name: "alu das",
+              name: "Pal das 2.0",
             },
           ],
           Sem7: [
@@ -98,7 +98,7 @@ export const departments = [
             {
               image: "/assets/heroBg.png",
               pdf: "/path/to/book1.pdf",
-              name: "alu das",
+              name: "Pal das 2.0",
             },
           ],
           Sem8: [
@@ -110,7 +110,7 @@ export const departments = [
             {
               image: "/assets/heroBg.png",
               pdf: "/path/to/book1.pdf",
-              name: "alu das",
+              name: "Pal das 2.0",
             },
           ],
         },

@@ -17,7 +17,7 @@ import {
 import MarqueeElement from "@/components/MarqueeElement";
 import { Suspense } from "react";
 import Loading from "./loading";
-
+import Community from "@/components/community";
 export default function Home() {
   return (
     <>
@@ -32,7 +32,9 @@ export default function Home() {
             announcements={sampleAnnouncements}
             className="set-size m-auto"
           />
+          
           <Accreditation/>
+          
           <div className="bg-secondary-light">
             <div className="set-size m-auto">
               <Suspense fallback={<Loading />}>
@@ -41,6 +43,7 @@ export default function Home() {
               <UpcomingEvents events={sampleUpcomingEvents} />
             </div>
           </div>
+          {/* <Community/> */}
           <WeeklyUpdates />
         </div>
       </main>
