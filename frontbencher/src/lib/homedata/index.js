@@ -33,8 +33,8 @@ export const sampleNews=
 ];
 export const sampleEvents=[
     {  
-        title: "AOT and IRCS",
-        imgUrl:"/assets/AOT_IRCS.webp",
+        title: "Techfest 2k24",
+        imgUrl:"/assets/Techfiesta.webp",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
     },
     {  
