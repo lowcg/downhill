@@ -41,7 +41,7 @@ const page = () => {
   );
 };
 
-export function Card({ name, desc }) {
+function Card({ name, desc }) {
   return (
     <div className="flex flex-col items-center md:p-4 w-[20rem] md:w-[30rem] flex-shrink-0">
       <div className="md:px-5 px-2 py-2 md:py-4 w-full bg-slate-300 rounded-md">

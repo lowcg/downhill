@@ -46,7 +46,7 @@ const page = () => {
   );
 };
 
-export function CardSeq({ image, title, desc}) {
+function CardSeq({ image, title, desc}) {
   console.log()
   return (
     <div className="w-full py-10 md:px-14 font-geist gap-6 flex flex-col items-center">

@@ -30,7 +30,7 @@ const allData = [
   }
 ];
 
-const page = () => {
+export default function CampusFacilities(){
   return (
     <div className="bg-white w-full flex flex-col items-center min-h-screen gap-20 py-20">
       <HeaderTitle title="Campus Facilities" />
@@ -46,8 +46,7 @@ const page = () => {
   );
 };
 
-export function CardSeq({ image, title, desc}) {
-  console.log()
+function CardSeq({ image, title, desc}) {
   return (
     <div className="w-full flex md:flex-row flex-col py-10 md:px-14 font-geist gap-6  md:even:flex-row-reverse md:even:justify-end md:even:text-right items-center">
       <div className="w-[80%] md:w-[40%] h-fit box-content overflow-hidden flex justify-center p-5">
@@ -61,4 +60,3 @@ export function CardSeq({ image, title, desc}) {
   );
 }
 
-export default page;

@@ -80,7 +80,10 @@ export default function Navbar({ className, alwaysSolid = false }) {
           </Link>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger>Academics<SvgCloseArrow/></MenubarTrigger>
+          <MenubarTrigger>
+            Academics
+            <SvgCloseArrow />
+          </MenubarTrigger>
           <MenubarContent>
             <MenubarItem>
               <Link href="/ugprogramme">UG Programs</Link>
@@ -124,7 +127,10 @@ export default function Navbar({ className, alwaysSolid = false }) {
 
         {/* Students */}
         <MenubarMenu>
-          <MenubarTrigger>Students<SvgCloseArrow/></MenubarTrigger>
+          <MenubarTrigger>
+            Students
+            <SvgCloseArrow />
+          </MenubarTrigger>
           <MenubarContent>
             <Link href={"/students/lifeataot"}>
               <MenubarItem>Life@AOT</MenubarItem>
@@ -132,7 +138,7 @@ export default function Navbar({ className, alwaysSolid = false }) {
             <Link href={"/students/campusfacilities"}>
               <MenubarItem>Campus Facilities</MenubarItem>
             </Link>
-            <Link href={'/students/careerservices'}>
+            <Link href={"/students/careerservices"}>
               <MenubarItem>Carrer Services</MenubarItem>
             </Link>
           </MenubarContent>
@@ -140,7 +146,10 @@ export default function Navbar({ className, alwaysSolid = false }) {
 
         {/* Faculty */}
         <MenubarMenu>
-          <MenubarTrigger>Faculty<SvgCloseArrow/></MenubarTrigger>
+          <MenubarTrigger>
+            Faculty
+            <SvgCloseArrow />
+          </MenubarTrigger>
           <MenubarContent>
             <Link href="/faculty/list">
               <MenubarItem>Faculty List & Positions </MenubarItem>
@@ -154,19 +163,23 @@ export default function Navbar({ className, alwaysSolid = false }) {
       </Menubar>
       <div className="lg:flex items-center space-x-4 hidden ">
         <Search />
-        <SecondaryButton
-          title="Request Info"
-          color="white"
-          hoverEffectOn
-          padding="py-[0.15rem] px-6"
-        />
-        <PrimaryButton
-          title="Contact us"
-          color="white"
-          hoverEffectOn
-          padding="py-[0.15rem] px-6"
-          border="white"
-        />
+        <Link href={"/contactus"}>
+          <SecondaryButton
+            title="Contact Us"
+            color="white"
+            hoverEffectOn
+            padding="py-[0.15rem] px-6"
+          />
+        </Link>
+        <Link href={"/signin"}>
+          <PrimaryButton
+            title="Sign In"
+            color="white"
+            hoverEffectOn
+            padding="py-[0.15rem] px-6"
+            border="white"
+          />
+        </Link>
       </div>
       <div className="lg:hidden flex justify-between w-full relative h-20 px-6">
         <Link href="/" className="flex items-center -space-x-2">
