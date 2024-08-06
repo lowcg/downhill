@@ -16,7 +16,7 @@ const alldata = [
   },
   {
     name: "Technical skills development workshops",
-    desc: "Our Technical Skills Development Workshops are designed to help students enhance their practical skills and stay up-to-date with the latest industry trends. With a focus on hands-on learning and real-world applications, these workshops cover a wide range of topics, including programming languages, software tools, and technical certifications. Whether you are interested in web development, data analytics, or cybersecurity, these workshops will provide you with the knowledge and skills needed to succeed in today's competitive job market.",
+    desc: "Our Technical Skills Development Workshops are designed to help students enhance their practical skills and stay up-to-date with the latest industry trends. With a focus on hands-on learning and real-world applications, these workshops cover a wide range of topics, including programming languages, software tools, and technical certifications. Whether you are interested in web development, data analytics, or cybersecurity, these workshops will provide you with the knowledge and skills needed to succeed in today&apos; competitive job market.",
   },
   {
     name: "Career counseling and guidance sessions",
