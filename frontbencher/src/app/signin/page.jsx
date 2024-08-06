@@ -28,7 +28,7 @@ const page = () => {
         <>
           <SignIn />
           <h1>
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <button
               onClick={() => setMode(false)}
               className="border border-slate-400 py-1 px-4 rounded-md"
